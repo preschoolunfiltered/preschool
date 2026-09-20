@@ -311,9 +311,11 @@
   <section id="shelf" class="wrap">
     <p class="lede">
       Every sheet in the set, ready to look at before it goes to the printer.
-      Each theme holds <strong>three puzzles at three densities</strong> — 92,
-      150 and 215 things to find — plus a matching answer key for each one.
-      Pick a theme to page through it.
+      Each theme holds <strong>three puzzles at three densities</strong> — 100,
+      168 and 240 things to find — plus a matching answer key for each one.
+      Pictures are tilted, mirrored and drawn at different sizes, and the
+      harder sheets clump them together, so nothing can be found by sweeping
+      in rows. Pick a theme to page through it.
     </p>
     <div class="grid" id="cards"></div>
     <p class="empty" id="empty" hidden>No theme by that name. Try “farm”, “ocean” or “winter”.</p>
@@ -364,9 +366,9 @@
 
   const LEVEL = { easy: 1, medium: 2, hard: 3 };
   const LEVEL_NOTE = {
-    easy: "Biggest art, fewest pictures — good for a first try",
-    medium: "The everyday version",
-    hard: "Smallest art, most to find — for early finishers"
+    easy: "Biggest art, gentle tilts, evenly spread — good for a first try",
+    medium: "Smaller, clumped, and half the pictures are turned or mirrored",
+    hard: "Any angle at all, nested together — for early finishers"
   };
 
   const el = (id) => document.getElementById(id);
@@ -470,6 +472,7 @@
       rows.push(["Things to find", String(page.items)]);
       rows.push(["Level", `${page.difficulty} ${pips(page.difficulty)}`]);
       rows.push(["Border", page.frame]);
+      rows.push(["Pictures", page.hiding]);
       rows.push(["Child writes", "counts, in dotted boxes"]);
     } else if (page.kind === "key") {
       rows.push(["Level", `${page.difficulty} ${pips(page.difficulty)}`]);

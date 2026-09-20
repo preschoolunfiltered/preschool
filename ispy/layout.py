@@ -176,14 +176,16 @@ def puzzle_page(theme: Theme, variant: int, difficulty: str,
     counts = counts_for(len(theme.icons), cfg["total"], rng)
     items = [name for name, c in zip(theme.icons, counts) for _ in range(c)]
     placed = scatter(items, field_rect(style), rng, cfg["size"],
-                     obstacles=obstacles)
+                     obstacles=obstacles, size_jitter=cfg["jitter"],
+                     rot=cfg["rot"], flip=cfg["flip"], pack=cfg["pack"],
+                     clusters=cfg["clusters"])
     got = tally(placed)
     final = [got.get(name, 0) for name in theme.icons]
 
     body = [frame_svg]
-    for name, x, y, size, rotation in placed:
+    for name, x, y, size, rotation, flipped in placed:
         body.append(place(ICONS[name](), x, y, size, rotation, cfg["stroke"],
-                          INK, name=name, pool=pool))
+                          INK, name=name, pool=pool, flip=flipped))
     note = "ANSWER KEY" if answer_key else ""
     body.insert(0, header(theme, style, note, pool))
     body.append(legend(theme.icons, final, answer_key, style, pool))

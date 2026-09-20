@@ -77,23 +77,27 @@ def place(
     stroke_color: str = "#000000",
     name: str | None = None,
     pool: "SymbolPool | None" = None,
+    flip: bool = False,
 ) -> str:
     """Drop a 100-unit icon centred at (x, y) at `size` points.
 
     Stroke width is divided by the scale so every icon on the page keeps the
-    same optical line weight no matter how big or small it is drawn.
+    same optical line weight no matter how big or small it is drawn. `flip`
+    mirrors the doodle, so the same picture shows up facing both ways.
     """
     s = size / 100.0
+    sx = -s if flip else s
     if pool is not None and name:
         ref = pool.icon(name, body, stroke_color)
         return (
             f'<use href="#{ref}" xlink:href="#{ref}" '
             f'transform="translate({x:.1f} {y:.1f}) rotate({rot:.1f}) '
-            f'scale({s:.3f})" stroke-width="{stroke / s:.2f}"/>'
+            f'scale({sx:.3f} {s:.3f})" stroke-width="{stroke / s:.2f}"/>'
         )
     return (
         f'<g transform="translate({x:.2f} {y:.2f}) rotate({rot:.2f}) '
-        f'scale({s:.4f}) translate(-50 -50)" fill="none" stroke="{stroke_color}" '
+        f'scale({sx:.4f} {s:.4f}) translate(-50 -50)" fill="none" '
+        f'stroke="{stroke_color}" '
         f'stroke-width="{stroke / s:.2f}" stroke-linecap="round" '
         f'stroke-linejoin="round">{body}</g>'
     )

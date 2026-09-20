@@ -16,6 +16,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from ispy import config
+from ispy.config import DIFFICULTY
 from ispy.icons import label
 from ispy.layout import cover_page, puzzle_page, terms_page
 from ispy.render import PAGE_H, PAGE_W, SymbolPool, svg_doc
@@ -47,8 +48,11 @@ def theme_document(theme):
                                      wrap=False)
         key, _ = puzzle_page(theme, v, difficulty, style, answer_key=True,
                              pool=pool, wrap=False)
+        d = DIFFICULTY[difficulty]
+        hiding = (f"tilted to {round(d['rot'])}\u00b0, "
+                  f"{round(d['flip'] * 100)}% mirrored")
         add("puzzle", f"Puzzle {v + 1}", puzzle, difficulty=difficulty,
-            items=sum(counts), frame=style)
+            items=sum(counts), frame=style, hiding=hiding)
         add("key", f"Key {v + 1}", key, difficulty=difficulty)
     add("terms", "Terms", terms_page(pool=pool, wrap=False))
 

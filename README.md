@@ -20,9 +20,12 @@ output/
     _pages/                          the same pages as single-page PDFs
 ```
 
-Every theme ships three puzzles at three difficulties — **easy** (92 items,
-large art), **medium** (150) and **hard** (215) — so one file works for a whole
-mixed-ability class. Each puzzle gets its own frame treatment (double line,
+Every theme ships three puzzles at three difficulties — **easy** (100 items,
+large art), **medium** (168) and **hard** (240) — so one file works for a whole
+mixed-ability class. Difficulty is not just item count: each level also sets
+how far a doodle may tilt (up to any angle), how often a copy is mirrored, how
+much sizes vary, how tightly items nest into each other, and how many clumps
+pull them off an even grid — all in `DIFFICULTY` in `ispy/config.py`. Each puzzle gets its own frame treatment (double line,
 scalloped, dashed with corner doodles) so the set does not look repetitive.
 
 **22 themes:** spring, summer, fall, winter, Christmas, Halloween,
