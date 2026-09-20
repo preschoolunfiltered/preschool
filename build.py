@@ -81,18 +81,17 @@ def build_coloring(theme, previews=True, dpi=150):
     prev = os.path.join(folder, "previews")
     os.makedirs(work, exist_ok=True)
 
-    sheets = coloring.pages_for(theme, config.COLORING_PER_KIND)
+    sheets = coloring.pages_for(theme)
     pages = [("00-cover", coloring.build_page(
         lambda p: coloring.cover_page(theme, len(sheets), p))),
         ("01-terms", terms_page())]
     for i, (kind, label, fn) in enumerate(sheets):
-        pages.append((f"{10 + i:02d}-{kind}-{i + 1}",
-                      coloring.build_page(fn)))
+        pages.append((f"{10 + i:02d}-{kind}-{i + 1}", coloring.build_page(fn)))
 
     pdf_paths = []
     for stem, svg in pages:
         pdf_paths.append(write_pdf(svg, os.path.join(work, f"{stem}.pdf")))
-        if previews and stem in ("00-cover", "10-hero-1", "11-pattern-2"):
+        if previews and stem in ("00-cover", "10-subject-1", "12-subject-3"):
             write_png(svg, os.path.join(prev, f"{stem}.png"), dpi=dpi)
 
     return merge(pdf_paths, os.path.join(folder, f"{name}.pdf"))

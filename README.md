@@ -17,13 +17,13 @@ puzzles** and **coloring pages**.
 ```
 output/
   I-Spy-Mega-Bundle.pdf              all 22 I Spy themes (176 pages)
-  Coloring-Mega-Bundle.pdf           all 22 coloring themes (220 pages)
+  Coloring-Mega-Bundle.pdf           all 22 coloring themes (434 pages)
   themes/I-Spy-Spring/
     I-Spy-Spring.pdf                 cover + terms + 3 puzzles + 3 answer keys
     previews/                        150 dpi PNGs for TPT thumbnails
     _pages/                          the same pages as single-page PDFs
   coloring/Color-Spring/
-    Color-Spring.pdf                 cover + terms + 8 coloring sheets
+    Color-Spring.pdf                 cover + terms + one page per picture
 ```
 
 Every theme ships three puzzles at three difficulties — **easy** (128 items,
@@ -53,14 +53,22 @@ python3 build.py --no-previews        # PDFs only, faster
 
 ### Coloring pages
 
-Eight sheets per theme in four rotating layouts — one big character with
-friends around it, a page of twelve pictures, six framed pictures, and a
-poster with hollow letters the child colors in. Lines are thick (2-3pt), and
-every icon passes through `outline()` in [`ispy/coloring.py`](ispy/coloring.py)
-on the way in, which turns the library's solid black accents — a ladybug's
-head, a bee's stripes, a jack-o'-lantern's face — into empty outlines, because
-a filled shape is a shape a child cannot color. `COLORING_PER_KIND` in
-`ispy/config.py` sets how many of each layout a theme gets.
+One big picture per sheet, clip-art style: the subject in a badge frame
+(scalloped, cloud or dashed panel, rotating), sparkles in the corners, and its
+name underneath in hollow letters the child colors too. One page per picture
+in the theme, so a set runs 15–18 pages — 434 in total.
+
+Three things make a doodle work at page size:
+
+- `outline()` turns the library's solid black accents — a ladybug's head, a
+  bee's stripes, a jack-o'-lantern's face — into empty outlines, because a
+  filled shape is a shape a child cannot color.
+- [`ispy/cute.py`](ispy/cute.py) adds a kawaii face to objects that don't have
+  one. Only objects with an empty belly are listed; anything whose middle is
+  already busy is left alone rather than given a face over its own detail.
+- `fitted()` scales each subject by its measured ink bounds
+  (`assets/icon_bounds.json`, rebuilt with `python3 tools/icon_bounds.py`)
+  rather than its nominal box, so a rainbow and a pencil both fill the frame.
 
 ## Make it yours
 
@@ -117,7 +125,8 @@ puzzle and answer-key previews as supporting images.
 | `ispy/scatter.py` | Picks per-icon counts, then hides them: tilt, mirror, clump, nest |
 | `ispy/lookalikes.py` | Shape families, so near-twins get parked together |
 | `ispy/layout.py` | Header, frames, puzzle field, legend, cover, terms page |
-| `ispy/coloring.py` | The coloring line: four page layouts, hollow titles |
+| `ispy/coloring.py` | The coloring line: one subject per page, badge frames |
+| `ispy/cute.py` | Kawaii faces for objects drawn at page size |
 | `ispy/render.py` | SVG assembly and PDF/PNG export |
 | `build.py` | Builds every theme, merges PDFs, writes previews |
 

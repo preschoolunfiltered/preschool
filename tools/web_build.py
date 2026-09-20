@@ -69,9 +69,10 @@ def coloring_document(theme):
     """Same stacking trick for the coloring set."""
     pool = SymbolPool()
     bodies, pages = [], []
-    bodies.append(coloring.cover_page(theme, config.COLORING_PER_KIND * 4, pool))
+    sheets = coloring.pages_for(theme)
+    bodies.append(coloring.cover_page(theme, len(sheets), pool))
     pages.append({"kind": "cover", "label": "Cover"})
-    for kind, label, fn in coloring.pages_for(theme, config.COLORING_PER_KIND):
+    for kind, label, fn in sheets:
         bodies.append(fn(pool))
         pages.append({"kind": kind, "label": label})
     bodies.append(terms_page(pool=pool, wrap=False))
@@ -102,11 +103,11 @@ def main():
                      " together, and near-twins are parked side by side on"
                      " purpose."},
             {"id": "color", "label": "Coloring pages", "themes": color_themes,
-             "note": "Eight coloring sheets per theme in four layouts - one"
-                     " big character, a page to color them all, six framed"
-                     " pictures, and a poster with hollow letters. Chunky"
-                     " outlines, nothing filled in black, so every shape can"
-                     " take a crayon."},
+             "note": "One big picture per sheet, clip-art style: a smiling"
+                     " subject in a badge frame, its name spelled out in"
+                     " hollow letters underneath, and chunky outlines with"
+                     " nothing filled in black, so every shape - and every"
+                     " letter - can take a crayon."},
         ],
     }
     total = 0
@@ -127,8 +128,7 @@ def main():
         ccover = os.path.join(out, "color-covers", f"{theme.key}.svg")
         with open(ccover, "w") as fh:
             fh.write(coloring.build_page(
-                lambda p: coloring.cover_page(theme,
-                                              config.COLORING_PER_KIND * 4, p),
+                lambda p: coloring.cover_page(theme, len(cpages) - 2, p),
                 compact=True))
         total += os.path.getsize(ccover)
         color_themes.append({

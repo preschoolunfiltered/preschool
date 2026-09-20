@@ -1,39 +1,46 @@
-"""Coloring pages built from the same doodle library as the puzzles.
+"""Coloring pages: one big picture per sheet, drawn like clip art.
 
-A coloring page wants the opposite of an I Spy sheet: a few big shapes with
-chunky outlines and nothing solid black, because a filled shape is a shape a
-child cannot color. Every icon is passed through `outline()` on the way in,
-which turns the library's solid accents (a ladybug's head, a bee's stripes, a
-jack-o'-lantern's face) into empty outlines.
+A coloring page wants the opposite of an I Spy sheet. One subject, drawn as
+large as the paper allows, with a heavy outline a crayon can chase, nothing
+filled in solid black, a badge frame around it and its name spelled out in
+hollow letters underneath. Objects pick up a kawaii face on the way in
+(`ispy.cute`), because clip art for this age group smiles back.
 """
 
 from __future__ import annotations
 
+import json
 import math
+import os
 import random
 
 from ispy import config
-from ispy.draw import SOLID, circle, line, path, pt, rect
-from ispy.icons import ICONS
+from ispy.cute import cutify
+from ispy.draw import SOLID, circle, dot, heart, line, path, pt, rect, star
+from ispy.icons import ICONS, label
 from ispy.render import PAGE_H, PAGE_W, SymbolPool, place, svg_doc
 from ispy.text import measure, text
 from ispy.themes import Theme
 
 INK = "#111111"
-MARGIN = 36.0
 
 # chunky, because a preschooler colors up to the line, not inside it
-STROKE_HERO = 3.1
-STROKE_MID = 2.6
-STROKE_SMALL = 2.1
-STROKE_TITLE = 2.6
+STROKE_SUBJECT = 4.6
+STROKE_FRAME = 3.0
+STROKE_SMALL = 2.4
+STROKE_TITLE = 3.2
 
-# scenery that reads as sky or ground rather than as a subject
-SKY = {"sun", "cloud", "rainbow", "star", "crescent_moon", "moon_craters",
-       "shooting_star", "snowflake", "bird", "seagull", "butterfly", "bee",
-       "bubbles", "planet", "raindrop", "kite", "bat", "dragonfly"}
-GROUND = {"grass_tuft", "sprout", "leaf_sprig", "seaweed", "coral", "fern",
-          "mushroom", "pinecone", "acorn", "jelly_bean", "shamrock"}
+FRAME_CX, FRAME_CY, FRAME_R = PAGE_W / 2, 364.0, 208.0
+SUBJECT_FIT = 286.0        # inside a circle frame
+SUBJECT_FIT_PANEL = 322.0  # inside the square one
+
+_BOUNDS_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)),
+                            "assets", "icon_bounds.json")
+try:
+    with open(_BOUNDS_PATH) as _fh:
+        BOUNDS = json.load(_fh)
+except OSError:  # not measured yet - fall back to the nominal box
+    BOUNDS = {}
 
 
 def outline(body: str) -> str:
@@ -41,25 +48,42 @@ def outline(body: str) -> str:
     return body.replace(SOLID, 'fill="none"')
 
 
+def art(name: str) -> str:
+    """One subject, de-blackened and smiling."""
+    return cutify(name, outline(ICONS[name]()))
+
+
 def drop(name: str, x: float, y: float, size: float, rot: float = 0.0,
-         stroke: float = STROKE_MID, pool=None, flip: bool = False) -> str:
-    return place(outline(ICONS[name]()), x, y, size, rot, stroke, INK,
-                 name=name + "-c", pool=pool, flip=flip)
+         stroke: float = STROKE_SMALL, pool=None, flip: bool = False) -> str:
+    return place(art(name), x, y, size, rot, stroke, INK, name=name + "-c",
+                 pool=pool, flip=flip)
 
 
-def title_block(theme: Theme, note: str, pool=None) -> str:
-    """Big hollow letters at the top - the title is colorable too."""
-    size = 62.0
-    while measure(theme.title, "display", size, 0) > 470 and size > 26:
-        size -= 2
-    scale = size / 1000.0  # Fredoka's em, near enough for a stroke width
-    out = [text(theme.title, PAGE_W / 2, 92, "display", size, "middle", 0,
-                "none", f'stroke="{INK}" stroke-width="{STROKE_TITLE / scale:.0f}" '
-                        f'stroke-linejoin="round"', pool=pool)]
-    if note:
-        out.append(text(note, PAGE_W / 2, 118, "hand", 22, "middle", 1.5, INK,
-                        pool=pool))
-    return "".join(out)
+def fitted(name: str, cx: float, cy: float, target: float, rot: float = 0.0,
+           stroke: float = STROKE_SUBJECT, pool=None) -> str:
+    """Draw `name` so its ink - not its nominal box - is `target` points wide.
+
+    A flower pot covers half its box and a rainbow covers three quarters of
+    the width and a third of the height. Scaling by the box would leave one
+    subject swimming on the page and crop another, so scale by what the icon
+    actually draws, and centre that rather than the box.
+    """
+    x0, y0, x1, y1 = BOUNDS.get(name, (0.0, 0.0, 100.0, 100.0))
+    w, h = max(x1 - x0, 1.0), max(y1 - y0, 1.0)
+    size = target * 100.0 / max(w, h)
+    s = size / 100.0
+    ink_cx, ink_cy = (x0 + x1) / 2, (y0 + y1) / 2
+    return place(art(name), cx - (ink_cx - 50) * s, cy - (ink_cy - 50) * s,
+                 size, rot, stroke, INK, name=name + "-c", pool=pool)
+
+
+def hollow(s: str, x: float, y: float, size: float, weight: float,
+           pool=None) -> str:
+    """Outlined letters - a word the child can color in as well."""
+    scale = size / 1000.0
+    return text(s, x, y, "display", size, "middle", 0, "none",
+                f'stroke="{INK}" stroke-width="{weight / scale:.0f}" '
+                f'stroke-linejoin="round"', pool=pool)
 
 
 def footer(note: str = "", pool=None) -> str:
@@ -70,162 +94,111 @@ def footer(note: str = "", pool=None) -> str:
                 "middle", 0.8, "#444444", pool=pool)
 
 
-def ground_line(y: float, rng: random.Random, tufts: str | None = None,
-                pool=None) -> str:
-    """A soft wavy horizon so the subjects have somewhere to stand."""
-    pts = [(24.0, y)]
-    x = 24.0
-    while x < PAGE_W - 24:
-        x += 58
-        pts.append((x, y + rng.uniform(-9, 9)))
+# ----------------------------------------------------------------- frames ---
+
+def scallop_circle(cx: float, cy: float, r: float, bumps: int = 20) -> str:
+    """A circle of little humps - the classic clip-art badge edge."""
+    pts = [pt(cx, cy, r, 360 * i / bumps) for i in range(bumps)]
+    chord = math.hypot(pts[1][0] - pts[0][0], pts[1][1] - pts[0][1]) / 2
     d = [f"M {pts[0][0]:.1f} {pts[0][1]:.1f}"]
-    for i in range(1, len(pts) - 1):
-        mx = (pts[i][0] + pts[i + 1][0]) / 2
-        my = (pts[i][1] + pts[i + 1][1]) / 2
-        d.append(f"Q {pts[i][0]:.1f} {pts[i][1]:.1f} {mx:.1f} {my:.1f}")
-    d.append(f"L {pts[-1][0]:.1f} {pts[-1][1]:.1f}")
-    out = [path(" ".join(d), f'fill="none" stroke="{INK}" '
-                             f'stroke-width="{STROKE_HERO}" '
-                             f'stroke-linecap="round"')]
-    if tufts:
-        for tx in (70, 190, 330, 470, 560):
-            out.append(drop(tufts, tx + rng.uniform(-14, 14),
-                            y + rng.uniform(4, 14), rng.uniform(34, 50), 0,
-                            STROKE_SMALL, pool))
+    for i in range(1, bumps + 1):
+        x, y = pts[i % bumps]
+        d.append(f"A {chord:.1f} {chord:.1f} 0 0 1 {x:.1f} {y:.1f}")
+    d.append("Z")
+    return path(" ".join(d), f'fill="none" stroke="{INK}" '
+                             f'stroke-width="{STROKE_FRAME}" '
+                             f'stroke-linejoin="round"')
+
+
+def cloud_circle(cx: float, cy: float, r: float, bumps: int = 11) -> str:
+    pts = [pt(cx, cy, r, 360 * i / bumps) for i in range(bumps)]
+    chord = math.hypot(pts[1][0] - pts[0][0], pts[1][1] - pts[0][1]) / 2
+    d = [f"M {pts[0][0]:.1f} {pts[0][1]:.1f}"]
+    for i in range(1, bumps + 1):
+        x, y = pts[i % bumps]
+        d.append(f"A {chord:.1f} {chord:.1f} 0 0 1 {x:.1f} {y:.1f}")
+    d.append("Z")
+    return path(" ".join(d), f'fill="none" stroke="{INK}" '
+                             f'stroke-width="{STROKE_FRAME}" '
+                             f'stroke-linejoin="round"')
+
+
+def dashed_panel(cx: float, cy: float, r: float) -> str:
+    return (rect(cx - r, cy - r * 1.02, r * 2, r * 2.04, 34,
+                 f'fill="none" stroke="{INK}" stroke-width="{STROKE_FRAME}"')
+            + rect(cx - r + 13, cy - r * 1.02 + 13, r * 2 - 26, r * 2.04 - 26,
+                   26, f'fill="none" stroke="{INK}" stroke-width="1.6" '
+                       f'stroke-dasharray="10 9" stroke-linecap="round"'))
+
+
+FRAMES = (scallop_circle, cloud_circle,
+          lambda cx, cy, r: dashed_panel(cx, cy, r))
+
+
+SPARKLE_SPOTS = ((70, 192), (542, 192), (68, 366), (544, 366),
+                 (70, 540), (542, 540))
+
+
+def confetti(rng: random.Random, cx: float, cy: float, r: float) -> str:
+    """Sparkles in the corners the badge leaves empty."""
+    out = []
+    for i, (x, y) in enumerate(SPARKLE_SPOTS):
+        pick = i % 3
+        size = rng.uniform(13, 19)
+        if pick == 0:
+            out.append(star(x, y, size, 5, 0.42, rng.uniform(-30, 30),
+                            f'fill="none" stroke="{INK}" '
+                            f'stroke-width="{STROKE_SMALL}" '
+                            f'stroke-linejoin="round"'))
+        elif pick == 1:
+            out.append(heart(x, y, size * 0.8,
+                             f'fill="none" stroke="{INK}" '
+                             f'stroke-width="{STROKE_SMALL}" '
+                             f'stroke-linejoin="round"'))
+        else:
+            out.append(circle(x, y, size * 0.4,
+                              f'fill="none" stroke="{INK}" '
+                              f'stroke-width="{STROKE_SMALL}"'))
     return "".join(out)
-
-
-def cycler(names, rng: random.Random):
-    """Hand out names without repeating until the list is used up."""
-    bag = list(names)
-    rng.shuffle(bag)
-    state = {"i": 0}
-
-    def nxt():
-        if state["i"] >= len(bag):
-            rng.shuffle(bag)
-            state["i"] = 0
-        state["i"] += 1
-        return bag[state["i"] - 1]
-    return nxt
-
-
-def _pick(theme: Theme, rng: random.Random):
-    """Split a theme's icons into subjects, sky things and ground things."""
-    icons = list(theme.icons)
-    sky = [n for n in icons if n in SKY]
-    ground = [n for n in icons if n in GROUND]
-    subjects = [n for n in icons if n not in SKY and n not in GROUND] or icons
-    return subjects, sky, ground
 
 
 # ------------------------------------------------------------------ pages ---
 
-def hero_page(theme: Theme, index: int, pool=None) -> str:
-    """One big character in the middle, friends all around it."""
-    rng = random.Random(f"{theme.key}-hero-{index}")
-    subjects, sky, ground = _pick(theme, rng)
-    star = subjects[index % len(subjects)]
-    friends = cycler([n for n in theme.icons if n != star], rng)
+def subject_page(theme: Theme, name: str, index: int, pool=None) -> str:
+    """One picture, one name, one page."""
+    rng = random.Random(f"{theme.key}-{name}-{index}")
+    word = label(name).upper()
 
-    body = [title_block(theme, "Color me in!", pool)]
-    body.append(rect(30, 132, PAGE_W - 60, 620, 26,
-                     f'fill="none" stroke="{INK}" stroke-width="2.2" '
-                     f'stroke-dasharray="11 9" stroke-linecap="round"'))
-    body.append(ground_line(690, rng, ground[0] if ground else None, pool))
-    body.append(drop(star, PAGE_W / 2, 430, 250, rng.uniform(-4, 4),
-                     STROKE_HERO, pool))
-
-    ring = [(122, 218), (306, 190), (492, 218), (96, 372),
-            (516, 372), (126, 560), (306, 606), (492, 560)]
-    for i, (x, y) in enumerate(ring):
-        body.append(drop(friends(), x, y, rng.uniform(96, 124),
-                         rng.uniform(-12, 12), STROKE_MID, pool,
-                         flip=bool(i % 2)))
-    body.append(footer("Coloring page " + str(index + 1), pool))
-    return "".join(body)
-
-
-def pattern_page(theme: Theme, index: int, pool=None) -> str:
-    """A whole page of pictures to work through - the long, calm one."""
-    rng = random.Random(f"{theme.key}-pattern-{index}")
-    nxt = cycler(theme.icons, rng)
-
-    body = [title_block(theme, "Color them all", pool)]
-    cols, rows = 3, 4
-    x0, y0, x1, y1 = 48.0, 148.0, 564.0, 744.0
-    cw = (x1 - x0) / cols
-    ch = (y1 - y0) / rows
-    for i in range(cols * rows):
-        cx = x0 + cw * (i % cols) + cw / 2 + rng.uniform(-9, 9)
-        cy = y0 + ch * (i // cols) + ch / 2 + rng.uniform(-8, 8)
-        body.append(drop(nxt(), cx, cy, rng.uniform(118, 140),
-                         rng.uniform(-10, 10), STROKE_HERO, pool,
-                         flip=bool((i + index) % 3 == 0)))
-    body.append(footer("Coloring page " + str(index + 1), pool))
-    return "".join(body)
-
-
-def grid_page(theme: Theme, index: int, pool=None) -> str:
-    """Six framed pictures - one color each."""
-    rng = random.Random(f"{theme.key}-grid-{index}")
-    nxt = cycler(theme.icons, rng)
-
-    body = [title_block(theme, "Give each one a color", pool)]
-    cols, rows = 2, 3
-    x0, y0, x1, y1 = 56.0, 150.0, 556.0, 736.0
-    cw = (x1 - x0) / cols
-    ch = (y1 - y0) / rows
-    for i in range(cols * rows):
-        cx = x0 + cw * (i % cols) + cw / 2
-        cy = y0 + ch * (i // cols) + ch / 2
-        body.append(rect(cx - cw / 2 + 9, cy - ch / 2 + 8, cw - 18, ch - 16, 18,
-                         f'fill="none" stroke="{INK}" stroke-width="2.2" '
-                         f'stroke-dasharray="9 8" stroke-linecap="round"'))
-        body.append(drop(nxt(), cx, cy, min(cw, ch) * 0.78, rng.uniform(-6, 6),
-                         STROKE_HERO, pool))
-    body.append(footer("Coloring page " + str(index + 1), pool))
-    return "".join(body)
-
-
-def poster_page(theme: Theme, index: int, pool=None) -> str:
-    """Hollow title in the middle with the theme's pictures ringed around it."""
-    rng = random.Random(f"{theme.key}-poster-{index}")
-    subjects, sky, ground = _pick(theme, rng)
-    ring = (subjects + sky)
-    rng.shuffle(ring)
-
-    size = 96.0
-    while measure(theme.title, "display", size, 0) > 380 and size > 34:
-        size -= 3
-    scale = size / 1000.0
     body = [
-        text(theme.title, PAGE_W / 2, 452, "display", size, "middle", 0, "none",
-             f'stroke="{INK}" stroke-width="{3.4 / scale:.0f}" '
-             f'stroke-linejoin="round"', pool=pool),
-        text("Color every picture", PAGE_W / 2, 500, "hand", 26, "middle", 2,
-             INK, pool=pool),
+        text(theme.title, PAGE_W / 2, 74, "hand", 26, "middle", 6, INK,
+             pool=pool),
+        FRAMES[index % len(FRAMES)](FRAME_CX, FRAME_CY, FRAME_R),
+        confetti(rng, FRAME_CX, FRAME_CY, FRAME_R),
+        fitted(name, FRAME_CX, FRAME_CY,
+               SUBJECT_FIT_PANEL if index % len(FRAMES) == 2 else SUBJECT_FIT,
+               rng.uniform(-3, 3), STROKE_SUBJECT, pool),
     ]
-    cx, cy = PAGE_W / 2, 432.0
-    nxt = cycler(ring, rng)
-    for i in range(12):
-        a = -90 + i * 30
-        rx, ry = 242, 268
-        x = cx + rx * math.cos(math.radians(a))
-        y = cy + ry * math.sin(math.radians(a))
-        body.append(drop(nxt(), x, y, rng.uniform(104, 132),
-                         rng.uniform(-14, 14), STROKE_MID, pool,
-                         flip=bool(i % 3 == 0)))
-    body.append(footer("Coloring page " + str(index + 1), pool))
+
+    size = 76.0
+    while measure(word, "display", size, 0) > 470 and size > 26:
+        size -= 2
+    body.append(hollow(word, PAGE_W / 2, 700, size, STROKE_TITLE, pool))
+    body.append(text("Color me in!", PAGE_W / 2, 732, "hand", 22, "middle",
+                     1.5, INK, pool=pool))
+    body.append(footer(f"Page {index + 1}", pool))
     return "".join(body)
 
 
-PAGE_KINDS = (
-    ("hero", "Big picture", hero_page),
-    ("pattern", "Color them all", pattern_page),
-    ("grid", "Six pictures", grid_page),
-    ("poster", "Poster", poster_page),
-)
+def pages_for(theme: Theme):
+    """One coloring sheet per picture in the theme."""
+    out = []
+    for i, name in enumerate(theme.icons):
+        out.append((
+            "subject",
+            label(name).title(),
+            lambda p, name=name, i=i: subject_page(theme, name, i, p),
+        ))
+    return out
 
 
 def cover_page(theme: Theme, n_pages: int, pool=None) -> str:
@@ -242,10 +215,7 @@ def cover_page(theme: Theme, n_pages: int, pool=None) -> str:
     size = 64.0
     while measure(theme.title, "display", size, 0) > 486 and size > 24:
         size -= 2
-    scale = size / 1000.0
-    body.append(text(theme.title, PAGE_W / 2, 174, "display", size, "middle", 0,
-                     "none", f'stroke="{INK}" stroke-width="{2.8 / scale:.0f}" '
-                             f'stroke-linejoin="round"', pool=pool))
+    body.append(hollow(theme.title, PAGE_W / 2, 174, size, 2.8, pool))
     body.append(text(theme.subtitle, PAGE_W / 2, 206, "hand-light", 23,
                      "middle", 1, INK, pool=pool))
 
@@ -261,9 +231,10 @@ def cover_page(theme: Theme, n_pages: int, pool=None) -> str:
     for i, name in enumerate(picks[:cols * rows]):
         x = panel[0] + cw * (i % cols) + cw / 2
         y = panel[1] + ch * (i // cols) + ch / 2
-        body.append(drop(name, x, y, 86, rng.uniform(-8, 8), STROKE_MID, pool))
+        body.append(fitted(name, x, y, 82, rng.uniform(-8, 8), STROKE_FRAME,
+                           pool))
 
-    body.append(text(f"{n_pages} coloring pages  ·  big, chunky lines",
+    body.append(text(f"{n_pages} coloring pages  ·  one big picture each",
                      PAGE_W / 2, 648, "hand", 25, "middle", 1, INK, pool=pool))
     body.append(text("Preschool · Pre-K · Kindergarten · "
                      "Fine motor · Calm corner", PAGE_W / 2, 676,
@@ -272,16 +243,6 @@ def cover_page(theme: Theme, n_pages: int, pool=None) -> str:
                      INK, pool=pool))
     body.append(footer(pool=pool))
     return "".join(body)
-
-
-def pages_for(theme: Theme, per_kind: int = 1):
-    """[(kind, label, svg_body_fn), ...] for one theme's coloring set."""
-    out = []
-    for i in range(per_kind):
-        for kind, label, fn in PAGE_KINDS:
-            out.append((kind, label if per_kind == 1 else f"{label} {i + 1}",
-                        lambda p, fn=fn, i=i: fn(theme, i, p)))
-    return out
 
 
 def build_page(fn, compact: bool = False) -> str:

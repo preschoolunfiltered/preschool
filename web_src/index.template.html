@@ -390,10 +390,7 @@
   };
 
   const SHEET_KINDS = {
-    hero: "One big character to color",
-    pattern: "Twelve pictures, a long quiet page",
-    grid: "Six framed pictures, one color each",
-    poster: "Hollow letters and a ring of pictures"
+    subject: "One big picture, named in hollow letters"
   };
 
   const el = (id) => document.getElementById(id);
@@ -501,7 +498,9 @@
       tab.type = "button";
       tab.className = "tab";
       tab.setAttribute("role", "tab");
-      tab.innerHTML = `<span class="tab-kind">${page.kind === "key" ? "Answers" : page.kind}</span>${page.label}`;
+      const eyebrow = page.kind === "key" ? "Answers"
+        : page.kind === "subject" ? `Page ${i}` : page.kind;
+      tab.innerHTML = `<span class="tab-kind">${eyebrow}</span>${page.label}`;
       tab.addEventListener("click", () => showPage(i));
       rail.appendChild(tab);
     });
@@ -540,9 +539,10 @@
     } else if (page.kind === "cover") {
       rows.push(["Use for", "the listing thumbnail"]);
     } else if (SHEET_KINDS[page.kind]) {
-      rows.push(["Layout", SHEET_KINDS[page.kind]]);
+      rows.push(["Picture", page.label]);
+      rows.push(["Word", page.label.toUpperCase() + ", hollow letters"]);
       rows.push(["Lines", "chunky, nothing filled black"]);
-      rows.push(["Child does", "colors it in"]);
+      rows.push(["Child does", "colors the picture and the word"]);
     } else {
       rows.push(["Covers", "what a buyer may and may not do"]);
     }

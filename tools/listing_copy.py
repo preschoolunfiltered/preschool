@@ -33,11 +33,12 @@ SEASONAL = {
 COLORING_LONG = """**What you get**
 
 - {n} coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- Four different layouts so the set never feels repetitive: one big character
-  to color, a page of twelve pictures, six framed pictures, and a poster with
-  hollow letters the children color in themselves
+- One big picture per page, drawn clip-art style in a badge frame, so even
+  the youngest hands have somewhere easy to start
+- The name of the picture underneath in big hollow letters, so the page
+  builds vocabulary and print awareness while it is being colored
 - Chunky outlines with nothing filled in solid black, so every single shape
-  can take a crayon - including the letters of the title
+  can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
 - A printable terms-of-use page
 
@@ -127,7 +128,7 @@ def block(theme):
 
 
 def coloring_block(theme):
-    n = config.COLORING_PER_KIND * 4
+    n = len(theme.icons)
     pages = 2 + n
     icons = ", ".join(label(i) for i in theme.icons)
     title_word = pretty(theme.title)
@@ -142,8 +143,8 @@ def coloring_block(theme):
         f"and Pre-K",
         "",
         "**Short blurb**  ",
-        f"{n} chunky-line {title_word.lower()} coloring pages in four "
-        f"layouts - print and go.",
+        f"{n} chunky-line {title_word.lower()} coloring pages - one big "
+        f"picture per sheet, print and go.",
         "",
         "**Description**",
         "",
@@ -198,17 +199,16 @@ Black-and-white, print-and-go, US Letter. {total_pages} pages.""")
     for t in THEMES:
         print(block(t))
 
-    cn = config.COLORING_PER_KIND * 4
+    cn = sum(len(t.icons) for t in THEMES)
     print("# Coloring pages")
     print()
     print("**Bundle title**  ")
-    print(f"Coloring Pages MEGA Bundle | {len(THEMES)} Themes, "
-          f"{len(THEMES) * cn} Pages")
+    print(f"Coloring Pages MEGA Bundle | {len(THEMES)} Themes, {cn} Pages")
     print()
-    print(f"""A year of coloring in one download: {len(THEMES)} themes,
-{cn} pages each, {len(THEMES) * cn} pages in total, in four rotating layouts.
-Chunky outlines throughout, nothing filled in solid black, so every shape -
-and every letter of every title - can be colored.""")
+    print(f"""A year of coloring in one download: {len(THEMES)} themes and
+{cn} pages, each one a single big picture with its name spelled out
+underneath in hollow letters. Chunky outlines throughout, nothing filled in
+solid black, so every shape - and every letter - can be colored.""")
     print()
     print("**Suggested price**: $15.00 (bundle)")
     print()

@@ -1020,12 +1020,12 @@ PDF, 8 pages, US Letter, print-and-go. No prep and nothing to assemble.
 # Coloring pages
 
 **Bundle title**  
-Coloring Pages MEGA Bundle | 22 Themes, 176 Pages
+Coloring Pages MEGA Bundle | 22 Themes, 390 Pages
 
-A year of coloring in one download: 22 themes,
-8 pages each, 176 pages in total, in four rotating layouts.
-Chunky outlines throughout, nothing filled in solid black, so every shape -
-and every letter of every title - can be colored.
+A year of coloring in one download: 22 themes and
+390 pages, each one a single big picture with its name spelled out
+underneath in hollow letters. Chunky outlines throughout, nothing filled in
+solid black, so every shape - and every letter - can be colored.
 
 **Suggested price**: $15.00 (bundle)
 
@@ -1034,21 +1034,22 @@ and every letter of every title - can be colored.
 ## Spring (coloring)
 
 **Product title**  
-Spring Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+Spring Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-8 chunky-line spring coloring pages in four layouts - print and go.
+18 chunky-line spring coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- Four different layouts so the set never feels repetitive: one big character
-  to color, a page of twelve pictures, six framed pictures, and a poster with
-  hollow letters the children color in themselves
+- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- One big picture per page, drawn clip-art style in a badge frame, so even
+  the youngest hands have somewhere easy to start
+- The name of the picture underneath in big hollow letters, so the page
+  builds vocabulary and print awareness while it is being colored
 - Chunky outlines with nothing filled in solid black, so every single shape
-  can take a crayon - including the letters of the title
+  can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
 - A printable terms-of-use page
 
@@ -1069,7 +1070,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1080,21 +1081,22 @@ PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Summer (coloring)
 
 **Product title**  
-Summer Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+Summer Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-8 chunky-line summer coloring pages in four layouts - print and go.
+18 chunky-line summer coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- Four different layouts so the set never feels repetitive: one big character
-  to color, a page of twelve pictures, six framed pictures, and a poster with
-  hollow letters the children color in themselves
+- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- One big picture per page, drawn clip-art style in a badge frame, so even
+  the youngest hands have somewhere easy to start
+- The name of the picture underneath in big hollow letters, so the page
+  builds vocabulary and print awareness while it is being colored
 - Chunky outlines with nothing filled in solid black, so every single shape
-  can take a crayon - including the letters of the title
+  can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
 - A printable terms-of-use page
 
@@ -1115,7 +1117,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1126,21 +1128,22 @@ PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Fall (coloring)
 
 **Product title**  
-Fall Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+Fall Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-8 chunky-line fall coloring pages in four layouts - print and go.
+18 chunky-line fall coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- Four different layouts so the set never feels repetitive: one big character
-  to color, a page of twelve pictures, six framed pictures, and a poster with
-  hollow letters the children color in themselves
+- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- One big picture per page, drawn clip-art style in a badge frame, so even
+  the youngest hands have somewhere easy to start
+- The name of the picture underneath in big hollow letters, so the page
+  builds vocabulary and print awareness while it is being colored
 - Chunky outlines with nothing filled in solid black, so every single shape
-  can take a crayon - including the letters of the title
+  can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
 - A printable terms-of-use page
 
@@ -1161,7 +1164,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1172,21 +1175,22 @@ PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Winter (coloring)
 
 **Product title**  
-Winter Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+Winter Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-8 chunky-line winter coloring pages in four layouts - print and go.
+18 chunky-line winter coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- Four different layouts so the set never feels repetitive: one big character
-  to color, a page of twelve pictures, six framed pictures, and a poster with
-  hollow letters the children color in themselves
+- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- One big picture per page, drawn clip-art style in a badge frame, so even
+  the youngest hands have somewhere easy to start
+- The name of the picture underneath in big hollow letters, so the page
+  builds vocabulary and print awareness while it is being colored
 - Chunky outlines with nothing filled in solid black, so every single shape
-  can take a crayon - including the letters of the title
+  can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
 - A printable terms-of-use page
 
@@ -1207,7 +1211,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1218,21 +1222,22 @@ PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Christmas (coloring)
 
 **Product title**  
-Christmas Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+Christmas Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-8 chunky-line christmas coloring pages in four layouts - print and go.
+18 chunky-line christmas coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- Four different layouts so the set never feels repetitive: one big character
-  to color, a page of twelve pictures, six framed pictures, and a poster with
-  hollow letters the children color in themselves
+- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- One big picture per page, drawn clip-art style in a badge frame, so even
+  the youngest hands have somewhere easy to start
+- The name of the picture underneath in big hollow letters, so the page
+  builds vocabulary and print awareness while it is being colored
 - Chunky outlines with nothing filled in solid black, so every single shape
-  can take a crayon - including the letters of the title
+  can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
 - A printable terms-of-use page
 
@@ -1253,7 +1258,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1264,21 +1269,22 @@ PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Halloween (coloring)
 
 **Product title**  
-Halloween Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+Halloween Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-8 chunky-line halloween coloring pages in four layouts - print and go.
+18 chunky-line halloween coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- Four different layouts so the set never feels repetitive: one big character
-  to color, a page of twelve pictures, six framed pictures, and a poster with
-  hollow letters the children color in themselves
+- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- One big picture per page, drawn clip-art style in a badge frame, so even
+  the youngest hands have somewhere easy to start
+- The name of the picture underneath in big hollow letters, so the page
+  builds vocabulary and print awareness while it is being colored
 - Chunky outlines with nothing filled in solid black, so every single shape
-  can take a crayon - including the letters of the title
+  can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
 - A printable terms-of-use page
 
@@ -1299,7 +1305,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1310,21 +1316,22 @@ PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Thanksgiving (coloring)
 
 **Product title**  
-Thanksgiving Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+Thanksgiving Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-8 chunky-line thanksgiving coloring pages in four layouts - print and go.
+18 chunky-line thanksgiving coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- Four different layouts so the set never feels repetitive: one big character
-  to color, a page of twelve pictures, six framed pictures, and a poster with
-  hollow letters the children color in themselves
+- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- One big picture per page, drawn clip-art style in a badge frame, so even
+  the youngest hands have somewhere easy to start
+- The name of the picture underneath in big hollow letters, so the page
+  builds vocabulary and print awareness while it is being colored
 - Chunky outlines with nothing filled in solid black, so every single shape
-  can take a crayon - including the letters of the title
+  can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
 - A printable terms-of-use page
 
@@ -1345,7 +1352,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1356,21 +1363,22 @@ PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Valentine (coloring)
 
 **Product title**  
-Valentine Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+Valentine Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-8 chunky-line valentine coloring pages in four layouts - print and go.
+18 chunky-line valentine coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- Four different layouts so the set never feels repetitive: one big character
-  to color, a page of twelve pictures, six framed pictures, and a poster with
-  hollow letters the children color in themselves
+- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- One big picture per page, drawn clip-art style in a badge frame, so even
+  the youngest hands have somewhere easy to start
+- The name of the picture underneath in big hollow letters, so the page
+  builds vocabulary and print awareness while it is being colored
 - Chunky outlines with nothing filled in solid black, so every single shape
-  can take a crayon - including the letters of the title
+  can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
 - A printable terms-of-use page
 
@@ -1391,7 +1399,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1402,21 +1410,22 @@ PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Easter (coloring)
 
 **Product title**  
-Easter Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+Easter Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-8 chunky-line easter coloring pages in four layouts - print and go.
+18 chunky-line easter coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- Four different layouts so the set never feels repetitive: one big character
-  to color, a page of twelve pictures, six framed pictures, and a poster with
-  hollow letters the children color in themselves
+- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- One big picture per page, drawn clip-art style in a badge frame, so even
+  the youngest hands have somewhere easy to start
+- The name of the picture underneath in big hollow letters, so the page
+  builds vocabulary and print awareness while it is being colored
 - Chunky outlines with nothing filled in solid black, so every single shape
-  can take a crayon - including the letters of the title
+  can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
 - A printable terms-of-use page
 
@@ -1437,7 +1446,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1448,21 +1457,22 @@ PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## St. Patrick's (coloring)
 
 **Product title**  
-St. Patrick's Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+St. Patrick's Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-8 chunky-line st. patrick's coloring pages in four layouts - print and go.
+18 chunky-line st. patrick's coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- Four different layouts so the set never feels repetitive: one big character
-  to color, a page of twelve pictures, six framed pictures, and a poster with
-  hollow letters the children color in themselves
+- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- One big picture per page, drawn clip-art style in a badge frame, so even
+  the youngest hands have somewhere easy to start
+- The name of the picture underneath in big hollow letters, so the page
+  builds vocabulary and print awareness while it is being colored
 - Chunky outlines with nothing filled in solid black, so every single shape
-  can take a crayon - including the letters of the title
+  can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
 - A printable terms-of-use page
 
@@ -1483,7 +1493,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1494,21 +1504,22 @@ PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Ocean (coloring)
 
 **Product title**  
-Ocean Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+Ocean Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-8 chunky-line ocean coloring pages in four layouts - print and go.
+18 chunky-line ocean coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- Four different layouts so the set never feels repetitive: one big character
-  to color, a page of twelve pictures, six framed pictures, and a poster with
-  hollow letters the children color in themselves
+- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- One big picture per page, drawn clip-art style in a badge frame, so even
+  the youngest hands have somewhere easy to start
+- The name of the picture underneath in big hollow letters, so the page
+  builds vocabulary and print awareness while it is being colored
 - Chunky outlines with nothing filled in solid black, so every single shape
-  can take a crayon - including the letters of the title
+  can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
 - A printable terms-of-use page
 
@@ -1529,7 +1540,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1540,21 +1551,22 @@ PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Space (coloring)
 
 **Product title**  
-Space Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+Space Coloring Pages | 15 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-8 chunky-line space coloring pages in four layouts - print and go.
+15 chunky-line space coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- Four different layouts so the set never feels repetitive: one big character
-  to color, a page of twelve pictures, six framed pictures, and a poster with
-  hollow letters the children color in themselves
+- 15 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- One big picture per page, drawn clip-art style in a badge frame, so even
+  the youngest hands have somewhere easy to start
+- The name of the picture underneath in big hollow letters, so the page
+  builds vocabulary and print awareness while it is being colored
 - Chunky outlines with nothing filled in solid black, so every single shape
-  can take a crayon - including the letters of the title
+  can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
 - A printable terms-of-use page
 
@@ -1575,7 +1587,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 17 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1586,21 +1598,22 @@ PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Farm (coloring)
 
 **Product title**  
-Farm Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+Farm Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-8 chunky-line farm coloring pages in four layouts - print and go.
+18 chunky-line farm coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- Four different layouts so the set never feels repetitive: one big character
-  to color, a page of twelve pictures, six framed pictures, and a poster with
-  hollow letters the children color in themselves
+- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- One big picture per page, drawn clip-art style in a badge frame, so even
+  the youngest hands have somewhere easy to start
+- The name of the picture underneath in big hollow letters, so the page
+  builds vocabulary and print awareness while it is being colored
 - Chunky outlines with nothing filled in solid black, so every single shape
-  can take a crayon - including the letters of the title
+  can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
 - A printable terms-of-use page
 
@@ -1621,7 +1634,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1632,21 +1645,22 @@ PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Dinosaurs (coloring)
 
 **Product title**  
-Dinosaurs Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+Dinosaurs Coloring Pages | 15 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-8 chunky-line dinosaurs coloring pages in four layouts - print and go.
+15 chunky-line dinosaurs coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- Four different layouts so the set never feels repetitive: one big character
-  to color, a page of twelve pictures, six framed pictures, and a poster with
-  hollow letters the children color in themselves
+- 15 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- One big picture per page, drawn clip-art style in a badge frame, so even
+  the youngest hands have somewhere easy to start
+- The name of the picture underneath in big hollow letters, so the page
+  builds vocabulary and print awareness while it is being colored
 - Chunky outlines with nothing filled in solid black, so every single shape
-  can take a crayon - including the letters of the title
+  can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
 - A printable terms-of-use page
 
@@ -1667,7 +1681,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 17 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1678,21 +1692,22 @@ PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Jungle (coloring)
 
 **Product title**  
-Jungle Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+Jungle Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-8 chunky-line jungle coloring pages in four layouts - print and go.
+18 chunky-line jungle coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- Four different layouts so the set never feels repetitive: one big character
-  to color, a page of twelve pictures, six framed pictures, and a poster with
-  hollow letters the children color in themselves
+- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- One big picture per page, drawn clip-art style in a badge frame, so even
+  the youngest hands have somewhere easy to start
+- The name of the picture underneath in big hollow letters, so the page
+  builds vocabulary and print awareness while it is being colored
 - Chunky outlines with nothing filled in solid black, so every single shape
-  can take a crayon - including the letters of the title
+  can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
 - A printable terms-of-use page
 
@@ -1713,7 +1728,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1724,21 +1739,22 @@ PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## School (coloring)
 
 **Product title**  
-School Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+School Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-8 chunky-line school coloring pages in four layouts - print and go.
+18 chunky-line school coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- Four different layouts so the set never feels repetitive: one big character
-  to color, a page of twelve pictures, six framed pictures, and a poster with
-  hollow letters the children color in themselves
+- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- One big picture per page, drawn clip-art style in a badge frame, so even
+  the youngest hands have somewhere easy to start
+- The name of the picture underneath in big hollow letters, so the page
+  builds vocabulary and print awareness while it is being colored
 - Chunky outlines with nothing filled in solid black, so every single shape
-  can take a crayon - including the letters of the title
+  can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
 - A printable terms-of-use page
 
@@ -1759,7 +1775,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1770,21 +1786,22 @@ PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Things That Go (coloring)
 
 **Product title**  
-Things That Go Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+Things That Go Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-8 chunky-line things that go coloring pages in four layouts - print and go.
+18 chunky-line things that go coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- Four different layouts so the set never feels repetitive: one big character
-  to color, a page of twelve pictures, six framed pictures, and a poster with
-  hollow letters the children color in themselves
+- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- One big picture per page, drawn clip-art style in a badge frame, so even
+  the youngest hands have somewhere easy to start
+- The name of the picture underneath in big hollow letters, so the page
+  builds vocabulary and print awareness while it is being colored
 - Chunky outlines with nothing filled in solid black, so every single shape
-  can take a crayon - including the letters of the title
+  can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
 - A printable terms-of-use page
 
@@ -1805,7 +1822,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1816,21 +1833,22 @@ PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Camping (coloring)
 
 **Product title**  
-Camping Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+Camping Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-8 chunky-line camping coloring pages in four layouts - print and go.
+18 chunky-line camping coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- Four different layouts so the set never feels repetitive: one big character
-  to color, a page of twelve pictures, six framed pictures, and a poster with
-  hollow letters the children color in themselves
+- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- One big picture per page, drawn clip-art style in a badge frame, so even
+  the youngest hands have somewhere easy to start
+- The name of the picture underneath in big hollow letters, so the page
+  builds vocabulary and print awareness while it is being colored
 - Chunky outlines with nothing filled in solid black, so every single shape
-  can take a crayon - including the letters of the title
+  can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
 - A printable terms-of-use page
 
@@ -1851,7 +1869,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1862,21 +1880,22 @@ PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Birthday (coloring)
 
 **Product title**  
-Birthday Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+Birthday Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-8 chunky-line birthday coloring pages in four layouts - print and go.
+18 chunky-line birthday coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- Four different layouts so the set never feels repetitive: one big character
-  to color, a page of twelve pictures, six framed pictures, and a poster with
-  hollow letters the children color in themselves
+- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- One big picture per page, drawn clip-art style in a badge frame, so even
+  the youngest hands have somewhere easy to start
+- The name of the picture underneath in big hollow letters, so the page
+  builds vocabulary and print awareness while it is being colored
 - Chunky outlines with nothing filled in solid black, so every single shape
-  can take a crayon - including the letters of the title
+  can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
 - A printable terms-of-use page
 
@@ -1897,7 +1916,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1908,21 +1927,22 @@ PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Bugs (coloring)
 
 **Product title**  
-Bugs Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+Bugs Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-8 chunky-line bugs coloring pages in four layouts - print and go.
+18 chunky-line bugs coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- Four different layouts so the set never feels repetitive: one big character
-  to color, a page of twelve pictures, six framed pictures, and a poster with
-  hollow letters the children color in themselves
+- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- One big picture per page, drawn clip-art style in a badge frame, so even
+  the youngest hands have somewhere easy to start
+- The name of the picture underneath in big hollow letters, so the page
+  builds vocabulary and print awareness while it is being colored
 - Chunky outlines with nothing filled in solid black, so every single shape
-  can take a crayon - including the letters of the title
+  can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
 - A printable terms-of-use page
 
@@ -1943,7 +1963,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1954,21 +1974,22 @@ PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Pets (coloring)
 
 **Product title**  
-Pets Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+Pets Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-8 chunky-line pets coloring pages in four layouts - print and go.
+18 chunky-line pets coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- Four different layouts so the set never feels repetitive: one big character
-  to color, a page of twelve pictures, six framed pictures, and a poster with
-  hollow letters the children color in themselves
+- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- One big picture per page, drawn clip-art style in a badge frame, so even
+  the youngest hands have somewhere easy to start
+- The name of the picture underneath in big hollow letters, so the page
+  builds vocabulary and print awareness while it is being colored
 - Chunky outlines with nothing filled in solid black, so every single shape
-  can take a crayon - including the letters of the title
+  can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
 - A printable terms-of-use page
 
@@ -1989,7 +2010,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -2000,21 +2021,22 @@ PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Yummy Food (coloring)
 
 **Product title**  
-Yummy Food Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+Yummy Food Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-8 chunky-line yummy food coloring pages in four layouts - print and go.
+18 chunky-line yummy food coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- Four different layouts so the set never feels repetitive: one big character
-  to color, a page of twelve pictures, six framed pictures, and a poster with
-  hollow letters the children color in themselves
+- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- One big picture per page, drawn clip-art style in a badge frame, so even
+  the youngest hands have somewhere easy to start
+- The name of the picture underneath in big hollow letters, so the page
+  builds vocabulary and print awareness while it is being colored
 - Chunky outlines with nothing filled in solid black, so every single shape
-  can take a crayon - including the letters of the title
+  can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
 - A printable terms-of-use page
 
@@ -2035,7 +2057,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
