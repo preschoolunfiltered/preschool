@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# Regenerable build artefacts (run `python3 build.py` to recreate)
+output/themes/*/_pages/
+output/I-Spy-Mega-Bundle.pdf

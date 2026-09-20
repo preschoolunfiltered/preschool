@@ -1,0 +1,5 @@
+# Build dependencies (Python 3.10+)
+cairosvg>=2.7        # SVG -> PDF/PNG
+fonttools>=4.40      # text outlines, so pages render identically everywhere
+pypdf>=4.0           # merging pages into per-theme and bundle PDFs
+pillow>=10.0         # preview image checks
