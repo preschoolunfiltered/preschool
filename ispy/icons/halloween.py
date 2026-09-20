@@ -68,7 +68,8 @@ def spider_web():
     for r in (28, 48, 68, 88):
         out.append(path(f"M 6 {6 + r} C {6 + r * 0.42} {6 + r * 0.82} "
                         f"{6 + r * 0.82} {6 + r * 0.42} {6 + r} 6"))
-    return "".join(out)
+    # the web fills its whole box, so pull it in to match the other doodles
+    return group("".join(out), "translate(50 50) scale(0.78) translate(-50 -50)")
 
 
 @icon("candy_corn")
