@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from pypdf import PdfWriter
 
-from ispy import config
+from ispy import coloring, config
 from ispy.layout import cover_page, puzzle_page, terms_page
 from ispy.render import write_pdf, write_png
 from ispy.themes import THEMES, BY_KEY
@@ -74,28 +74,65 @@ def build_theme(theme, previews=True, dpi=150):
     return combined
 
 
+def build_coloring(theme, previews=True, dpi=150):
+    name = f"Color-{slug(theme.title)}"
+    folder = os.path.join(OUT, "coloring", name)
+    work = os.path.join(folder, "_pages")
+    prev = os.path.join(folder, "previews")
+    os.makedirs(work, exist_ok=True)
+
+    sheets = coloring.pages_for(theme, config.COLORING_PER_KIND)
+    pages = [("00-cover", coloring.build_page(
+        lambda p: coloring.cover_page(theme, len(sheets), p))),
+        ("01-terms", terms_page())]
+    for i, (kind, label, fn) in enumerate(sheets):
+        pages.append((f"{10 + i:02d}-{kind}-{i + 1}",
+                      coloring.build_page(fn)))
+
+    pdf_paths = []
+    for stem, svg in pages:
+        pdf_paths.append(write_pdf(svg, os.path.join(work, f"{stem}.pdf")))
+        if previews and stem in ("00-cover", "10-hero-1", "11-pattern-2"):
+            write_png(svg, os.path.join(prev, f"{stem}.png"), dpi=dpi)
+
+    return merge(pdf_paths, os.path.join(folder, f"{name}.pdf"))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--themes", nargs="*", default=None)
     ap.add_argument("--no-previews", action="store_true")
     ap.add_argument("--dpi", type=int, default=150)
     ap.add_argument("--bundle-only", action="store_true")
+    ap.add_argument("--only", choices=["puzzles", "coloring", "all"],
+                    default="all")
     args = ap.parse_args()
 
     themes = THEMES
     if args.themes:
         themes = [BY_KEY[k] for k in args.themes]
 
-    built = []
+    built, colored = [], []
     for t in themes:
-        path = build_theme(t, previews=not args.no_previews, dpi=args.dpi)
-        built.append(path)
-        print(f"  built {os.path.relpath(path, ROOT)}")
+        if args.only in ("puzzles", "all"):
+            path = build_theme(t, previews=not args.no_previews, dpi=args.dpi)
+            built.append(path)
+            print(f"  built {os.path.relpath(path, ROOT)}")
+        if args.only in ("coloring", "all"):
+            path = build_coloring(t, previews=not args.no_previews,
+                                  dpi=args.dpi)
+            colored.append(path)
+            print(f"  built {os.path.relpath(path, ROOT)}")
 
-    if len(built) > 1 and not args.bundle_only:
-        bundle = merge(built, os.path.join(OUT, "I-Spy-Mega-Bundle.pdf"))
-        print(f"  built {os.path.relpath(bundle, ROOT)}")
-    print(f"done - {len(built)} theme(s)")
+    if not args.bundle_only:
+        if len(built) > 1:
+            bundle = merge(built, os.path.join(OUT, "I-Spy-Mega-Bundle.pdf"))
+            print(f"  built {os.path.relpath(bundle, ROOT)}")
+        if len(colored) > 1:
+            bundle = merge(colored,
+                           os.path.join(OUT, "Coloring-Mega-Bundle.pdf"))
+            print(f"  built {os.path.relpath(bundle, ROOT)}")
+    print(f"done - {len(themes)} theme(s)")
 
 
 if __name__ == "__main__":

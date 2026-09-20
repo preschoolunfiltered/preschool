@@ -30,6 +30,36 @@ SEASONAL = {
     "stpatrick": "st patricks day, march, shamrock",
 }
 
+COLORING_LONG = """**What you get**
+
+- {n} coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- Four different layouts so the set never feels repetitive: one big character
+  to color, a page of twelve pictures, six framed pictures, and a poster with
+  hollow letters the children color in themselves
+- Chunky outlines with nothing filled in solid black, so every single shape
+  can take a crayon - including the letters of the title
+- Black-and-white line art, no colour ink needed to print
+- A printable terms-of-use page
+
+**How to use it**
+
+Morning tubs, calm corners, early finishers, fine-motor practice, sub tubs,
+indoor recess, or a quiet-time folder that goes home. Laminate them and they
+work with dry-erase markers again and again.
+
+**Pictures in this set**
+
+{icons}
+
+**Skills**
+
+Pencil grip and crayon control, staying inside the line, color recognition,
+focus and stamina, vocabulary building.
+
+**Format**
+
+PDF, {pages} pages, US Letter, print-and-go. No prep and nothing to assemble."""
+
 LONG = """**What you get**
 
 - {n} I Spy puzzles, each on its own full-page US Letter sheet (8.5 x 11 in)
@@ -96,6 +126,38 @@ def block(theme):
     return "\n".join(out)
 
 
+def coloring_block(theme):
+    n = config.COLORING_PER_KIND * 4
+    pages = 2 + n
+    icons = ", ".join(label(i) for i in theme.icons)
+    title_word = pretty(theme.title)
+    tags = ["coloring pages", "coloring sheets", "fine motor", "morning tubs",
+            "calm corner", "early finishers", "sub plans", "no prep"]
+    tags += [t.strip() for t in SEASONAL.get(theme.key, theme.key).split(",")]
+    return "\n".join([
+        f"## {title_word} (coloring)",
+        "",
+        "**Product title**  ",
+        f"{title_word} Coloring Pages | {n} No-Prep Sheets for Preschool "
+        f"and Pre-K",
+        "",
+        "**Short blurb**  ",
+        f"{n} chunky-line {title_word.lower()} coloring pages in four "
+        f"layouts - print and go.",
+        "",
+        "**Description**",
+        "",
+        COLORING_LONG.format(n=n, icons=icons, pages=pages),
+        "",
+        f"**Grades**: {GRADES}  ",
+        f"**Suggested price**: $3.00 (single theme)  ",
+        f"**Tags**: {', '.join(tags)}",
+        "",
+        "---",
+        "",
+    ])
+
+
 def main():
     n = config.VARIANTS_PER_THEME
     total_pages = len(THEMES) * (2 + n * 2)
@@ -135,6 +197,25 @@ Black-and-white, print-and-go, US Letter. {total_pages} pages.""")
     print()
     for t in THEMES:
         print(block(t))
+
+    cn = config.COLORING_PER_KIND * 4
+    print("# Coloring pages")
+    print()
+    print("**Bundle title**  ")
+    print(f"Coloring Pages MEGA Bundle | {len(THEMES)} Themes, "
+          f"{len(THEMES) * cn} Pages")
+    print()
+    print(f"""A year of coloring in one download: {len(THEMES)} themes,
+{cn} pages each, {len(THEMES) * cn} pages in total, in four rotating layouts.
+Chunky outlines throughout, nothing filled in solid black, so every shape -
+and every letter of every title - can be colored.""")
+    print()
+    print("**Suggested price**: $15.00 (bundle)")
+    print()
+    print("---")
+    print()
+    for t in THEMES:
+        print(coloring_block(t))
 
 
 if __name__ == "__main__":

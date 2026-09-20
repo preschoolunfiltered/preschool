@@ -95,7 +95,10 @@ def text(
     if not parts:
         return ""
     body = "".join(parts)
+    # `extra` may carry its own stroke (hollow letters on a coloring page),
+    # in which case ours would be a duplicate attribute and break the parse
+    stroke = "" if "stroke=" in extra else ' stroke="none"'
     return (
         f'<g transform="translate({x:.2f} {y:.2f}) scale({scale:.5f})" '
-        f'fill="{fill}" stroke="none"{(" " + extra) if extra else ""}>{body}</g>'
+        f'fill="{fill}"{stroke}{(" " + extra) if extra else ""}>{body}</g>'
     )

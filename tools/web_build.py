@@ -15,7 +15,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from ispy import config
+from ispy import coloring, config
 from ispy.config import DIFFICULTY
 from ispy.icons import label
 from ispy.layout import cover_page, puzzle_page, terms_page
@@ -65,12 +65,50 @@ def theme_document(theme):
     return svg, pages
 
 
+def coloring_document(theme):
+    """Same stacking trick for the coloring set."""
+    pool = SymbolPool()
+    bodies, pages = [], []
+    bodies.append(coloring.cover_page(theme, config.COLORING_PER_KIND * 4, pool))
+    pages.append({"kind": "cover", "label": "Cover"})
+    for kind, label, fn in coloring.pages_for(theme, config.COLORING_PER_KIND):
+        bodies.append(fn(pool))
+        pages.append({"kind": kind, "label": label})
+    bodies.append(terms_page(pool=pool, wrap=False))
+    pages.append({"kind": "terms", "label": "Terms"})
+
+    stacked = "".join(
+        f'<g transform="translate(0 {i * PAGE_H:.0f})">{b}</g>'
+        for i, b in enumerate(bodies)
+    )
+    return svg_doc(pool.defs() + stacked, PAGE_W, PAGE_H * len(bodies)), pages
+
+
 def main():
     out = sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, "web")
     os.makedirs(os.path.join(out, "themes"), exist_ok=True)
     os.makedirs(os.path.join(out, "covers"), exist_ok=True)
-    manifest = {"brand": config.BRAND, "pageWidth": PAGE_W,
-                "pageHeight": PAGE_H, "themes": []}
+    os.makedirs(os.path.join(out, "color"), exist_ok=True)
+    os.makedirs(os.path.join(out, "color-covers"), exist_ok=True)
+    ispy_themes, color_themes = [], []
+    manifest = {
+        "brand": config.BRAND, "pageWidth": PAGE_W, "pageHeight": PAGE_H,
+        "collections": [
+            {"id": "ispy", "label": "I Spy puzzles", "themes": ispy_themes,
+             "note": "Each theme holds three puzzles at three densities - 128,"
+                     " 196 and 272 things to find - plus a matching answer key"
+                     " for each one. Pictures are tilted to any angle,"
+                     " mirrored, drawn at different sizes and clumped"
+                     " together, and near-twins are parked side by side on"
+                     " purpose."},
+            {"id": "color", "label": "Coloring pages", "themes": color_themes,
+             "note": "Eight coloring sheets per theme in four layouts - one"
+                     " big character, a page to color them all, six framed"
+                     " pictures, and a poster with hollow letters. Chunky"
+                     " outlines, nothing filled in black, so every shape can"
+                     " take a crayon."},
+        ],
+    }
     total = 0
     for theme in THEMES:
         svg, pages = theme_document(theme)
@@ -81,7 +119,28 @@ def main():
         cover = os.path.join(out, "covers", f"{theme.key}.svg")
         with open(cover, "w") as fh:  # shelf thumbnails, so a card is ~70KB
             fh.write(cover_page(theme, config.VARIANTS_PER_THEME, compact=True))
-        manifest["themes"].append({
+        csvg, cpages = coloring_document(theme)
+        cpath = os.path.join(out, "color", f"{theme.key}.svg")
+        with open(cpath, "w") as fh:
+            fh.write(csvg)
+        total += os.path.getsize(cpath)
+        ccover = os.path.join(out, "color-covers", f"{theme.key}.svg")
+        with open(ccover, "w") as fh:
+            fh.write(coloring.build_page(
+                lambda p: coloring.cover_page(theme,
+                                              config.COLORING_PER_KIND * 4, p),
+                compact=True))
+        total += os.path.getsize(ccover)
+        color_themes.append({
+            "key": theme.key,
+            "name": pretty(theme.title),
+            "cover": f"color-covers/{theme.key}.svg",
+            "subtitle": theme.subtitle,
+            "icons": [label(i) for i in theme.icons],
+            "file": f"color/{theme.key}.svg",
+            "pages": cpages,
+        })
+        ispy_themes.append({
             "key": theme.key,
             "name": pretty(theme.title),
             "cover": f"covers/{theme.key}.svg",

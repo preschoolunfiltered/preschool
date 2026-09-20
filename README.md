@@ -9,15 +9,21 @@ Nothing here is traced from someone else's clipart: the 287 doodles are plain
 SVG paths written in `ispy/icons/`, so the finished pages are yours to sell.
 See [docs/TERMS-OF-USE.md](docs/TERMS-OF-USE.md) for the font licences.
 
+Two product lines come out of the same 287 doodles: **I Spy counting
+puzzles** and **coloring pages**.
+
 ## What gets built
 
 ```
 output/
-  I-Spy-Mega-Bundle.pdf              all 22 themes in one file (176 pages)
+  I-Spy-Mega-Bundle.pdf              all 22 I Spy themes (176 pages)
+  Coloring-Mega-Bundle.pdf           all 22 coloring themes (220 pages)
   themes/I-Spy-Spring/
     I-Spy-Spring.pdf                 cover + terms + 3 puzzles + 3 answer keys
     previews/                        150 dpi PNGs for TPT thumbnails
     _pages/                          the same pages as single-page PDFs
+  coloring/Color-Spring/
+    Color-Spring.pdf                 cover + terms + 8 coloring sheets
 ```
 
 Every theme ships three puzzles at three difficulties — **easy** (128 items,
@@ -39,10 +45,22 @@ food.
 
 ```bash
 pip install -r requirements.txt
-python3 build.py                      # everything (about 75 seconds)
+python3 build.py                      # both lines (about 2 minutes)
+python3 build.py --only coloring      # just the coloring pages
 python3 build.py --themes spring ocean
 python3 build.py --no-previews        # PDFs only, faster
 ```
+
+### Coloring pages
+
+Eight sheets per theme in four rotating layouts — one big character with
+friends around it, a page of twelve pictures, six framed pictures, and a
+poster with hollow letters the child colors in. Lines are thick (2-3pt), and
+every icon passes through `outline()` in [`ispy/coloring.py`](ispy/coloring.py)
+on the way in, which turns the library's solid black accents — a ladybug's
+head, a bee's stripes, a jack-o'-lantern's face — into empty outlines, because
+a filled shape is a shape a child cannot color. `COLORING_PER_KIND` in
+`ispy/config.py` sets how many of each layout a theme gets.
 
 ## Make it yours
 
@@ -99,6 +117,7 @@ puzzle and answer-key previews as supporting images.
 | `ispy/scatter.py` | Picks per-icon counts, then hides them: tilt, mirror, clump, nest |
 | `ispy/lookalikes.py` | Shape families, so near-twins get parked together |
 | `ispy/layout.py` | Header, frames, puzzle field, legend, cover, terms page |
+| `ispy/coloring.py` | The coloring line: four page layouts, hollow titles |
 | `ispy/render.py` | SVG assembly and PDF/PNG export |
 | `build.py` | Builds every theme, merges PDFs, writes previews |
 

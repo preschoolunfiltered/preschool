@@ -11,6 +11,10 @@ STORE_LINE = "© Preschool Unfiltered · For single-classroom use"
 # How many puzzle variants (each with its own answer key) per theme.
 VARIANTS_PER_THEME = 3
 
+# Coloring pages: how many of each layout (big picture, color-them-all,
+# six pictures, poster) each theme gets. 2 gives eight pages per theme.
+COLORING_PER_KIND = 2
+
 # How hard each level is to search.
 #   total   - the sum of all the counts on a page
 #   size    - the base size of a doodle in points

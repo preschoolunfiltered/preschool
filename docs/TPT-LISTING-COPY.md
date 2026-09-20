@@ -1017,3 +1017,1029 @@ PDF, 8 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 ---
 
+# Coloring pages
+
+**Bundle title**  
+Coloring Pages MEGA Bundle | 22 Themes, 176 Pages
+
+A year of coloring in one download: 22 themes,
+8 pages each, 176 pages in total, in four rotating layouts.
+Chunky outlines throughout, nothing filled in solid black, so every shape -
+and every letter of every title - can be colored.
+
+**Suggested price**: $15.00 (bundle)
+
+---
+
+## Spring (coloring)
+
+**Product title**  
+Spring Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+
+**Short blurb**  
+8 chunky-line spring coloring pages in four layouts - print and go.
+
+**Description**
+
+**What you get**
+
+- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- Four different layouts so the set never feels repetitive: one big character
+  to color, a page of twelve pictures, six framed pictures, and a poster with
+  hollow letters the children color in themselves
+- Chunky outlines with nothing filled in solid black, so every single shape
+  can take a crayon - including the letters of the title
+- Black-and-white line art, no colour ink needed to print
+- A printable terms-of-use page
+
+**How to use it**
+
+Morning tubs, calm corners, early finishers, fine-motor practice, sub tubs,
+indoor recess, or a quiet-time folder that goes home. Laminate them and they
+work with dry-erase markers again and again.
+
+**Pictures in this set**
+
+tulip, daisy, blossom branch, seed packet, watering can, flower pot, sun hat, sprout, trowel, snail, ladybug, bee, butterfly, worm, birds nest, rainbow, umbrella, rain boot
+
+**Skills**
+
+Pencil grip and crayon control, staying inside the line, color recognition,
+focus and stamina, vocabulary building.
+
+**Format**
+
+PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+
+**Grades**: PreK, Kindergarten, 1st grade  
+**Suggested price**: $3.00 (single theme)  
+**Tags**: coloring pages, coloring sheets, fine motor, morning tubs, calm corner, early finishers, sub plans, no prep, spring, april, may, earth day
+
+---
+
+## Summer (coloring)
+
+**Product title**  
+Summer Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+
+**Short blurb**  
+8 chunky-line summer coloring pages in four layouts - print and go.
+
+**Description**
+
+**What you get**
+
+- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- Four different layouts so the set never feels repetitive: one big character
+  to color, a page of twelve pictures, six framed pictures, and a poster with
+  hollow letters the children color in themselves
+- Chunky outlines with nothing filled in solid black, so every single shape
+  can take a crayon - including the letters of the title
+- Black-and-white line art, no colour ink needed to print
+- A printable terms-of-use page
+
+**How to use it**
+
+Morning tubs, calm corners, early finishers, fine-motor practice, sub tubs,
+indoor recess, or a quiet-time folder that goes home. Laminate them and they
+work with dry-erase markers again and again.
+
+**Pictures in this set**
+
+beach ball, ice cream cone, popsicle, sunglasses, flip flop, sandcastle, surfboard, beach umbrella, watermelon slice, lemonade, pineapple, palm tree, kite, swim ring, sand bucket, sailboat, seagull, sun
+
+**Skills**
+
+Pencil grip and crayon control, staying inside the line, color recognition,
+focus and stamina, vocabulary building.
+
+**Format**
+
+PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+
+**Grades**: PreK, Kindergarten, 1st grade  
+**Suggested price**: $3.00 (single theme)  
+**Tags**: coloring pages, coloring sheets, fine motor, morning tubs, calm corner, early finishers, sub plans, no prep, summer, beach, end of year, summer school
+
+---
+
+## Fall (coloring)
+
+**Product title**  
+Fall Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+
+**Short blurb**  
+8 chunky-line fall coloring pages in four layouts - print and go.
+
+**Description**
+
+**What you get**
+
+- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- Four different layouts so the set never feels repetitive: one big character
+  to color, a page of twelve pictures, six framed pictures, and a poster with
+  hollow letters the children color in themselves
+- Chunky outlines with nothing filled in solid black, so every single shape
+  can take a crayon - including the letters of the title
+- Black-and-white line art, no colour ink needed to print
+- A printable terms-of-use page
+
+**How to use it**
+
+Morning tubs, calm corners, early finishers, fine-motor practice, sub tubs,
+indoor recess, or a quiet-time folder that goes home. Laminate them and they
+work with dry-erase markers again and again.
+
+**Pictures in this set**
+
+acorn, pumpkin, maple leaf, oak leaf, apple, corn, sunflower, hay bale, mushroom, squirrel, owl, pinecone, sweater, wheelbarrow, pie, hot cocoa, fox, rain boot
+
+**Skills**
+
+Pencil grip and crayon control, staying inside the line, color recognition,
+focus and stamina, vocabulary building.
+
+**Format**
+
+PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+
+**Grades**: PreK, Kindergarten, 1st grade  
+**Suggested price**: $3.00 (single theme)  
+**Tags**: coloring pages, coloring sheets, fine motor, morning tubs, calm corner, early finishers, sub plans, no prep, fall, autumn, september, october
+
+---
+
+## Winter (coloring)
+
+**Product title**  
+Winter Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+
+**Short blurb**  
+8 chunky-line winter coloring pages in four layouts - print and go.
+
+**Description**
+
+**What you get**
+
+- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- Four different layouts so the set never feels repetitive: one big character
+  to color, a page of twelve pictures, six framed pictures, and a poster with
+  hollow letters the children color in themselves
+- Chunky outlines with nothing filled in solid black, so every single shape
+  can take a crayon - including the letters of the title
+- Black-and-white line art, no colour ink needed to print
+- A printable terms-of-use page
+
+**How to use it**
+
+Morning tubs, calm corners, early finishers, fine-motor practice, sub tubs,
+indoor recess, or a quiet-time folder that goes home. Laminate them and they
+work with dry-erase markers again and again.
+
+**Pictures in this set**
+
+snowflake, snowman, mitten, beanie hat, scarf, sled, ice skate, penguin, polar bear, icicles, earmuffs, pine tree, skis, hot cocoa, cloud, bird, sweater, mountain
+
+**Skills**
+
+Pencil grip and crayon control, staying inside the line, color recognition,
+focus and stamina, vocabulary building.
+
+**Format**
+
+PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+
+**Grades**: PreK, Kindergarten, 1st grade  
+**Suggested price**: $3.00 (single theme)  
+**Tags**: coloring pages, coloring sheets, fine motor, morning tubs, calm corner, early finishers, sub plans, no prep, winter, january, snow day
+
+---
+
+## Christmas (coloring)
+
+**Product title**  
+Christmas Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+
+**Short blurb**  
+8 chunky-line christmas coloring pages in four layouts - print and go.
+
+**Description**
+
+**What you get**
+
+- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- Four different layouts so the set never feels repetitive: one big character
+  to color, a page of twelve pictures, six framed pictures, and a poster with
+  hollow letters the children color in themselves
+- Chunky outlines with nothing filled in solid black, so every single shape
+  can take a crayon - including the letters of the title
+- Black-and-white line art, no colour ink needed to print
+- A printable terms-of-use page
+
+**How to use it**
+
+Morning tubs, calm corners, early finishers, fine-motor practice, sub tubs,
+indoor recess, or a quiet-time folder that goes home. Laminate them and they
+work with dry-erase markers again and again.
+
+**Pictures in this set**
+
+christmas tree, gift, candy cane, stocking, santa hat, reindeer, bell, wreath, gingerbread man, ornament, sleigh, snow globe, holly, string lights, santa face, cookie, snowflake, star
+
+**Skills**
+
+Pencil grip and crayon control, staying inside the line, color recognition,
+focus and stamina, vocabulary building.
+
+**Format**
+
+PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+
+**Grades**: PreK, Kindergarten, 1st grade  
+**Suggested price**: $3.00 (single theme)  
+**Tags**: coloring pages, coloring sheets, fine motor, morning tubs, calm corner, early finishers, sub plans, no prep, christmas, december, holidays
+
+---
+
+## Halloween (coloring)
+
+**Product title**  
+Halloween Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+
+**Short blurb**  
+8 chunky-line halloween coloring pages in four layouts - print and go.
+
+**Description**
+
+**What you get**
+
+- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- Four different layouts so the set never feels repetitive: one big character
+  to color, a page of twelve pictures, six framed pictures, and a poster with
+  hollow letters the children color in themselves
+- Chunky outlines with nothing filled in solid black, so every single shape
+  can take a crayon - including the letters of the title
+- Black-and-white line art, no colour ink needed to print
+- A printable terms-of-use page
+
+**How to use it**
+
+Morning tubs, calm corners, early finishers, fine-motor practice, sub tubs,
+indoor recess, or a quiet-time folder that goes home. Laminate them and they
+work with dry-erase markers again and again.
+
+**Pictures in this set**
+
+jack o lantern, ghost, bat, spider, spider web, candy corn, witch hat, cauldron, black cat, skull, broom, wrapped candy, tombstone, crescent moon, mummy, potion bottle, owl, star
+
+**Skills**
+
+Pencil grip and crayon control, staying inside the line, color recognition,
+focus and stamina, vocabulary building.
+
+**Format**
+
+PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+
+**Grades**: PreK, Kindergarten, 1st grade  
+**Suggested price**: $3.00 (single theme)  
+**Tags**: coloring pages, coloring sheets, fine motor, morning tubs, calm corner, early finishers, sub plans, no prep, halloween, october, not scary
+
+---
+
+## Thanksgiving (coloring)
+
+**Product title**  
+Thanksgiving Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+
+**Short blurb**  
+8 chunky-line thanksgiving coloring pages in four layouts - print and go.
+
+**Description**
+
+**What you get**
+
+- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- Four different layouts so the set never feels repetitive: one big character
+  to color, a page of twelve pictures, six framed pictures, and a poster with
+  hollow letters the children color in themselves
+- Chunky outlines with nothing filled in solid black, so every single shape
+  can take a crayon - including the letters of the title
+- Black-and-white line art, no colour ink needed to print
+- A printable terms-of-use page
+
+**How to use it**
+
+Morning tubs, calm corners, early finishers, fine-motor practice, sub tubs,
+indoor recess, or a quiet-time folder that goes home. Laminate them and they
+work with dry-erase markers again and again.
+
+**Pictures in this set**
+
+turkey, pumpkin, pie, corn, wheat stalk, pilgrim hat, apple, acorn, maple leaf, oak leaf, hay bale, sunflower, hot cocoa, squirrel, fox, owl, mushroom, pinecone
+
+**Skills**
+
+Pencil grip and crayon control, staying inside the line, color recognition,
+focus and stamina, vocabulary building.
+
+**Format**
+
+PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+
+**Grades**: PreK, Kindergarten, 1st grade  
+**Suggested price**: $3.00 (single theme)  
+**Tags**: coloring pages, coloring sheets, fine motor, morning tubs, calm corner, early finishers, sub plans, no prep, thanksgiving, november, turkey
+
+---
+
+## Valentine (coloring)
+
+**Product title**  
+Valentine Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+
+**Short blurb**  
+8 chunky-line valentine coloring pages in four layouts - print and go.
+
+**Description**
+
+**What you get**
+
+- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- Four different layouts so the set never feels repetitive: one big character
+  to color, a page of twelve pictures, six framed pictures, and a poster with
+  hollow letters the children color in themselves
+- Chunky outlines with nothing filled in solid black, so every single shape
+  can take a crayon - including the letters of the title
+- Black-and-white line art, no colour ink needed to print
+- A printable terms-of-use page
+
+**How to use it**
+
+Morning tubs, calm corners, early finishers, fine-motor practice, sub tubs,
+indoor recess, or a quiet-time folder that goes home. Laminate them and they
+work with dry-erase markers again and again.
+
+**Pictures in this set**
+
+heart, double heart, love letter, cupcake, rose, teddy bear, chocolate box, cupid arrow, heart balloon, lollipop, heart banner, candy hearts, cookie, donut, gift, star, butterfly, ladybug
+
+**Skills**
+
+Pencil grip and crayon control, staying inside the line, color recognition,
+focus and stamina, vocabulary building.
+
+**Format**
+
+PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+
+**Grades**: PreK, Kindergarten, 1st grade  
+**Suggested price**: $3.00 (single theme)  
+**Tags**: coloring pages, coloring sheets, fine motor, morning tubs, calm corner, early finishers, sub plans, no prep, valentines day, february, hearts
+
+---
+
+## Easter (coloring)
+
+**Product title**  
+Easter Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+
+**Short blurb**  
+8 chunky-line easter coloring pages in four layouts - print and go.
+
+**Description**
+
+**What you get**
+
+- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- Four different layouts so the set never feels repetitive: one big character
+  to color, a page of twelve pictures, six framed pictures, and a poster with
+  hollow letters the children color in themselves
+- Chunky outlines with nothing filled in solid black, so every single shape
+  can take a crayon - including the letters of the title
+- Black-and-white line art, no colour ink needed to print
+- A printable terms-of-use page
+
+**How to use it**
+
+Morning tubs, calm corners, early finishers, fine-motor practice, sub tubs,
+indoor recess, or a quiet-time folder that goes home. Laminate them and they
+work with dry-erase markers again and again.
+
+**Pictures in this set**
+
+easter egg stripes, easter egg dots, hatching egg, bunny, easter basket, carrot, lamb, jelly bean, chick, tulip, daisy, butterfly, birds nest, rainbow, sun, bee, blossom branch, sprout
+
+**Skills**
+
+Pencil grip and crayon control, staying inside the line, color recognition,
+focus and stamina, vocabulary building.
+
+**Format**
+
+PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+
+**Grades**: PreK, Kindergarten, 1st grade  
+**Suggested price**: $3.00 (single theme)  
+**Tags**: coloring pages, coloring sheets, fine motor, morning tubs, calm corner, early finishers, sub plans, no prep, easter, spring, april
+
+---
+
+## St. Patrick's (coloring)
+
+**Product title**  
+St. Patrick's Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+
+**Short blurb**  
+8 chunky-line st. patrick's coloring pages in four layouts - print and go.
+
+**Description**
+
+**What you get**
+
+- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- Four different layouts so the set never feels repetitive: one big character
+  to color, a page of twelve pictures, six framed pictures, and a poster with
+  hollow letters the children color in themselves
+- Chunky outlines with nothing filled in solid black, so every single shape
+  can take a crayon - including the letters of the title
+- Black-and-white line art, no colour ink needed to print
+- A printable terms-of-use page
+
+**How to use it**
+
+Morning tubs, calm corners, early finishers, fine-motor practice, sub tubs,
+indoor recess, or a quiet-time folder that goes home. Laminate them and they
+work with dry-erase markers again and again.
+
+**Pictures in this set**
+
+shamrock, four leaf clover, pot of gold, horseshoe, leprechaun hat, gold coin, lucky coin bag, rainbow, cloud, star, heart, sun, leaf sprig, bird, butterfly, mushroom, snail, grass tuft
+
+**Skills**
+
+Pencil grip and crayon control, staying inside the line, color recognition,
+focus and stamina, vocabulary building.
+
+**Format**
+
+PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+
+**Grades**: PreK, Kindergarten, 1st grade  
+**Suggested price**: $3.00 (single theme)  
+**Tags**: coloring pages, coloring sheets, fine motor, morning tubs, calm corner, early finishers, sub plans, no prep, st patricks day, march, shamrock
+
+---
+
+## Ocean (coloring)
+
+**Product title**  
+Ocean Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+
+**Short blurb**  
+8 chunky-line ocean coloring pages in four layouts - print and go.
+
+**Description**
+
+**What you get**
+
+- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- Four different layouts so the set never feels repetitive: one big character
+  to color, a page of twelve pictures, six framed pictures, and a poster with
+  hollow letters the children color in themselves
+- Chunky outlines with nothing filled in solid black, so every single shape
+  can take a crayon - including the letters of the title
+- Black-and-white line art, no colour ink needed to print
+- A printable terms-of-use page
+
+**How to use it**
+
+Morning tubs, calm corners, early finishers, fine-motor practice, sub tubs,
+indoor recess, or a quiet-time folder that goes home. Laminate them and they
+work with dry-erase markers again and again.
+
+**Pictures in this set**
+
+fish, whale, dolphin, octopus, jellyfish, sea turtle, seahorse, crab, starfish, seashell, conch shell, coral, anchor, treasure chest, submarine, bubbles, seaweed, shark
+
+**Skills**
+
+Pencil grip and crayon control, staying inside the line, color recognition,
+focus and stamina, vocabulary building.
+
+**Format**
+
+PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+
+**Grades**: PreK, Kindergarten, 1st grade  
+**Suggested price**: $3.00 (single theme)  
+**Tags**: coloring pages, coloring sheets, fine motor, morning tubs, calm corner, early finishers, sub plans, no prep, ocean
+
+---
+
+## Space (coloring)
+
+**Product title**  
+Space Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+
+**Short blurb**  
+8 chunky-line space coloring pages in four layouts - print and go.
+
+**Description**
+
+**What you get**
+
+- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- Four different layouts so the set never feels repetitive: one big character
+  to color, a page of twelve pictures, six framed pictures, and a poster with
+  hollow letters the children color in themselves
+- Chunky outlines with nothing filled in solid black, so every single shape
+  can take a crayon - including the letters of the title
+- Black-and-white line art, no colour ink needed to print
+- A printable terms-of-use page
+
+**How to use it**
+
+Morning tubs, calm corners, early finishers, fine-motor practice, sub tubs,
+indoor recess, or a quiet-time folder that goes home. Laminate them and they
+work with dry-erase markers again and again.
+
+**Pictures in this set**
+
+rocket, planet, star, shooting star, astronaut, ufo, moon craters, satellite, comet, telescope, alien, space helmet, crescent moon, sun, bubbles
+
+**Skills**
+
+Pencil grip and crayon control, staying inside the line, color recognition,
+focus and stamina, vocabulary building.
+
+**Format**
+
+PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+
+**Grades**: PreK, Kindergarten, 1st grade  
+**Suggested price**: $3.00 (single theme)  
+**Tags**: coloring pages, coloring sheets, fine motor, morning tubs, calm corner, early finishers, sub plans, no prep, space
+
+---
+
+## Farm (coloring)
+
+**Product title**  
+Farm Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+
+**Short blurb**  
+8 chunky-line farm coloring pages in four layouts - print and go.
+
+**Description**
+
+**What you get**
+
+- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- Four different layouts so the set never feels repetitive: one big character
+  to color, a page of twelve pictures, six framed pictures, and a poster with
+  hollow letters the children color in themselves
+- Chunky outlines with nothing filled in solid black, so every single shape
+  can take a crayon - including the letters of the title
+- Black-and-white line art, no colour ink needed to print
+- A printable terms-of-use page
+
+**How to use it**
+
+Morning tubs, calm corners, early finishers, fine-motor practice, sub tubs,
+indoor recess, or a quiet-time folder that goes home. Laminate them and they
+work with dry-erase markers again and again.
+
+**Pictures in this set**
+
+barn, cow, pig, hen, sheep, horse, tractor, duck, fence, milk bottle, rooster, pitchfork, silo, egg basket, hay bale, corn, sunflower, wheelbarrow
+
+**Skills**
+
+Pencil grip and crayon control, staying inside the line, color recognition,
+focus and stamina, vocabulary building.
+
+**Format**
+
+PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+
+**Grades**: PreK, Kindergarten, 1st grade  
+**Suggested price**: $3.00 (single theme)  
+**Tags**: coloring pages, coloring sheets, fine motor, morning tubs, calm corner, early finishers, sub plans, no prep, farm
+
+---
+
+## Dinosaurs (coloring)
+
+**Product title**  
+Dinosaurs Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+
+**Short blurb**  
+8 chunky-line dinosaurs coloring pages in four layouts - print and go.
+
+**Description**
+
+**What you get**
+
+- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- Four different layouts so the set never feels repetitive: one big character
+  to color, a page of twelve pictures, six framed pictures, and a poster with
+  hollow letters the children color in themselves
+- Chunky outlines with nothing filled in solid black, so every single shape
+  can take a crayon - including the letters of the title
+- Black-and-white line art, no colour ink needed to print
+- A printable terms-of-use page
+
+**How to use it**
+
+Morning tubs, calm corners, early finishers, fine-motor practice, sub tubs,
+indoor recess, or a quiet-time folder that goes home. Laminate them and they
+work with dry-erase markers again and again.
+
+**Pictures in this set**
+
+t rex, stegosaurus, brontosaurus, triceratops, pterodactyl, dino egg, volcano, fern, dino footprint, bone, fossil skull, palm tree, mountain, leaf sprig, grass tuft
+
+**Skills**
+
+Pencil grip and crayon control, staying inside the line, color recognition,
+focus and stamina, vocabulary building.
+
+**Format**
+
+PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+
+**Grades**: PreK, Kindergarten, 1st grade  
+**Suggested price**: $3.00 (single theme)  
+**Tags**: coloring pages, coloring sheets, fine motor, morning tubs, calm corner, early finishers, sub plans, no prep, dinosaur
+
+---
+
+## Jungle (coloring)
+
+**Product title**  
+Jungle Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+
+**Short blurb**  
+8 chunky-line jungle coloring pages in four layouts - print and go.
+
+**Description**
+
+**What you get**
+
+- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- Four different layouts so the set never feels repetitive: one big character
+  to color, a page of twelve pictures, six framed pictures, and a poster with
+  hollow letters the children color in themselves
+- Chunky outlines with nothing filled in solid black, so every single shape
+  can take a crayon - including the letters of the title
+- Black-and-white line art, no colour ink needed to print
+- A printable terms-of-use page
+
+**How to use it**
+
+Morning tubs, calm corners, early finishers, fine-motor practice, sub tubs,
+indoor recess, or a quiet-time folder that goes home. Laminate them and they
+work with dry-erase markers again and again.
+
+**Pictures in this set**
+
+lion, monkey, elephant, giraffe, zebra, tiger, snake, parrot, banana, hippo, crocodile, monstera leaf, paw print, palm tree, butterfly, bird, fern, sun
+
+**Skills**
+
+Pencil grip and crayon control, staying inside the line, color recognition,
+focus and stamina, vocabulary building.
+
+**Format**
+
+PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+
+**Grades**: PreK, Kindergarten, 1st grade  
+**Suggested price**: $3.00 (single theme)  
+**Tags**: coloring pages, coloring sheets, fine motor, morning tubs, calm corner, early finishers, sub plans, no prep, jungle
+
+---
+
+## School (coloring)
+
+**Product title**  
+School Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+
+**Short blurb**  
+8 chunky-line school coloring pages in four layouts - print and go.
+
+**Description**
+
+**What you get**
+
+- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- Four different layouts so the set never feels repetitive: one big character
+  to color, a page of twelve pictures, six framed pictures, and a poster with
+  hollow letters the children color in themselves
+- Chunky outlines with nothing filled in solid black, so every single shape
+  can take a crayon - including the letters of the title
+- Black-and-white line art, no colour ink needed to print
+- A printable terms-of-use page
+
+**How to use it**
+
+Morning tubs, calm corners, early finishers, fine-motor practice, sub tubs,
+indoor recess, or a quiet-time folder that goes home. Laminate them and they
+work with dry-erase markers again and again.
+
+**Pictures in this set**
+
+pencil, crayon, book, backpack, ruler, scissors, glue stick, notebook, globe, school bus, abc block, paint palette, chalkboard, paperclip, lunchbox, apple, star, heart
+
+**Skills**
+
+Pencil grip and crayon control, staying inside the line, color recognition,
+focus and stamina, vocabulary building.
+
+**Format**
+
+PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+
+**Grades**: PreK, Kindergarten, 1st grade  
+**Suggested price**: $3.00 (single theme)  
+**Tags**: coloring pages, coloring sheets, fine motor, morning tubs, calm corner, early finishers, sub plans, no prep, school
+
+---
+
+## Things That Go (coloring)
+
+**Product title**  
+Things That Go Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+
+**Short blurb**  
+8 chunky-line things that go coloring pages in four layouts - print and go.
+
+**Description**
+
+**What you get**
+
+- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- Four different layouts so the set never feels repetitive: one big character
+  to color, a page of twelve pictures, six framed pictures, and a poster with
+  hollow letters the children color in themselves
+- Chunky outlines with nothing filled in solid black, so every single shape
+  can take a crayon - including the letters of the title
+- Black-and-white line art, no colour ink needed to print
+- A printable terms-of-use page
+
+**How to use it**
+
+Morning tubs, calm corners, early finishers, fine-motor practice, sub tubs,
+indoor recess, or a quiet-time folder that goes home. Laminate them and they
+work with dry-erase markers again and again.
+
+**Pictures in this set**
+
+car, train, airplane, bicycle, dump truck, helicopter, hot air balloon, fire truck, scooter, traffic light, skateboard, school bus, sailboat, submarine, rocket, tractor, canoe, kite
+
+**Skills**
+
+Pencil grip and crayon control, staying inside the line, color recognition,
+focus and stamina, vocabulary building.
+
+**Format**
+
+PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+
+**Grades**: PreK, Kindergarten, 1st grade  
+**Suggested price**: $3.00 (single theme)  
+**Tags**: coloring pages, coloring sheets, fine motor, morning tubs, calm corner, early finishers, sub plans, no prep, transport
+
+---
+
+## Camping (coloring)
+
+**Product title**  
+Camping Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+
+**Short blurb**  
+8 chunky-line camping coloring pages in four layouts - print and go.
+
+**Description**
+
+**What you get**
+
+- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- Four different layouts so the set never feels repetitive: one big character
+  to color, a page of twelve pictures, six framed pictures, and a poster with
+  hollow letters the children color in themselves
+- Chunky outlines with nothing filled in solid black, so every single shape
+  can take a crayon - including the letters of the title
+- Black-and-white line art, no colour ink needed to print
+- A printable terms-of-use page
+
+**How to use it**
+
+Morning tubs, calm corners, early finishers, fine-motor practice, sub tubs,
+indoor recess, or a quiet-time folder that goes home. Laminate them and they
+work with dry-erase markers again and again.
+
+**Pictures in this set**
+
+tent, campfire, marshmallow stick, compass, lantern, canoe, fishing rod, binoculars, map, flashlight, mountain, bear, smore, log, pine tree, owl, fish, backpack
+
+**Skills**
+
+Pencil grip and crayon control, staying inside the line, color recognition,
+focus and stamina, vocabulary building.
+
+**Format**
+
+PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+
+**Grades**: PreK, Kindergarten, 1st grade  
+**Suggested price**: $3.00 (single theme)  
+**Tags**: coloring pages, coloring sheets, fine motor, morning tubs, calm corner, early finishers, sub plans, no prep, camping
+
+---
+
+## Birthday (coloring)
+
+**Product title**  
+Birthday Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+
+**Short blurb**  
+8 chunky-line birthday coloring pages in four layouts - print and go.
+
+**Description**
+
+**What you get**
+
+- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- Four different layouts so the set never feels repetitive: one big character
+  to color, a page of twelve pictures, six framed pictures, and a poster with
+  hollow letters the children color in themselves
+- Chunky outlines with nothing filled in solid black, so every single shape
+  can take a crayon - including the letters of the title
+- Black-and-white line art, no colour ink needed to print
+- A printable terms-of-use page
+
+**How to use it**
+
+Morning tubs, calm corners, early finishers, fine-motor practice, sub tubs,
+indoor recess, or a quiet-time folder that goes home. Laminate them and they
+work with dry-erase markers again and again.
+
+**Pictures in this set**
+
+birthday cake, party hat, balloon, candle, confetti, bunting, donut, party popper, gift bag, gift, cupcake, lollipop, cookie, ice cream cone, star, heart, wrapped candy, double heart
+
+**Skills**
+
+Pencil grip and crayon control, staying inside the line, color recognition,
+focus and stamina, vocabulary building.
+
+**Format**
+
+PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+
+**Grades**: PreK, Kindergarten, 1st grade  
+**Suggested price**: $3.00 (single theme)  
+**Tags**: coloring pages, coloring sheets, fine motor, morning tubs, calm corner, early finishers, sub plans, no prep, birthday
+
+---
+
+## Bugs (coloring)
+
+**Product title**  
+Bugs Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+
+**Short blurb**  
+8 chunky-line bugs coloring pages in four layouts - print and go.
+
+**Description**
+
+**What you get**
+
+- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- Four different layouts so the set never feels repetitive: one big character
+  to color, a page of twelve pictures, six framed pictures, and a poster with
+  hollow letters the children color in themselves
+- Chunky outlines with nothing filled in solid black, so every single shape
+  can take a crayon - including the letters of the title
+- Black-and-white line art, no colour ink needed to print
+- A printable terms-of-use page
+
+**How to use it**
+
+Morning tubs, calm corners, early finishers, fine-motor practice, sub tubs,
+indoor recess, or a quiet-time folder that goes home. Laminate them and they
+work with dry-erase markers again and again.
+
+**Pictures in this set**
+
+ant, caterpillar, dragonfly, grasshopper, beetle, firefly, moth, honeycomb, magnifying glass, ladybug, bee, butterfly, snail, worm, spider, leaf sprig, grass tuft, daisy
+
+**Skills**
+
+Pencil grip and crayon control, staying inside the line, color recognition,
+focus and stamina, vocabulary building.
+
+**Format**
+
+PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+
+**Grades**: PreK, Kindergarten, 1st grade  
+**Suggested price**: $3.00 (single theme)  
+**Tags**: coloring pages, coloring sheets, fine motor, morning tubs, calm corner, early finishers, sub plans, no prep, bugs
+
+---
+
+## Pets (coloring)
+
+**Product title**  
+Pets Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+
+**Short blurb**  
+8 chunky-line pets coloring pages in four layouts - print and go.
+
+**Description**
+
+**What you get**
+
+- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- Four different layouts so the set never feels repetitive: one big character
+  to color, a page of twelve pictures, six framed pictures, and a poster with
+  hollow letters the children color in themselves
+- Chunky outlines with nothing filled in solid black, so every single shape
+  can take a crayon - including the letters of the title
+- Black-and-white line art, no colour ink needed to print
+- A printable terms-of-use page
+
+**How to use it**
+
+Morning tubs, calm corners, early finishers, fine-motor practice, sub tubs,
+indoor recess, or a quiet-time folder that goes home. Laminate them and they
+work with dry-erase markers again and again.
+
+**Pictures in this set**
+
+dog, cat, fish bowl, bird cage, ball of yarn, hamster, pet bowl, dog house, collar, mouse, bone, paw print, heart, bunny, bird, fish, sea turtle, duck
+
+**Skills**
+
+Pencil grip and crayon control, staying inside the line, color recognition,
+focus and stamina, vocabulary building.
+
+**Format**
+
+PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+
+**Grades**: PreK, Kindergarten, 1st grade  
+**Suggested price**: $3.00 (single theme)  
+**Tags**: coloring pages, coloring sheets, fine motor, morning tubs, calm corner, early finishers, sub plans, no prep, pets
+
+---
+
+## Yummy Food (coloring)
+
+**Product title**  
+Yummy Food Coloring Pages | 8 No-Prep Sheets for Preschool and Pre-K
+
+**Short blurb**  
+8 chunky-line yummy food coloring pages in four layouts - print and go.
+
+**Description**
+
+**What you get**
+
+- 8 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- Four different layouts so the set never feels repetitive: one big character
+  to color, a page of twelve pictures, six framed pictures, and a poster with
+  hollow letters the children color in themselves
+- Chunky outlines with nothing filled in solid black, so every single shape
+  can take a crayon - including the letters of the title
+- Black-and-white line art, no colour ink needed to print
+- A printable terms-of-use page
+
+**How to use it**
+
+Morning tubs, calm corners, early finishers, fine-motor practice, sub tubs,
+indoor recess, or a quiet-time folder that goes home. Laminate them and they
+work with dry-erase markers again and again.
+
+**Pictures in this set**
+
+pizza slice, burger, hot dog, taco, strawberry, grapes, cheese, broccoli, apple, banana, carrot, watermelon slice, cookie, donut, cupcake, ice cream cone, milk bottle, corn
+
+**Skills**
+
+Pencil grip and crayon control, staying inside the line, color recognition,
+focus and stamina, vocabulary building.
+
+**Format**
+
+PDF, 10 pages, US Letter, print-and-go. No prep and nothing to assemble.
+
+**Grades**: PreK, Kindergarten, 1st grade  
+**Suggested price**: $3.00 (single theme)  
+**Tags**: coloring pages, coloring sheets, fine motor, morning tubs, calm corner, early finishers, sub plans, no prep, food
+
+---
+

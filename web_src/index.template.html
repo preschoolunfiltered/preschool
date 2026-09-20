@@ -100,6 +100,30 @@
     font-variant-numeric: tabular-nums;
   }
   .count-strip b { font-family: var(--display); font-weight: 600; color: var(--ink); font-size: 14px; }
+  .segmented {
+    display: inline-flex;
+    background: var(--panel-2);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 3px;
+    gap: 2px;
+  }
+  .segmented button {
+    background: none;
+    border: 0;
+    border-radius: 999px;
+    padding: 6px 13px;
+    font-size: 13px;
+    color: var(--ink-soft);
+    cursor: pointer;
+    white-space: nowrap;
+  }
+  .segmented button[aria-pressed="true"] {
+    background: var(--panel);
+    color: var(--ink);
+    font-weight: 600;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .12);
+  }
   .filter {
     font: inherit;
     font-size: 14px;
@@ -300,23 +324,17 @@
     </div>
     <div class="count-strip">
       <span><b id="stat-themes">0</b> themes</span>
-      <span><b id="stat-puzzles">0</b> puzzles</span>
+      <span><b id="stat-puzzles">0</b> <span id="stat-sheets-label">puzzles</span></span>
       <span><b id="stat-pages">0</b> pages</span>
     </div>
+    <div class="segmented" id="collections" role="group" aria-label="Collection"></div>
     <input id="filter" class="filter" type="search" placeholder="Find a theme" aria-label="Filter themes">
   </div>
 </header>
 
 <main>
   <section id="shelf" class="wrap">
-    <p class="lede">
-      Every sheet in the set, ready to look at before it goes to the printer.
-      Each theme holds <strong>three puzzles at three densities</strong> — 128,
-      196 and 272 things to find — plus a matching answer key for each one.
-      Pictures are tilted to any angle, mirrored, drawn at different sizes and
-      clumped together, and near-twins are parked side by side on purpose, so
-      nothing is found by sweeping in rows. Pick a theme to page through it.
-    </p>
+    <p class="lede" id="lede"></p>
     <div class="grid" id="cards"></div>
     <p class="empty" id="empty" hidden>No theme by that name. Try “farm”, “ocean” or “winter”.</p>
   </section>
@@ -341,7 +359,7 @@
           <div class="spec" id="spec"></div>
         </div>
         <div class="panel">
-          <h3>Hiding in this set</h3>
+          <h3 id="vocab-head">Hiding in this set</h3>
           <div class="vocab" id="vocab"></div>
         </div>
         <p class="note" id="print-note">
@@ -371,10 +389,18 @@
     hard: "Tiny, nested, mirrored, twinned — for a child who finishes early"
   };
 
+  const SHEET_KINDS = {
+    hero: "One big character to color",
+    pattern: "Twelve pictures, a long quiet page",
+    grid: "Six framed pictures, one color each",
+    poster: "Hollow letters and a ring of pictures"
+  };
+
   const el = (id) => document.getElementById(id);
   const cards = el("cards"), viewer = el("viewer"), shelf = el("shelf");
   const sheetImg = el("sheet-img"), rail = el("rail");
 
+  let collection = DATA.collections[0];
   let current = null, pageIndex = 0;
 
   function pips(level) {
@@ -384,19 +410,49 @@
       "</span>";
   }
 
+  function buildTabs() {
+    const box = el("collections");
+    box.innerHTML = "";
+    DATA.collections.forEach((c) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.textContent = c.label;
+      b.setAttribute("aria-pressed", c === collection ? "true" : "false");
+      b.addEventListener("click", () => {
+        if (c === collection) return;
+        collection = c;
+        current = null;
+        viewer.hidden = true;
+        shelf.hidden = false;
+        location.hash = "";
+        buildTabs();
+        buildShelf();
+      });
+      box.appendChild(b);
+    });
+  }
+
   function buildShelf() {
-    const totalPuzzles = DATA.themes.reduce(
-      (n, t) => n + t.pages.filter((p) => p.kind === "puzzle").length, 0);
-    const totalPages = DATA.themes.reduce((n, t) => n + t.pages.length, 0);
-    el("stat-themes").textContent = DATA.themes.length;
-    el("stat-puzzles").textContent = totalPuzzles;
+    const sheetsOf = (t) => t.pages.filter(
+      (p) => p.kind !== "cover" && p.kind !== "terms" && p.kind !== "key");
+    const totalSheets = collection.themes.reduce(
+      (n, t) => n + sheetsOf(t).length, 0);
+    const totalPages = collection.themes.reduce((n, t) => n + t.pages.length, 0);
+    el("stat-themes").textContent = collection.themes.length;
+    el("stat-puzzles").textContent = totalSheets;
     el("stat-pages").textContent = totalPages;
+    el("stat-sheets-label").textContent =
+      collection.id === "ispy" ? "puzzles" : "sheets";
     el("foot-brand").textContent = DATA.brand;
+    el("lede").innerHTML = collection.note +
+      " Pick a theme to page through it.";
 
     cards.innerHTML = "";
-    DATA.themes.forEach((theme) => {
+    collection.themes.forEach((theme) => {
       const puzzles = theme.pages.filter((p) => p.kind === "puzzle");
       const items = puzzles.map((p) => p.items);
+      const sheets = theme.pages.filter(
+        (p) => p.kind !== "cover" && p.kind !== "terms" && p.kind !== "key");
       const card = document.createElement("button");
       card.type = "button";
       card.className = "card";
@@ -406,9 +462,11 @@
         <span class="card-title">${theme.name}</span>
         <span class="card-sub">${theme.subtitle}</span>
         <span class="card-foot">
-          <span>${puzzles.length} puzzles</span>
+          <span>${sheets.length} ${collection.id === "ispy" ? "puzzles" : "sheets"}</span>
           <span>&middot;</span>
-          <span>${Math.min(...items)}&ndash;${Math.max(...items)} to find</span>
+          ${puzzles.length
+            ? `<span>${Math.min(...items)}&ndash;${Math.max(...items)} to find</span>`
+            : `<span>chunky outlines</span>`}
           <span>&middot;</span>
           <span>${theme.icons.length} pictures</span>
         </span>`;
@@ -418,7 +476,7 @@
   }
 
   function open(key, index) {
-    const theme = DATA.themes.find((t) => t.key === key);
+    const theme = collection.themes.find((t) => t.key === key);
     if (!theme) return;
     const changed = !current || current.key !== key;
     current = theme;
@@ -433,7 +491,7 @@
     shelf.hidden = true;
     viewer.hidden = false;
     if (changed) window.scrollTo({ top: 0, behavior: "instant" });
-    location.hash = `${theme.key}/${index}`;
+    location.hash = `${collection.id}/${theme.key}/${index}`;
   }
 
   function buildRail(theme) {
@@ -450,6 +508,8 @@
   }
 
   function buildVocab(theme) {
+    el("vocab-head").textContent = collection.id === "ispy"
+      ? "Hiding in this set" : "Pictures in this set";
     el("vocab").innerHTML = theme.icons
       .map((name) => `<span class="chip">${name}</span>`).join("");
   }
@@ -479,6 +539,10 @@
       rows.push(["Counts", "filled in"]);
     } else if (page.kind === "cover") {
       rows.push(["Use for", "the listing thumbnail"]);
+    } else if (SHEET_KINDS[page.kind]) {
+      rows.push(["Layout", SHEET_KINDS[page.kind]]);
+      rows.push(["Lines", "chunky, nothing filled black"]);
+      rows.push(["Child does", "colors it in"]);
     } else {
       rows.push(["Covers", "what a buyer may and may not do"]);
     }
@@ -488,8 +552,8 @@
       .join("");
     el("print-note").textContent = page.kind === "puzzle"
       ? LEVEL_NOTE[page.difficulty]
-      : "Printing sends this sheet at full size, one page.";
-    location.hash = `${current.key}/${pageIndex}`;
+      : (SHEET_KINDS[page.kind] || "Printing sends this sheet at full size, one page.");
+    location.hash = `${collection.id}/${current.key}/${pageIndex}`;
   }
 
   function backToShelf() {
@@ -506,7 +570,7 @@
     const q = e.target.value.trim().toLowerCase();
     let shown = 0;
     [...cards.children].forEach((card) => {
-      const theme = DATA.themes.find((t) => t.key === card.dataset.key);
+      const theme = collection.themes.find((t) => t.key === card.dataset.key);
       const hay = `${theme.name} ${theme.subtitle} ${theme.icons.join(" ")}`.toLowerCase();
       const hit = !q || hay.includes(q);
       card.hidden = !hit;
@@ -524,10 +588,20 @@
   });
 
   function fromHash() {
-    const [key, idx] = location.hash.replace(/^#/, "").split("/");
-    if (key && DATA.themes.some((t) => t.key === key)) open(key, Number(idx) || 0);
+    const parts = location.hash.replace(/^#/, "").split("/").filter(Boolean);
+    if (!parts.length) return;
+    const [cid, key, idx] = parts.length >= 3
+      ? parts : [DATA.collections[0].id, parts[0], parts[1]];
+    const c = DATA.collections.find((x) => x.id === cid);
+    if (c) {
+      collection = c;
+      buildTabs();
+      buildShelf();
+    }
+    if (collection.themes.some((t) => t.key === key)) open(key, Number(idx) || 0);
   }
 
+  buildTabs();
   buildShelf();
   fromHash();
   window.addEventListener("hashchange", () => {
