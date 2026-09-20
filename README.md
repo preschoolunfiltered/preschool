@@ -20,12 +20,14 @@ output/
     _pages/                          the same pages as single-page PDFs
 ```
 
-Every theme ships three puzzles at three difficulties — **easy** (100 items,
-large art), **medium** (168) and **hard** (240) — so one file works for a whole
+Every theme ships three puzzles at three difficulties — **easy** (128 items,
+large art), **medium** (196) and **hard** (272) — so one file works for a whole
 mixed-ability class. Difficulty is not just item count: each level also sets
 how far a doodle may tilt (up to any angle), how often a copy is mirrored, how
-much sizes vary, how tightly items nest into each other, and how many clumps
-pull them off an even grid — all in `DIFFICULTY` in `ispy/config.py`. Each puzzle gets its own frame treatment (double line,
+much sizes vary, how tightly items nest into each other, how many clumps pull
+them off an even grid, and how often a copy is parked beside a near-twin —
+all in `DIFFICULTY` in `ispy/config.py`. Which doodles count as near-twins is
+`ispy/lookalikes.py`. Each puzzle gets its own frame treatment (double line,
 scalloped, dashed with corner doodles) so the set does not look repetitive.
 
 **22 themes:** spring, summer, fall, winter, Christmas, Halloween,
@@ -94,7 +96,8 @@ puzzle and answer-key previews as supporting images.
 | `ispy/draw.py` | SVG primitives — arcs, blobs, tubes, petals, kawaii faces |
 | `ispy/icons/` | 287 doodles, grouped into themed packs |
 | `ispy/text.py` | Renders text as vector outlines via fontTools |
-| `ispy/scatter.py` | Picks per-icon counts, dart-throws them without crowding |
+| `ispy/scatter.py` | Picks per-icon counts, then hides them: tilt, mirror, clump, nest |
+| `ispy/lookalikes.py` | Shape families, so near-twins get parked together |
 | `ispy/layout.py` | Header, frames, puzzle field, legend, cover, terms page |
 | `ispy/render.py` | SVG assembly and PDF/PNG export |
 | `build.py` | Builds every theme, merges PDFs, writes previews |

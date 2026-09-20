@@ -20,21 +20,23 @@ VARIANTS_PER_THEME = 3
 #   pack    - spacing factor; below 1 lets doodles nest into each other
 #   clusters- clumps to pull items toward; 0 spreads them evenly, which is
 #             the easiest possible page to scan
+#   decoy   - chance of parking a copy beside a lookalike or another of its
+#             own kind, which is what makes a child's count come out wrong
 DIFFICULTY = {
     "easy": {
-        "total": 100, "size": 44.0, "stroke": 1.55,
-        "jitter": (0.82, 1.18), "rot": 42.0, "flip": 0.22,
-        "pack": 0.94, "clusters": 0,
+        "total": 128, "size": 40.0, "stroke": 1.45,
+        "jitter": (0.78, 1.22), "rot": 90.0, "flip": 0.32,
+        "pack": 0.88, "clusters": 3, "decoy": 0.28,
     },
     "medium": {
-        "total": 168, "size": 36.0, "stroke": 1.35,
-        "jitter": (0.74, 1.26), "rot": 110.0, "flip": 0.38,
-        "pack": 0.84, "clusters": 5,
+        "total": 196, "size": 33.0, "stroke": 1.30,
+        "jitter": (0.70, 1.30), "rot": 180.0, "flip": 0.45,
+        "pack": 0.79, "clusters": 6, "decoy": 0.40,
     },
     "hard": {
-        "total": 240, "size": 30.0, "stroke": 1.20,
-        "jitter": (0.66, 1.34), "rot": 180.0, "flip": 0.5,
-        "pack": 0.74, "clusters": 8,
+        "total": 272, "size": 28.0, "stroke": 1.15,
+        "jitter": (0.62, 1.38), "rot": 180.0, "flip": 0.55,
+        "pack": 0.70, "clusters": 9, "decoy": 0.52,
     },
 }
 

@@ -49,8 +49,9 @@ def theme_document(theme):
         key, _ = puzzle_page(theme, v, difficulty, style, answer_key=True,
                              pool=pool, wrap=False)
         d = DIFFICULTY[difficulty]
-        hiding = (f"tilted to {round(d['rot'])}\u00b0, "
-                  f"{round(d['flip'] * 100)}% mirrored")
+        hiding = (f"any angle to {round(d['rot'])}\u00b0, "
+                  f"{round(d['flip'] * 100)}% mirrored, "
+                  f"{round(d['decoy'] * 100)}% beside a lookalike")
         add("puzzle", f"Puzzle {v + 1}", puzzle, difficulty=difficulty,
             items=sum(counts), frame=style, hiding=hiding)
         add("key", f"Key {v + 1}", key, difficulty=difficulty)

@@ -5,6 +5,8 @@ from __future__ import annotations
 import math
 import random
 
+from ispy.lookalikes import SIMILAR
+
 
 def counts_for(n_icons: int, total: int, rng: random.Random,
                lo: int = 2, hi: int = 18) -> list[int]:
@@ -26,7 +28,7 @@ def counts_for(n_icons: int, total: int, rng: random.Random,
 
 def scatter(items, area, rng: random.Random, base_size: float,
             obstacles=(), size_jitter=(0.88, 1.12), rot=18.0, flip=0.0,
-            pack=0.98, clusters=0):
+            pack=0.98, clusters=0, decoy=0.0):
     """Dart-throw `items` into `area`, hiding them as we go.
 
     items     : list of icon names (one entry per drawn item)
@@ -40,6 +42,8 @@ def scatter(items, area, rng: random.Random, base_size: float,
     clusters  : number of clumps to pull items toward; 0 spreads them evenly.
                 Even spacing is the thing that makes a page easy - the eye
                 sweeps it in rows - so clumping is what really hides an item.
+    decoy     : chance of parking a copy right beside a lookalike (or beside
+                another of its own kind), which is what makes a count go wrong
 
     returns   : list of (name, x, y, size, rotation, flipped)
     """
@@ -52,6 +56,7 @@ def scatter(items, area, rng: random.Random, base_size: float,
     spread = (x1 - x0) / (1.7 * max(clusters, 1) ** 0.5)
 
     placed: list[tuple[float, float, float]] = [tuple(o) for o in obstacles]
+    by_name: dict[str, list[tuple[float, float, float]]] = {}
     out = []
     for name in order:
         size = base_size * rng.uniform(*size_jitter)
@@ -61,7 +66,20 @@ def scatter(items, area, rng: random.Random, base_size: float,
             # relax the spacing requirement the longer we struggle
             k = pack - min(attempt / 900.0, 1.0) * (pack - 0.52)
             px = py = None
-            if centres and rng.random() < 0.65:
+            if decoy and rng.random() < decoy:
+                # nestle this copy against a near-twin already on the page
+                anchors = by_name.get(name, [])[:]
+                for peer in SIMILAR.get(name, ()):  # same shape, different thing
+                    anchors += by_name.get(peer, [])
+                if anchors:
+                    ax, ay, ar = anchors[rng.randrange(len(anchors))]
+                    ang = rng.uniform(0, 360)
+                    gap = (r + ar) * rng.uniform(0.80, 1.02)
+                    gx = ax + gap * math.cos(math.radians(ang))
+                    gy = ay + gap * math.sin(math.radians(ang))
+                    if x0 + r <= gx <= x1 - r and y0 + r <= gy <= y1 - r:
+                        px, py = gx, gy
+            if px is None and centres and rng.random() < 0.65:
                 cx, cy = centres[rng.randrange(len(centres))]
                 gx, gy = rng.gauss(cx, spread), rng.gauss(cy, spread)
                 # resample rather than clamp: clamping would pile candidates
@@ -82,6 +100,7 @@ def scatter(items, area, rng: random.Random, base_size: float,
         if spot is None:                      # page is full - drop the item
             continue
         placed.append((spot[0], spot[1], r))
+        by_name.setdefault(name, []).append((spot[0], spot[1], r))
         out.append((name, spot[0], spot[1], size, rng.uniform(-rot, rot),
                     rng.random() < flip))
     return out

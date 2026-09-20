@@ -178,7 +178,7 @@ def puzzle_page(theme: Theme, variant: int, difficulty: str,
     placed = scatter(items, field_rect(style), rng, cfg["size"],
                      obstacles=obstacles, size_jitter=cfg["jitter"],
                      rot=cfg["rot"], flip=cfg["flip"], pack=cfg["pack"],
-                     clusters=cfg["clusters"])
+                     clusters=cfg["clusters"], decoy=cfg["decoy"])
     got = tally(placed)
     final = [got.get(name, 0) for name in theme.icons]
 
