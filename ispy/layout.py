@@ -8,7 +8,7 @@ import random
 from ispy import config
 from ispy.draw import dot, heart, line, path, pt, rect, star
 from ispy.icons import ICONS
-from ispy.render import PAGE_H, PAGE_W, place, svg_doc
+from ispy.render import PAGE_H, PAGE_W, SymbolPool, place, svg_doc
 from ispy.scatter import counts_for, scatter, tally
 from ispy.text import measure, text
 from ispy.themes import Theme
@@ -25,11 +25,11 @@ INK = "#111111"
 
 # --------------------------------------------------------------- header ----
 
-def header(theme: Theme, style: str, note: str = "") -> str:
+def header(theme: Theme, style: str, note: str = "", pool=None) -> str:
     out = []
     eyebrow = theme.eyebrow
     ew = measure(eyebrow, "hand", 26, 5)
-    out.append(text(eyebrow, PAGE_W / 2, 64, "hand", 26, "middle", 5, INK))
+    out.append(text(eyebrow, PAGE_W / 2, 64, "hand", 26, "middle", 5, INK, pool=pool))
     out.append(line(PAGE_W / 2 - ew / 2 - 46, 58, PAGE_W / 2 - ew / 2 - 14, 58,
                     f'stroke="{INK}" stroke-width="1.6" stroke-linecap="round"'))
     out.append(line(PAGE_W / 2 + ew / 2 + 14, 58, PAGE_W / 2 + ew / 2 + 46, 58,
@@ -39,7 +39,7 @@ def header(theme: Theme, style: str, note: str = "") -> str:
     kind = "display" if style != "scallop" else "hand"
     while measure(theme.title, kind, size, 0) > 470 and size > 20:
         size -= 1.5
-    out.append(text(theme.title, PAGE_W / 2, 106, kind, size, "middle", 0, INK))
+    out.append(text(theme.title, PAGE_W / 2, 106, kind, size, "middle", 0, INK, pool=pool))
 
     if note:
         # sit the label on the frame's top edge, in a little white cut-out
@@ -47,7 +47,7 @@ def header(theme: Theme, style: str, note: str = "") -> str:
         out.append(rect(PAGE_W / 2 - w / 2, FRAME[1] - 6, w, 21, 10.5,
                         'fill="#ffffff" stroke="none"'))
         out.append(text(note, PAGE_W / 2, FRAME[1] + 9.5, "hand", 18,
-                        "middle", 2.5, INK))
+                        "middle", 2.5, INK, pool=pool))
     return "".join(out)
 
 
@@ -75,7 +75,7 @@ def _scallop_path(x0, y0, x1, y1, bump=13.0):
     return " ".join(d)
 
 
-def frame(theme: Theme, style: str, rng: random.Random):
+def frame(theme: Theme, style: str, rng: random.Random, pool=None):
     """Returns (svg, obstacles) - obstacles keep doodles off the corner art."""
     x0, y0, x1, y1 = FRAME
     s = []
@@ -100,8 +100,9 @@ def frame(theme: Theme, style: str, rng: random.Random):
                 [(x0, y0), (x1, y0), (x0, y1), (x1, y1)]):
             s.append(f'<circle cx="{cx}" cy="{cy}" r="23" fill="#ffffff" '
                      f'stroke="none"/>')
-            s.append(place(ICONS[picks[i % len(picks)]](), cx, cy, 34, 0, 1.3,
-                           INK))
+            pick = picks[i % len(picks)]
+            s.append(place(ICONS[pick](), cx, cy, 34, 0, 1.3, INK,
+                           name=pick, pool=pool))
             obstacles.append((cx, cy, 30))
     return "".join(s), obstacles
 
@@ -114,7 +115,7 @@ def field_rect(style: str):
 
 # --------------------------------------------------------------- legend ----
 
-def legend(icons, counts, show_counts: bool, style: str) -> str:
+def legend(icons, counts, show_counts: bool, style: str, pool=None) -> str:
     n = len(icons)
     cols = 6 if n % 6 == 0 else 5
     rows = math.ceil(n / cols)
@@ -123,7 +124,7 @@ def legend(icons, counts, show_counts: bool, style: str) -> str:
     top = LEGEND_TOP + (0 if rows == 3 else 8)
 
     out = [text("How many can you find?", PAGE_W / 2, top, "hand", 21,
-                "middle", 1.5, INK)]
+                "middle", 1.5, INK, pool=pool)]
     for i, name in enumerate(icons):
         r, c = divmod(i, cols)
         cx = left + cell_w * c
@@ -134,36 +135,44 @@ def legend(icons, counts, show_counts: bool, style: str) -> str:
             out.append(rect(bx, by, box, box, 6,
                             f'fill="none" stroke="{INK}" stroke-width="1.3"'))
             out.append(text(str(counts[i]), bx + box / 2, by + box - 7.5,
-                            "display", 16, "middle", 0, INK))
+                            "display", 16, "middle", 0, INK, pool=pool))
         else:
             out.append(rect(bx, by, box, box, 6,
                             f'fill="none" stroke="{INK}" stroke-width="1.3" '
                             f'stroke-dasharray="3.2 3"'))
         out.append(place(ICONS[name](), cx + 33 + box, cy + box / 2, 40, 0,
-                         1.3, INK))
+                         1.3, INK, name=name, pool=pool))
     return "".join(out)
 
 
-def footer(extra: str = "") -> str:
+def footer(extra: str = "", pool=None) -> str:
     bits = [config.STORE_LINE]
     if config.WEBSITE:
         bits.append(config.WEBSITE)
     if extra:
         bits.append(extra)
     return text("  ·  ".join(bits), PAGE_W / 2, FOOTER_Y, "hand-light",
-                15, "middle", 0.8, "#444444")
+                15, "middle", 0.8, "#444444", pool=pool)
 
 
 # ----------------------------------------------------------------- pages ----
 
 def puzzle_page(theme: Theme, variant: int, difficulty: str,
-                style: str, answer_key: bool = False):
-    """Build one puzzle (or its answer key). Returns (svg, counts)."""
+                style: str, answer_key: bool = False, compact: bool = False,
+                pool=None, wrap: bool = True):
+    """Build one puzzle (or its answer key). Returns (svg, counts).
+
+    Pass a shared `pool` and `wrap=False` to get the bare page body, so several
+    pages can live in one document behind a single set of <defs>.
+    """
     seed = f"{theme.key}-{variant}"
     rng = random.Random(seed)
     cfg = config.DIFFICULTY[difficulty]
 
-    frame_svg, obstacles = frame(theme, style, random.Random(seed + "-frame"))
+    owns_pool = pool is None
+    pool = pool or (SymbolPool() if compact else None)
+    frame_svg, obstacles = frame(theme, style, random.Random(seed + "-frame"),
+                                 pool)
     counts = counts_for(len(theme.icons), cfg["total"], rng)
     items = [name for name, c in zip(theme.icons, counts) for _ in range(c)]
     placed = scatter(items, field_rect(style), rng, cfg["size"],
@@ -174,19 +183,27 @@ def puzzle_page(theme: Theme, variant: int, difficulty: str,
     body = [frame_svg]
     for name, x, y, size, rotation in placed:
         body.append(place(ICONS[name](), x, y, size, rotation, cfg["stroke"],
-                          INK))
+                          INK, name=name, pool=pool))
     note = "ANSWER KEY" if answer_key else ""
-    body.insert(0, header(theme, style, note))
-    body.append(legend(theme.icons, final, answer_key, style))
-    body.append(footer(f"Puzzle {variant + 1}" + (" key" if answer_key else "")))
+    body.insert(0, header(theme, style, note, pool))
+    body.append(legend(theme.icons, final, answer_key, style, pool))
+    body.append(footer(f"Puzzle {variant + 1}"
+                       + (" key" if answer_key else ""), pool))
+    if not wrap:
+        return "".join(body), final
+    if pool is not None and owns_pool:
+        body.insert(0, pool.defs())
     return svg_doc("".join(body)), final
 
 
-def cover_page(theme: Theme, n_puzzles: int) -> str:
+def cover_page(theme: Theme, n_puzzles: int, compact: bool = False,
+               pool=None, wrap: bool = True) -> str:
     rng = random.Random(theme.key + "-cover")
+    owns_pool = pool is None
+    pool = pool or (SymbolPool() if compact else None)
     body = []
     ew = measure("I SPY", "hand", 34, 7)
-    body.append(text("I SPY", PAGE_W / 2, 104, "hand", 34, "middle", 7, INK))
+    body.append(text("I SPY", PAGE_W / 2, 104, "hand", 34, "middle", 7, INK, pool=pool))
     body.append(line(PAGE_W / 2 - ew / 2 - 52, 96, PAGE_W / 2 - ew / 2 - 16,
                      96, f'stroke="{INK}" stroke-width="1.8" '
                          f'stroke-linecap="round"'))
@@ -197,9 +214,9 @@ def cover_page(theme: Theme, n_puzzles: int) -> str:
     while measure(theme.title, "display", size, 0) > 486 and size > 24:
         size -= 2
     body.append(text(theme.title, PAGE_W / 2, 174, "display", size, "middle",
-                     0, INK))
+                     0, INK, pool=pool))
     body.append(text(theme.subtitle, PAGE_W / 2, 206, "hand-light", 23,
-                     "middle", 1, INK))
+                     "middle", 1, INK, pool=pool))
 
     panel = (66.0, 234.0, 546.0, 610.0)
     body.append(rect(panel[0], panel[1], panel[2] - panel[0],
@@ -217,17 +234,21 @@ def cover_page(theme: Theme, n_puzzles: int) -> str:
         cx = panel[0] + cw * (i % cols) + cw / 2
         cy = panel[1] + ch * (i // cols) + ch / 2
         body.append(place(ICONS[name](), cx, cy, 58,
-                          rng.uniform(-9, 9), 1.5, INK))
+                          rng.uniform(-9, 9), 1.5, INK, name=name, pool=pool))
 
     body.append(text(f"{n_puzzles} printable puzzles  \u00b7  answer keys "
                      f"included", PAGE_W / 2, 648, "hand", 25, "middle", 1,
-                     INK))
+                     INK, pool=pool))
     body.append(text("Preschool \u00b7 Pre-K \u00b7 Kindergarten \u00b7 "
                      "Early finishers \u00b7 Sub tubs", PAGE_W / 2, 676,
-                     "hand-light", 19, "middle", 1, INK))
+                     "hand-light", 19, "middle", 1, INK, pool=pool))
     body.append(text(config.BRAND, PAGE_W / 2, 734, "display", 22, "middle",
-                     0, INK))
-    body.append(footer())
+                     0, INK, pool=pool))
+    body.append(footer(pool=pool))
+    if not wrap:
+        return "".join(body)
+    if pool is not None and owns_pool:
+        body.insert(0, pool.defs())
     return svg_doc("".join(body))
 
 
@@ -247,21 +268,27 @@ TERMS_LINES = [
 ]
 
 
-def terms_page() -> str:
+def terms_page(compact: bool = False, pool=None, wrap: bool = True) -> str:
+    owns_pool = pool is None
+    pool = pool or (SymbolPool() if compact else None)
     body = [text("TERMS OF USE", PAGE_W / 2, 120, "display", 38, "middle", 0,
-                 INK)]
+                 INK, pool=pool)]
     body.append(text(config.BRAND, PAGE_W / 2, 150, "hand", 22, "middle", 2,
-                     INK))
+                     INK, pool=pool))
     body.append(rect(70, 180, 472, 420, 18,
                      f'fill="none" stroke="{INK}" stroke-width="2.2"'))
     y = 222.0
     for txt, bold in TERMS_LINES:
         if txt:
             body.append(text(txt, 100, y, "hand" if bold else "hand-light",
-                             23 if bold else 20, "start", 0.6, INK))
+                             23 if bold else 20, "start", 0.6, INK, pool=pool))
         y += 30 if txt else 16
     body.append(text("Fonts: Fredoka One & Amatic SC (SIL Open Font Licence). "
                      "Artwork drawn for this set.", PAGE_W / 2, 640,
-                     "hand-light", 15, "middle", 0.5, "#555555"))
-    body.append(footer())
+                     "hand-light", 15, "middle", 0.5, "#555555", pool=pool))
+    body.append(footer(pool=pool))
+    if not wrap:
+        return "".join(body)
+    if pool is not None and owns_pool:
+        body.insert(0, pool.defs())
     return svg_doc("".join(body))

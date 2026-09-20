@@ -60,6 +60,20 @@ python3 build.py --no-previews        # PDFs only, faster
    python3 tools/contact_sheet.py all /tmp/contact.png   # or a,b,c for a subset
    ```
 
+## Browse it in the browser
+
+```bash
+python3 tools/web_build.py     # writes web/index.html + one SVG per theme
+```
+
+This builds a self-contained viewer: a shelf of all 22 themes, then a page
+rail for paging through every puzzle, answer key, cover and terms sheet.
+Each theme exports as one tall SVG holding its eight pages behind a single
+shared set of `<defs>`, so the doodle artwork is stored once per theme rather
+than once per page — a dense sheet drops from ~300KB to ~80KB. The viewer's
+markup lives in `web_src/index.template.html`; the build injects the manifest
+into it, so edit the template, not `web/index.html`.
+
 ## Selling it
 
 `python3 tools/listing_copy.py > docs/TPT-LISTING-COPY.md` regenerates

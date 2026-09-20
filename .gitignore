@@ -5,3 +5,4 @@ __pycache__/
 # Regenerable build artefacts (run `python3 build.py` to recreate)
 output/themes/*/_pages/
 output/I-Spy-Mega-Bundle.pdf
+web/

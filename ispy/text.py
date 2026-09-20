@@ -57,6 +57,7 @@ def text(
     tracking: float = 0.0,
     fill: str = "#000",
     extra: str = "",
+    pool=None,
 ) -> str:
     """Return <path> outlines for `s`, baseline at y, aligned by `anchor`."""
     upem, cmap, gs, hmtx = _metrics(kind)
@@ -73,16 +74,27 @@ def text(
         if gn is None:
             pen_x += upem * 0.32 + tracking / scale
             continue
-        spen = SVGPathPen(gs)
-        tpen = TransformPen(spen, Transform(1, 0, 0, -1, pen_x, 0))
-        gs[gn].draw(tpen)
-        d = spen.getCommands()
-        if d:
-            parts.append(d)
+        if pool is not None:
+            # glyph outlines live once in <defs>; repeated letters cost ~40 bytes
+            spen = SVGPathPen(gs, ntos=lambda v: str(round(v)))
+            tpen = TransformPen(spen, Transform(1, 0, 0, -1, 0, 0))
+            gs[gn].draw(tpen)
+            d = spen.getCommands()
+            if d:
+                ref = pool.glyph(kind, gn, d)
+                parts.append(f'<use href="#{ref}" xlink:href="#{ref}" '
+                             f'x="{pen_x:.0f}"/>')
+        else:
+            spen = SVGPathPen(gs)
+            tpen = TransformPen(spen, Transform(1, 0, 0, -1, pen_x, 0))
+            gs[gn].draw(tpen)
+            d = spen.getCommands()
+            if d:
+                parts.append(f'<path d="{d}"/>')
         pen_x += hmtx[gn][0] + tracking / scale
     if not parts:
         return ""
-    body = "".join(f'<path d="{d}"/>' for d in parts)
+    body = "".join(parts)
     return (
         f'<g transform="translate({x:.2f} {y:.2f}) scale({scale:.5f})" '
         f'fill="{fill}" stroke="none"{(" " + extra) if extra else ""}>{body}</g>'
