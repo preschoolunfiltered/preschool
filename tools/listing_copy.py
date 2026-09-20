@@ -33,10 +33,12 @@ SEASONAL = {
 COLORING_LONG = """**What you get**
 
 - {n} coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- One big picture per page, drawn clip-art style in a badge frame, so even
-  the youngest hands have somewhere easy to start
-- The name of the picture underneath in big hollow letters, so the page
-  builds vocabulary and print awareness while it is being colored
+- One big picture per page, drawn clip-art style with a heavy outline, so
+  even the youngest hands have somewhere easy to start
+- A bubble-letter title the children color in as well - COLOR THE BUNNY -
+  so the page builds vocabulary and print awareness while it is worked on
+- Flowers, butterflies and stars down the margins, so there is plenty to
+  do once the main picture is finished
 - Chunky outlines with nothing filled in solid black, so every single shape
   can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print

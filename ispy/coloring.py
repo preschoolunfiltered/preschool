@@ -13,6 +13,7 @@ import json
 import math
 import os
 import random
+import re
 
 from ispy import config
 from ispy.cute import cutify
@@ -25,14 +26,14 @@ from ispy.themes import Theme
 INK = "#111111"
 
 # chunky, because a preschooler colors up to the line, not inside it
-STROKE_SUBJECT = 4.6
-STROKE_FRAME = 3.0
-STROKE_SMALL = 2.4
-STROKE_TITLE = 3.2
+STROKE_SUBJECT = 5.4   # the star of the page
+STROKE_FILLER = 2.6    # the flowers and butterflies around it
+STROKE_BORDER = 3.2
+STROKE_TITLE = 4.4
 
-FRAME_CX, FRAME_CY, FRAME_R = PAGE_W / 2, 364.0, 208.0
-SUBJECT_FIT = 286.0        # inside a circle frame
-SUBJECT_FIT_PANEL = 322.0  # inside the square one
+BORDER = (28.0, 28.0, PAGE_W - 28.0, PAGE_H - 28.0)
+SUBJECT_CX, SUBJECT_CY = PAGE_W / 2, 486.0
+SUBJECT_FIT = 366.0
 
 _BOUNDS_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)),
                             "assets", "icon_bounds.json")
@@ -43,9 +44,31 @@ except OSError:  # not measured yet - fall back to the nominal box
     BOUNDS = {}
 
 
+_SOLID_EL = re.compile(r'<(circle|ellipse|polygon|path)\b[^>]*?'
+                       r'fill="#000" stroke="none"[^>]*?/>')
+
+
 def outline(body: str) -> str:
-    """Solid black accents become outlines, so every shape can be colored."""
-    return body.replace(SOLID, 'fill="none"')
+    """Hollow out solid black shapes - but leave eyes alone.
+
+    A filled shape is a shape a child cannot color, so the ladybug's head,
+    the bee's stripes and the jack-o'-lantern's face all become outlines.
+    Pupils are the exception: clip art keeps them solid, and an eye drawn as
+    a small empty ring reads as a startled one.
+    """
+    def repl(m):
+        el, tag = m.group(0), m.group(1)
+        if tag == "circle":
+            r = re.search(r'\br="([\d.]+)"', el)
+            if r and float(r.group(1)) <= 6.0:
+                return el
+        elif tag == "ellipse":
+            rx = re.search(r'\brx="([\d.]+)"', el)
+            ry = re.search(r'\bry="([\d.]+)"', el)
+            if rx and ry and max(float(rx.group(1)), float(ry.group(1))) <= 7.0:
+                return el
+        return el.replace(SOLID, 'fill="none"')
+    return _SOLID_EL.sub(repl, body)
 
 
 def art(name: str) -> str:
@@ -54,7 +77,7 @@ def art(name: str) -> str:
 
 
 def drop(name: str, x: float, y: float, size: float, rot: float = 0.0,
-         stroke: float = STROKE_SMALL, pool=None, flip: bool = False) -> str:
+         stroke: float = STROKE_FILLER, pool=None, flip: bool = False) -> str:
     return place(art(name), x, y, size, rot, stroke, INK, name=name + "-c",
                  pool=pool, flip=flip)
 
@@ -94,98 +117,156 @@ def footer(note: str = "", pool=None) -> str:
                 "middle", 0.8, "#444444", pool=pool)
 
 
-# ----------------------------------------------------------------- frames ---
+# ----------------------------------------------------- border and fillers ---
 
-def scallop_circle(cx: float, cy: float, r: float, bumps: int = 20) -> str:
-    """A circle of little humps - the classic clip-art badge edge."""
-    pts = [pt(cx, cy, r, 360 * i / bumps) for i in range(bumps)]
-    chord = math.hypot(pts[1][0] - pts[0][0], pts[1][1] - pts[0][1]) / 2
-    d = [f"M {pts[0][0]:.1f} {pts[0][1]:.1f}"]
-    for i in range(1, bumps + 1):
-        x, y = pts[i % bumps]
-        d.append(f"A {chord:.1f} {chord:.1f} 0 0 1 {x:.1f} {y:.1f}")
-    d.append("Z")
-    return path(" ".join(d), f'fill="none" stroke="{INK}" '
-                             f'stroke-width="{STROKE_FRAME}" '
-                             f'stroke-linejoin="round"')
-
-
-def cloud_circle(cx: float, cy: float, r: float, bumps: int = 11) -> str:
-    pts = [pt(cx, cy, r, 360 * i / bumps) for i in range(bumps)]
-    chord = math.hypot(pts[1][0] - pts[0][0], pts[1][1] - pts[0][1]) / 2
-    d = [f"M {pts[0][0]:.1f} {pts[0][1]:.1f}"]
-    for i in range(1, bumps + 1):
-        x, y = pts[i % bumps]
-        d.append(f"A {chord:.1f} {chord:.1f} 0 0 1 {x:.1f} {y:.1f}")
-    d.append("Z")
-    return path(" ".join(d), f'fill="none" stroke="{INK}" '
-                             f'stroke-width="{STROKE_FRAME}" '
-                             f'stroke-linejoin="round"')
-
-
-def dashed_panel(cx: float, cy: float, r: float) -> str:
-    return (rect(cx - r, cy - r * 1.02, r * 2, r * 2.04, 34,
-                 f'fill="none" stroke="{INK}" stroke-width="{STROKE_FRAME}"')
-            + rect(cx - r + 13, cy - r * 1.02 + 13, r * 2 - 26, r * 2.04 - 26,
-                   26, f'fill="none" stroke="{INK}" stroke-width="1.6" '
-                       f'stroke-dasharray="10 9" stroke-linecap="round"'))
-
-
-FRAMES = (scallop_circle, cloud_circle,
-          lambda cx, cy, r: dashed_panel(cx, cy, r))
-
-
-SPARKLE_SPOTS = ((70, 192), (542, 192), (68, 366), (544, 366),
-                 (70, 540), (542, 540))
-
-
-def confetti(rng: random.Random, cx: float, cy: float, r: float) -> str:
-    """Sparkles in the corners the badge leaves empty."""
-    out = []
-    for i, (x, y) in enumerate(SPARKLE_SPOTS):
-        pick = i % 3
-        size = rng.uniform(13, 19)
-        if pick == 0:
-            out.append(star(x, y, size, 5, 0.42, rng.uniform(-30, 30),
-                            f'fill="none" stroke="{INK}" '
-                            f'stroke-width="{STROKE_SMALL}" '
-                            f'stroke-linejoin="round"'))
-        elif pick == 1:
-            out.append(heart(x, y, size * 0.8,
-                             f'fill="none" stroke="{INK}" '
-                             f'stroke-width="{STROKE_SMALL}" '
-                             f'stroke-linejoin="round"'))
-        else:
-            out.append(circle(x, y, size * 0.4,
-                              f'fill="none" stroke="{INK}" '
-                              f'stroke-width="{STROKE_SMALL}"'))
+def page_border(pool=None) -> str:
+    """Thin rounded frame, with the credit line sitting in the bottom edge."""
+    x0, y0, x1, y1 = BORDER
+    out = [rect(x0, y0, x1 - x0, y1 - y0, 26,
+                f'fill="none" stroke="{INK}" stroke-width="{STROKE_BORDER}" '
+                f'stroke-linejoin="round"')]
     return "".join(out)
+
+
+def credit(theme: Theme, pool=None) -> str:
+    line_txt = f"{theme.title.title()}  \u00b7  {config.STORE_LINE}"
+    w = measure(line_txt, "hand-light", 15, 0.8) + 26
+    return (rect(PAGE_W / 2 - w / 2, BORDER[3] - 11, w, 22, 11,
+                 'fill="#ffffff" stroke="none"')
+            + text(line_txt, PAGE_W / 2, BORDER[3] + 5, "hand-light", 15,
+                   "middle", 0.8, "#444444", pool=pool))
+
+
+def bloom(cx: float, cy: float, r: float, petals: int, style: int) -> str:
+    """A filler flower. Three petal shapes, the way a clip-art sheet varies them."""
+    g = f'fill="none" stroke="{INK}" stroke-width="{STROKE_FILLER}" ' \
+        f'stroke-linejoin="round" stroke-linecap="round"'
+    out = []
+    petals = min(petals, 6) if style != 1 else petals
+    if style == 0:                                   # round petals
+        for i in range(petals):
+            a = 360 * i / petals
+            px, py = pt(cx, cy, r * 0.62, a)
+            out.append(circle(px, py, r * 0.40, g))
+    elif style == 1:                                 # pointed daisy petals
+        for i in range(petals):
+            a = 360 * i / petals
+            tipx, tipy = pt(cx, cy, r, a)
+            lx, ly = pt(cx, cy, r * 0.34, a - 40)
+            rx, ry = pt(cx, cy, r * 0.34, a + 40)
+            out.append(path(f"M {lx:.1f} {ly:.1f} Q {tipx:.1f} {tipy:.1f} "
+                            f"{rx:.1f} {ry:.1f}", g))
+    else:                                            # long oval petals
+        for i in range(petals):
+            a = 360 * i / petals
+            px, py = pt(cx, cy, r * 0.60, a)
+            out.append(ellipse_petal(px, py, r * 0.46, r * 0.26, a, g))
+    out.append(circle(cx, cy, r * 0.22, g))
+    return "".join(out)
+
+
+def ellipse_petal(cx, cy, rx, ry, rot, attrs) -> str:
+    return (f'<ellipse cx="{cx:.1f}" cy="{cy:.1f}" rx="{rx:.1f}" '
+            f'ry="{ry:.1f}" transform="rotate({rot:.1f} {cx:.1f} {cy:.1f})" '
+            f'{attrs}/>')
+
+
+# small things that read as decoration rather than as a second subject
+FILLERS = ("butterfly", "bee", "ladybug", "star", "heart", "cloud",
+           "snowflake", "bubbles", "leaf_sprig", "grass_tuft", "shamrock",
+           "paw_print", "starfish", "seashell", "crescent_moon", "holly",
+           "dragonfly", "moth", "raindrop", "acorn", "maple_leaf", "fern",
+           "double_heart", "shooting_star", "bone", "confetti")
+
+
+def filler_art(theme: Theme, name: str, x: float, y: float, size: float,
+               rot: float, pool=None) -> str:
+    return place(art(name), x, y, size, rot, STROKE_FILLER, INK,
+                 name=name + "-c", pool=pool)
 
 
 # ------------------------------------------------------------------ pages ---
 
+BLOOM_THEMES = {"spring", "summer", "easter", "bugs", "farm", "jungle",
+                "stpatrick", "fall", "valentine", "pets", "birthday"}
+
+
+def _subject_guard(name: str, target: float):
+    """The ellipse the main picture occupies, so fillers keep out of it."""
+    x0, y0, x1, y1 = BOUNDS.get(name, (0.0, 0.0, 100.0, 100.0))
+    w, h = max(x1 - x0, 1.0), max(y1 - y0, 1.0)
+    s = target / max(w, h)
+    return w * s / 2 + 16, h * s / 2 + 14
+
+
+def decorations(theme: Theme, rng: random.Random, guard, pool=None) -> str:
+    """Flowers, butterflies and sparkles filling the space around the picture."""
+    picks = [n for n in theme.icons if n in FILLERS]
+    kinds = [("icon", n) for n in picks] * 2
+    if theme.key in BLOOM_THEMES or not picks:
+        kinds += [("bloom", None)] * 6
+    kinds += [("spark", None)] * 3
+    rng.shuffle(kinds)
+
+    gx, gy = guard
+    x0, y0, x1, y1 = BORDER
+    # fixed spots down both margins and along the bottom, the way a clip-art
+    # sheet lines its flowers up - a ring around the subject leaves the
+    # corners bare and crowds a wide picture
+    slots = ((74, 298), (64, 416), (80, 540), (104, 656),
+             (538, 298), (548, 416), (532, 540), (508, 656),
+             (206, 690), (306, 268), (412, 690))
+    placed, out = [], []
+    for i, (sx, sy) in enumerate(slots):
+        size = rng.uniform(52, 88)
+        r = size * 0.5
+        x = min(max(sx + rng.uniform(-14, 14), x0 + 20 + r), x1 - 20 - r)
+        y = min(max(sy + rng.uniform(-14, 14), 244 + r), y1 - 26 - r)
+        dx = (x - SUBJECT_CX) / (gx + r)
+        dy = (y - SUBJECT_CY) / (gy + r)
+        if dx * dx + dy * dy < 1.0:
+            continue
+        if any((x - px) ** 2 + (y - py) ** 2 < (0.92 * (r + pr)) ** 2
+               for px, py, pr in placed):
+            continue
+        placed.append((x, y, r))
+        kind, name = kinds[len(placed) % len(kinds)]
+        rot = rng.uniform(-22, 22)
+        if kind == "icon":
+            out.append(filler_art(theme, name, x, y, size, rot, pool))
+        elif kind == "bloom":
+            out.append(bloom(x, y, r * 0.92, rng.choice((5, 6, 7)),
+                             rng.randrange(3)))
+        else:
+            g = (f'fill="none" stroke="{INK}" stroke-width="{STROKE_FILLER}" '
+                 f'stroke-linejoin="round"')
+            if rng.random() < 0.5:
+                out.append(star(x, y, r * 0.8, 5, 0.42, rot - 90, g))
+            else:
+                out.append(heart(x, y, r * 0.66, g))
+    return "".join(out)
+
+
 def subject_page(theme: Theme, name: str, index: int, pool=None) -> str:
-    """One picture, one name, one page."""
+    """One big picture, a bubble-letter title, decorations around the edges."""
     rng = random.Random(f"{theme.key}-{name}-{index}")
     word = label(name).upper()
 
-    body = [
-        text(theme.title, PAGE_W / 2, 74, "hand", 26, "middle", 6, INK,
-             pool=pool),
-        FRAMES[index % len(FRAMES)](FRAME_CX, FRAME_CY, FRAME_R),
-        confetti(rng, FRAME_CX, FRAME_CY, FRAME_R),
-        fitted(name, FRAME_CX, FRAME_CY,
-               SUBJECT_FIT_PANEL if index % len(FRAMES) == 2 else SUBJECT_FIT,
-               rng.uniform(-3, 3), STROKE_SUBJECT, pool),
-    ]
+    lead = 40.0
+    big = 92.0
+    while measure(word, "display", big, 0) > 432 and big > 30:
+        big -= 2
 
-    size = 76.0
-    while measure(word, "display", size, 0) > 470 and size > 26:
-        size -= 2
-    body.append(hollow(word, PAGE_W / 2, 700, size, STROKE_TITLE, pool))
-    body.append(text("Color me in!", PAGE_W / 2, 732, "hand", 22, "middle",
-                     1.5, INK, pool=pool))
-    body.append(footer(f"Page {index + 1}", pool))
+    guard = _subject_guard(name, SUBJECT_FIT)
+    body = [
+        page_border(pool),
+        hollow("COLOR THE", PAGE_W / 2, 128, lead, 3.4, pool),
+        hollow(word, PAGE_W / 2, 214, big, STROKE_TITLE, pool),
+        decorations(theme, rng, guard, pool),
+        fitted(name, SUBJECT_CX, SUBJECT_CY, SUBJECT_FIT, rng.uniform(-3, 3),
+               STROKE_SUBJECT, pool),
+        credit(theme, pool),
+    ]
     return "".join(body)
 
 
@@ -231,8 +312,7 @@ def cover_page(theme: Theme, n_pages: int, pool=None) -> str:
     for i, name in enumerate(picks[:cols * rows]):
         x = panel[0] + cw * (i % cols) + cw / 2
         y = panel[1] + ch * (i // cols) + ch / 2
-        body.append(fitted(name, x, y, 82, rng.uniform(-8, 8), STROKE_FRAME,
-                           pool))
+        body.append(fitted(name, x, y, 82, rng.uniform(-8, 8), 2.8, pool))
 
     body.append(text(f"{n_pages} coloring pages  ·  one big picture each",
                      PAGE_W / 2, 648, "hand", 25, "middle", 1, INK, pool=pool))

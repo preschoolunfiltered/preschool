@@ -390,7 +390,7 @@
   };
 
   const SHEET_KINDS = {
-    subject: "One big picture, named in hollow letters"
+    subject: "One big picture, bubble-letter title, decorated margins"
   };
 
   const el = (id) => document.getElementById(id);
@@ -540,7 +540,7 @@
       rows.push(["Use for", "the listing thumbnail"]);
     } else if (SHEET_KINDS[page.kind]) {
       rows.push(["Picture", page.label]);
-      rows.push(["Word", page.label.toUpperCase() + ", hollow letters"]);
+      rows.push(["Title", "COLOR THE " + page.label.toUpperCase()]);
       rows.push(["Lines", "chunky, nothing filled black"]);
       rows.push(["Child does", "colors the picture and the word"]);
     } else {

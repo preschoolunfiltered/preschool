@@ -103,11 +103,11 @@ def main():
                      " together, and near-twins are parked side by side on"
                      " purpose."},
             {"id": "color", "label": "Coloring pages", "themes": color_themes,
-             "note": "One big picture per sheet, clip-art style: a smiling"
-                     " subject in a badge frame, its name spelled out in"
-                     " hollow letters underneath, and chunky outlines with"
-                     " nothing filled in black, so every shape - and every"
-                     " letter - can take a crayon."},
+             "note": "One big picture per sheet, clip-art style: a bubble"
+                     " -letter title, a smiling subject drawn heavy enough for"
+                     " a crayon to chase, and flowers, butterflies and stars"
+                     " down the margins. Nothing is filled in black except"
+                     " the eyes, so every shape can take a color."},
         ],
     }
     total = 0

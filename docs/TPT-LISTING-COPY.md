@@ -1044,10 +1044,12 @@ Spring Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 **What you get**
 
 - 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- One big picture per page, drawn clip-art style in a badge frame, so even
-  the youngest hands have somewhere easy to start
-- The name of the picture underneath in big hollow letters, so the page
-  builds vocabulary and print awareness while it is being colored
+- One big picture per page, drawn clip-art style with a heavy outline, so
+  even the youngest hands have somewhere easy to start
+- A bubble-letter title the children color in as well - COLOR THE BUNNY -
+  so the page builds vocabulary and print awareness while it is worked on
+- Flowers, butterflies and stars down the margins, so there is plenty to
+  do once the main picture is finished
 - Chunky outlines with nothing filled in solid black, so every single shape
   can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
@@ -1091,10 +1093,12 @@ Summer Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 **What you get**
 
 - 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- One big picture per page, drawn clip-art style in a badge frame, so even
-  the youngest hands have somewhere easy to start
-- The name of the picture underneath in big hollow letters, so the page
-  builds vocabulary and print awareness while it is being colored
+- One big picture per page, drawn clip-art style with a heavy outline, so
+  even the youngest hands have somewhere easy to start
+- A bubble-letter title the children color in as well - COLOR THE BUNNY -
+  so the page builds vocabulary and print awareness while it is worked on
+- Flowers, butterflies and stars down the margins, so there is plenty to
+  do once the main picture is finished
 - Chunky outlines with nothing filled in solid black, so every single shape
   can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
@@ -1138,10 +1142,12 @@ Fall Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 **What you get**
 
 - 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- One big picture per page, drawn clip-art style in a badge frame, so even
-  the youngest hands have somewhere easy to start
-- The name of the picture underneath in big hollow letters, so the page
-  builds vocabulary and print awareness while it is being colored
+- One big picture per page, drawn clip-art style with a heavy outline, so
+  even the youngest hands have somewhere easy to start
+- A bubble-letter title the children color in as well - COLOR THE BUNNY -
+  so the page builds vocabulary and print awareness while it is worked on
+- Flowers, butterflies and stars down the margins, so there is plenty to
+  do once the main picture is finished
 - Chunky outlines with nothing filled in solid black, so every single shape
   can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
@@ -1185,10 +1191,12 @@ Winter Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 **What you get**
 
 - 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- One big picture per page, drawn clip-art style in a badge frame, so even
-  the youngest hands have somewhere easy to start
-- The name of the picture underneath in big hollow letters, so the page
-  builds vocabulary and print awareness while it is being colored
+- One big picture per page, drawn clip-art style with a heavy outline, so
+  even the youngest hands have somewhere easy to start
+- A bubble-letter title the children color in as well - COLOR THE BUNNY -
+  so the page builds vocabulary and print awareness while it is worked on
+- Flowers, butterflies and stars down the margins, so there is plenty to
+  do once the main picture is finished
 - Chunky outlines with nothing filled in solid black, so every single shape
   can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
@@ -1232,10 +1240,12 @@ Christmas Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 **What you get**
 
 - 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- One big picture per page, drawn clip-art style in a badge frame, so even
-  the youngest hands have somewhere easy to start
-- The name of the picture underneath in big hollow letters, so the page
-  builds vocabulary and print awareness while it is being colored
+- One big picture per page, drawn clip-art style with a heavy outline, so
+  even the youngest hands have somewhere easy to start
+- A bubble-letter title the children color in as well - COLOR THE BUNNY -
+  so the page builds vocabulary and print awareness while it is worked on
+- Flowers, butterflies and stars down the margins, so there is plenty to
+  do once the main picture is finished
 - Chunky outlines with nothing filled in solid black, so every single shape
   can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
@@ -1279,10 +1289,12 @@ Halloween Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 **What you get**
 
 - 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- One big picture per page, drawn clip-art style in a badge frame, so even
-  the youngest hands have somewhere easy to start
-- The name of the picture underneath in big hollow letters, so the page
-  builds vocabulary and print awareness while it is being colored
+- One big picture per page, drawn clip-art style with a heavy outline, so
+  even the youngest hands have somewhere easy to start
+- A bubble-letter title the children color in as well - COLOR THE BUNNY -
+  so the page builds vocabulary and print awareness while it is worked on
+- Flowers, butterflies and stars down the margins, so there is plenty to
+  do once the main picture is finished
 - Chunky outlines with nothing filled in solid black, so every single shape
   can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
@@ -1326,10 +1338,12 @@ Thanksgiving Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 **What you get**
 
 - 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- One big picture per page, drawn clip-art style in a badge frame, so even
-  the youngest hands have somewhere easy to start
-- The name of the picture underneath in big hollow letters, so the page
-  builds vocabulary and print awareness while it is being colored
+- One big picture per page, drawn clip-art style with a heavy outline, so
+  even the youngest hands have somewhere easy to start
+- A bubble-letter title the children color in as well - COLOR THE BUNNY -
+  so the page builds vocabulary and print awareness while it is worked on
+- Flowers, butterflies and stars down the margins, so there is plenty to
+  do once the main picture is finished
 - Chunky outlines with nothing filled in solid black, so every single shape
   can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
@@ -1373,10 +1387,12 @@ Valentine Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 **What you get**
 
 - 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- One big picture per page, drawn clip-art style in a badge frame, so even
-  the youngest hands have somewhere easy to start
-- The name of the picture underneath in big hollow letters, so the page
-  builds vocabulary and print awareness while it is being colored
+- One big picture per page, drawn clip-art style with a heavy outline, so
+  even the youngest hands have somewhere easy to start
+- A bubble-letter title the children color in as well - COLOR THE BUNNY -
+  so the page builds vocabulary and print awareness while it is worked on
+- Flowers, butterflies and stars down the margins, so there is plenty to
+  do once the main picture is finished
 - Chunky outlines with nothing filled in solid black, so every single shape
   can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
@@ -1420,10 +1436,12 @@ Easter Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 **What you get**
 
 - 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- One big picture per page, drawn clip-art style in a badge frame, so even
-  the youngest hands have somewhere easy to start
-- The name of the picture underneath in big hollow letters, so the page
-  builds vocabulary and print awareness while it is being colored
+- One big picture per page, drawn clip-art style with a heavy outline, so
+  even the youngest hands have somewhere easy to start
+- A bubble-letter title the children color in as well - COLOR THE BUNNY -
+  so the page builds vocabulary and print awareness while it is worked on
+- Flowers, butterflies and stars down the margins, so there is plenty to
+  do once the main picture is finished
 - Chunky outlines with nothing filled in solid black, so every single shape
   can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
@@ -1467,10 +1485,12 @@ St. Patrick's Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 **What you get**
 
 - 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- One big picture per page, drawn clip-art style in a badge frame, so even
-  the youngest hands have somewhere easy to start
-- The name of the picture underneath in big hollow letters, so the page
-  builds vocabulary and print awareness while it is being colored
+- One big picture per page, drawn clip-art style with a heavy outline, so
+  even the youngest hands have somewhere easy to start
+- A bubble-letter title the children color in as well - COLOR THE BUNNY -
+  so the page builds vocabulary and print awareness while it is worked on
+- Flowers, butterflies and stars down the margins, so there is plenty to
+  do once the main picture is finished
 - Chunky outlines with nothing filled in solid black, so every single shape
   can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
@@ -1514,10 +1534,12 @@ Ocean Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 **What you get**
 
 - 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- One big picture per page, drawn clip-art style in a badge frame, so even
-  the youngest hands have somewhere easy to start
-- The name of the picture underneath in big hollow letters, so the page
-  builds vocabulary and print awareness while it is being colored
+- One big picture per page, drawn clip-art style with a heavy outline, so
+  even the youngest hands have somewhere easy to start
+- A bubble-letter title the children color in as well - COLOR THE BUNNY -
+  so the page builds vocabulary and print awareness while it is worked on
+- Flowers, butterflies and stars down the margins, so there is plenty to
+  do once the main picture is finished
 - Chunky outlines with nothing filled in solid black, so every single shape
   can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
@@ -1561,10 +1583,12 @@ Space Coloring Pages | 15 No-Prep Sheets for Preschool and Pre-K
 **What you get**
 
 - 15 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- One big picture per page, drawn clip-art style in a badge frame, so even
-  the youngest hands have somewhere easy to start
-- The name of the picture underneath in big hollow letters, so the page
-  builds vocabulary and print awareness while it is being colored
+- One big picture per page, drawn clip-art style with a heavy outline, so
+  even the youngest hands have somewhere easy to start
+- A bubble-letter title the children color in as well - COLOR THE BUNNY -
+  so the page builds vocabulary and print awareness while it is worked on
+- Flowers, butterflies and stars down the margins, so there is plenty to
+  do once the main picture is finished
 - Chunky outlines with nothing filled in solid black, so every single shape
   can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
@@ -1608,10 +1632,12 @@ Farm Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 **What you get**
 
 - 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- One big picture per page, drawn clip-art style in a badge frame, so even
-  the youngest hands have somewhere easy to start
-- The name of the picture underneath in big hollow letters, so the page
-  builds vocabulary and print awareness while it is being colored
+- One big picture per page, drawn clip-art style with a heavy outline, so
+  even the youngest hands have somewhere easy to start
+- A bubble-letter title the children color in as well - COLOR THE BUNNY -
+  so the page builds vocabulary and print awareness while it is worked on
+- Flowers, butterflies and stars down the margins, so there is plenty to
+  do once the main picture is finished
 - Chunky outlines with nothing filled in solid black, so every single shape
   can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
@@ -1655,10 +1681,12 @@ Dinosaurs Coloring Pages | 15 No-Prep Sheets for Preschool and Pre-K
 **What you get**
 
 - 15 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- One big picture per page, drawn clip-art style in a badge frame, so even
-  the youngest hands have somewhere easy to start
-- The name of the picture underneath in big hollow letters, so the page
-  builds vocabulary and print awareness while it is being colored
+- One big picture per page, drawn clip-art style with a heavy outline, so
+  even the youngest hands have somewhere easy to start
+- A bubble-letter title the children color in as well - COLOR THE BUNNY -
+  so the page builds vocabulary and print awareness while it is worked on
+- Flowers, butterflies and stars down the margins, so there is plenty to
+  do once the main picture is finished
 - Chunky outlines with nothing filled in solid black, so every single shape
   can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
@@ -1702,10 +1730,12 @@ Jungle Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 **What you get**
 
 - 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- One big picture per page, drawn clip-art style in a badge frame, so even
-  the youngest hands have somewhere easy to start
-- The name of the picture underneath in big hollow letters, so the page
-  builds vocabulary and print awareness while it is being colored
+- One big picture per page, drawn clip-art style with a heavy outline, so
+  even the youngest hands have somewhere easy to start
+- A bubble-letter title the children color in as well - COLOR THE BUNNY -
+  so the page builds vocabulary and print awareness while it is worked on
+- Flowers, butterflies and stars down the margins, so there is plenty to
+  do once the main picture is finished
 - Chunky outlines with nothing filled in solid black, so every single shape
   can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
@@ -1749,10 +1779,12 @@ School Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 **What you get**
 
 - 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- One big picture per page, drawn clip-art style in a badge frame, so even
-  the youngest hands have somewhere easy to start
-- The name of the picture underneath in big hollow letters, so the page
-  builds vocabulary and print awareness while it is being colored
+- One big picture per page, drawn clip-art style with a heavy outline, so
+  even the youngest hands have somewhere easy to start
+- A bubble-letter title the children color in as well - COLOR THE BUNNY -
+  so the page builds vocabulary and print awareness while it is worked on
+- Flowers, butterflies and stars down the margins, so there is plenty to
+  do once the main picture is finished
 - Chunky outlines with nothing filled in solid black, so every single shape
   can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
@@ -1796,10 +1828,12 @@ Things That Go Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 **What you get**
 
 - 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- One big picture per page, drawn clip-art style in a badge frame, so even
-  the youngest hands have somewhere easy to start
-- The name of the picture underneath in big hollow letters, so the page
-  builds vocabulary and print awareness while it is being colored
+- One big picture per page, drawn clip-art style with a heavy outline, so
+  even the youngest hands have somewhere easy to start
+- A bubble-letter title the children color in as well - COLOR THE BUNNY -
+  so the page builds vocabulary and print awareness while it is worked on
+- Flowers, butterflies and stars down the margins, so there is plenty to
+  do once the main picture is finished
 - Chunky outlines with nothing filled in solid black, so every single shape
   can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
@@ -1843,10 +1877,12 @@ Camping Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 **What you get**
 
 - 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- One big picture per page, drawn clip-art style in a badge frame, so even
-  the youngest hands have somewhere easy to start
-- The name of the picture underneath in big hollow letters, so the page
-  builds vocabulary and print awareness while it is being colored
+- One big picture per page, drawn clip-art style with a heavy outline, so
+  even the youngest hands have somewhere easy to start
+- A bubble-letter title the children color in as well - COLOR THE BUNNY -
+  so the page builds vocabulary and print awareness while it is worked on
+- Flowers, butterflies and stars down the margins, so there is plenty to
+  do once the main picture is finished
 - Chunky outlines with nothing filled in solid black, so every single shape
   can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
@@ -1890,10 +1926,12 @@ Birthday Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 **What you get**
 
 - 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- One big picture per page, drawn clip-art style in a badge frame, so even
-  the youngest hands have somewhere easy to start
-- The name of the picture underneath in big hollow letters, so the page
-  builds vocabulary and print awareness while it is being colored
+- One big picture per page, drawn clip-art style with a heavy outline, so
+  even the youngest hands have somewhere easy to start
+- A bubble-letter title the children color in as well - COLOR THE BUNNY -
+  so the page builds vocabulary and print awareness while it is worked on
+- Flowers, butterflies and stars down the margins, so there is plenty to
+  do once the main picture is finished
 - Chunky outlines with nothing filled in solid black, so every single shape
   can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
@@ -1937,10 +1975,12 @@ Bugs Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 **What you get**
 
 - 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- One big picture per page, drawn clip-art style in a badge frame, so even
-  the youngest hands have somewhere easy to start
-- The name of the picture underneath in big hollow letters, so the page
-  builds vocabulary and print awareness while it is being colored
+- One big picture per page, drawn clip-art style with a heavy outline, so
+  even the youngest hands have somewhere easy to start
+- A bubble-letter title the children color in as well - COLOR THE BUNNY -
+  so the page builds vocabulary and print awareness while it is worked on
+- Flowers, butterflies and stars down the margins, so there is plenty to
+  do once the main picture is finished
 - Chunky outlines with nothing filled in solid black, so every single shape
   can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
@@ -1984,10 +2024,12 @@ Pets Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 **What you get**
 
 - 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- One big picture per page, drawn clip-art style in a badge frame, so even
-  the youngest hands have somewhere easy to start
-- The name of the picture underneath in big hollow letters, so the page
-  builds vocabulary and print awareness while it is being colored
+- One big picture per page, drawn clip-art style with a heavy outline, so
+  even the youngest hands have somewhere easy to start
+- A bubble-letter title the children color in as well - COLOR THE BUNNY -
+  so the page builds vocabulary and print awareness while it is worked on
+- Flowers, butterflies and stars down the margins, so there is plenty to
+  do once the main picture is finished
 - Chunky outlines with nothing filled in solid black, so every single shape
   can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print
@@ -2031,10 +2073,12 @@ Yummy Food Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
 **What you get**
 
 - 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
-- One big picture per page, drawn clip-art style in a badge frame, so even
-  the youngest hands have somewhere easy to start
-- The name of the picture underneath in big hollow letters, so the page
-  builds vocabulary and print awareness while it is being colored
+- One big picture per page, drawn clip-art style with a heavy outline, so
+  even the youngest hands have somewhere easy to start
+- A bubble-letter title the children color in as well - COLOR THE BUNNY -
+  so the page builds vocabulary and print awareness while it is worked on
+- Flowers, butterflies and stars down the margins, so there is plenty to
+  do once the main picture is finished
 - Chunky outlines with nothing filled in solid black, so every single shape
   can take a crayon - including the letters of the word
 - Black-and-white line art, no colour ink needed to print

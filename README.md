@@ -53,16 +53,19 @@ python3 build.py --no-previews        # PDFs only, faster
 
 ### Coloring pages
 
-One big picture per sheet, clip-art style: the subject in a badge frame
-(scalloped, cloud or dashed panel, rotating), sparkles in the corners, and its
-name underneath in hollow letters the child colors too. One page per picture
-in the theme, so a set runs 15–18 pages — 434 in total.
+One big picture per sheet, clip-art style: a two-line bubble-letter title
+("COLOR THE BUNNY"), the subject drawn large with a heavy 5.4pt outline, and
+flowers, butterflies and stars down both margins, inside a thin page border
+whose bottom edge carries the credit line. One page per picture in the theme,
+so a set runs 15–18 pages — 434 in total.
 
 Three things make a doodle work at page size:
 
 - `outline()` turns the library's solid black accents — a ladybug's head, a
   bee's stripes, a jack-o'-lantern's face — into empty outlines, because a
-  filled shape is a shape a child cannot color.
+  filled shape is a shape a child cannot color. Pupils are the exception:
+  clip art keeps eyes solid, and an eye drawn as an empty ring looks
+  startled.
 - [`ispy/cute.py`](ispy/cute.py) adds a kawaii face to objects that don't have
   one. Only objects with an empty belly are listed; anything whose middle is
   already busy is left alone rather than given a face over its own detail.
