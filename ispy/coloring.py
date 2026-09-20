@@ -34,7 +34,7 @@ STROKE_TITLE = 4.4
 
 BORDER = (28.0, 28.0, PAGE_W - 28.0, PAGE_H - 28.0)
 SUBJECT_CX, SUBJECT_CY = PAGE_W / 2, 486.0
-SUBJECT_FIT = 366.0
+SUBJECT_FIT = 398.0
 
 _BOUNDS_PATH = os.path.join(os.path.dirname(os.path.dirname(__file__)),
                             "assets", "icon_bounds.json")
@@ -219,7 +219,8 @@ def _subject_guard(key: str, target: float):
 
 
 def decorations(theme: Theme, rng: random.Random, guard, pool=None,
-                cy: float = SUBJECT_CY) -> str:
+                cy: float = SUBJECT_CY, sizes=(52.0, 88.0),
+                slots=None) -> str:
     """Flowers, butterflies and sparkles filling the space around the picture."""
     picks = [n for n in theme.icons if n in FILLERS]
     kinds = [("icon", n) for n in picks] * 2
@@ -233,12 +234,12 @@ def decorations(theme: Theme, rng: random.Random, guard, pool=None,
     # fixed spots down both margins and along the bottom, the way a clip-art
     # sheet lines its flowers up - a ring around the subject leaves the
     # corners bare and crowds a wide picture
-    slots = ((74, 298), (64, 416), (80, 540), (104, 656),
-             (538, 298), (548, 416), (532, 540), (508, 656),
-             (206, 690), (306, 268), (412, 690))
+    slots = slots or ((74, 298), (64, 416), (80, 540), (104, 656),
+                      (538, 298), (548, 416), (532, 540), (508, 656),
+                      (206, 690), (306, 268), (412, 690))
     placed, out = [], []
     for i, (sx, sy) in enumerate(slots):
-        size = rng.uniform(52, 88)
+        size = rng.uniform(*sizes)
         r = size * 0.5
         x = min(max(sx + rng.uniform(-14, 14), x0 + 20 + r), x1 - 20 - r)
         y = min(max(sy + rng.uniform(-14, 14), 250 + r), y1 - 26 - r)
@@ -290,7 +291,7 @@ def subject_page(theme: Theme, name: str, index: int, pool=None) -> str:
     return "".join(body)
 
 
-HERO_CY, HERO_FIT = 512.0, 386.0
+HERO_CY, HERO_FIT = 516.0, 434.0
 
 
 def hero_page(theme: Theme, pool=None) -> str:
@@ -309,7 +310,11 @@ def hero_page(theme: Theme, pool=None) -> str:
         page_border(pool),
         hollow(lead, PAGE_W / 2, 132, small, 3.6, pool),
         hollow(word, PAGE_W / 2, 216, big, STROKE_TITLE, pool),
-        decorations(theme, rng, guard, pool, cy=HERO_CY),
+        decorations(theme, rng, guard, pool, cy=HERO_CY, sizes=(42.0, 64.0),
+                    slots=((62, 300), (58, 372), (60, 444), (66, 516),
+                           (74, 588), (92, 656), (550, 300), (554, 372),
+                           (552, 444), (546, 516), (538, 588), (520, 656),
+                           (306, 272))),
         fitted_hero(theme, PAGE_W / 2, HERO_CY, HERO_FIT, pool),
         credit(theme, pool),
     ])

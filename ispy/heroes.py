@@ -1,14 +1,14 @@
-"""Full-body character drawings, one per theme, for the coloring pages.
+"""Full-body characters, one per theme, drawn chibi for coloring pages.
 
-The icon library is drawn to read at 30pt on an I Spy sheet, which is why a
-blown-up icon looks thin as the star of a coloring page: a bunny there is a
-head, not a character. These are drawn for page size instead - a body, arms,
-legs, a face and something to hold - at the fidelity a store-bought sheet has.
+The rules here are cute-first: a head bigger than the body, big solid eyes,
+a small smile, and as few interior lines as possible. A coloring page is not
+an anatomy lesson - every extra line is another fiddly gap a four-year-old
+has to color around, and the page reads busier for it.
 
-Everything lives in the same 100x100 box as the icons, so the coloring page
-places a hero exactly the way it places any other subject. The parts below
-(head, ears, body, arms, feet) are shared so twenty-odd characters read as
-one family rather than twenty separate drawings.
+Everything lives in the same 100x100 box as the icons, so a hero is placed
+exactly like any other subject. `critter()` builds the standard body, so the
+characters read as one family and each one is only its ears, its markings
+and the thing it is holding.
 """
 
 from __future__ import annotations
@@ -19,6 +19,8 @@ from ispy.draw import (
     FILLED, arc, circle, dot, ellipse, heart, line, path, pt, rect, star,
     tube, zigzag,
 )
+
+SOLID_BLACK = 'fill="#000" stroke="none"'
 
 HEROES: dict[str, callable] = {}
 
@@ -49,6 +51,8 @@ PHRASES: dict[str, tuple[str, str]] = {
 }
 
 
+
+
 def hero(key: str):
     def deco(fn):
         HEROES[key] = fn
@@ -56,573 +60,472 @@ def hero(key: str):
     return deco
 
 
-# ------------------------------------------------------------- body parts ---
+# --------------------------------------------------------- the chibi build ---
+# One head, one body, one set of limbs, shared by every character.
 
-def face(cx, cy, w=15.0, eye=3.0, smile=7.0, blush=True, closed=False):
-    """Eyes, a smile, and two blush ovals - the set's house expression."""
-    out = []
-    if closed:
-        out.append(arc(cx - w / 2, cy, 4.0, 200, 340))
-        out.append(arc(cx + w / 2, cy, 4.0, 200, 340))
-    else:
-        out.append(dot(cx - w / 2, cy, eye))
-        out.append(dot(cx + w / 2, cy, eye))
-    out.append(arc(cx, cy + 3.5, smile, 20, 160))
+HEAD_X, HEAD_Y, HEAD_R = 50.0, 34.0, 26.0
+BODY_X, BODY_Y, BODY_RX, BODY_RY = 50.0, 75.0, 20.0, 18.0
+
+
+def eyes(cx=HEAD_X, cy=HEAD_Y + 2, w=19.0, r=4.8, blush=True):
+    out = [dot(cx - w / 2, cy, r), dot(cx + w / 2, cy, r)]
     if blush:
-        out.append(ellipse(cx - w / 2 - 7.5, cy + 5.5, 3.6, 2.4))
-        out.append(ellipse(cx + w / 2 + 7.5, cy + 5.5, 3.6, 2.4))
+        out.append(ellipse(cx - w / 2 - 9, cy + 8, 4.2, 2.6))
+        out.append(ellipse(cx + w / 2 + 9, cy + 8, 4.2, 2.6))
     return "".join(out)
 
 
-def snout(cx, cy, rx=8.0, ry=6.0, nose_r=2.6):
-    """A muzzle with a nose and the little W mouth under it."""
+def smile(cx=HEAD_X, cy=HEAD_Y + 12, r=6.0):
+    return arc(cx, cy, r, 20, 160)
+
+
+def muzzle(cx=HEAD_X, cy=HEAD_Y + 13, rx=10.0, ry=7.0, nose=3.0):
+    """An oval snout with a nose and one smile line - nothing more."""
     return "".join([
         ellipse(cx, cy, rx, ry, 0, FILLED),
-        ellipse(cx, cy - ry * 0.45, nose_r * 1.3, nose_r, 0, "fill=\"#000\" stroke=\"none\""),
-        path(f"M {cx} {cy - ry * 0.1} L {cx} {cy + ry * 0.5}"),
-        path(f"M {cx} {cy + ry * 0.5} C {cx - 3} {cy + ry * 1.1} "
-             f"{cx - 5} {cy + ry * 0.6} {cx - 5.5} {cy + ry * 0.2}"),
-        path(f"M {cx} {cy + ry * 0.5} C {cx + 3} {cy + ry * 1.1} "
-             f"{cx + 5} {cy + ry * 0.6} {cx + 5.5} {cy + ry * 0.2}"),
+        ellipse(cx, cy - ry * 0.35, nose * 1.4, nose, 0, SOLID_BLACK),
+        arc(cx, cy + ry * 0.2, rx * 0.45, 20, 160),
     ])
 
 
-def round_ears(cx, cy, r, spread, ear_r, inner=True):
+def head_shape():
+    return circle(HEAD_X, HEAD_Y, HEAD_R, FILLED)
+
+
+def body_shape():
+    return ellipse(BODY_X, BODY_Y, BODY_RX, BODY_RY, 0, FILLED)
+
+
+def arms(up=False, reach=15.0, mitt=6.0):
     out = []
     for s in (-1, 1):
-        ex, ey = cx + s * spread, cy
-        out.append(circle(ex, ey, ear_r, FILLED))
-        if inner:
-            out.append(circle(ex, ey, ear_r * 0.5, FILLED))
-    return "".join(out)
-
-
-def pointy_ears(cx, cy, spread, h, w, inner=True):
-    out = []
-    for s in (-1, 1):
-        bx = cx + s * spread
-        out.append(path(f"M {bx - w / 2} {cy} L {bx + s * w * 0.15} {cy - h} "
-                        f"L {bx + w / 2} {cy + 2} Z", FILLED))
-        if inner:
-            out.append(path(f"M {bx - w * 0.22} {cy - 1} "
-                            f"L {bx + s * w * 0.1} {cy - h * 0.6} "
-                            f"L {bx + w * 0.22} {cy} Z"))
-    return "".join(out)
-
-
-def long_ears(cx, cy, spread, h, w, tilt=9.0):
-    out = []
-    for s in (-1, 1):
-        ex = cx + s * spread
-        body = (ellipse(ex, cy - h / 2, w / 2, h / 2, 0, FILLED)
-                + ellipse(ex, cy - h / 2, w / 5, h / 2.6, 0, FILLED))
-        out.append(f'<g transform="rotate({s * tilt} {ex} {cy})">{body}</g>')
-    return "".join(out)
-
-
-def belly(cx, cy, rx, ry):
-    return ellipse(cx, cy, rx, ry, 0, FILLED)
-
-
-def arms(cx, cy, reach=15.0, drop=9.0, w=5.0, mitt=5.4, up=False):
-    """Two short limbs with round mitts, held down or up."""
-    out = []
-    for s in (-1, 1):
-        x0, y0 = cx + s * (reach * 0.5), cy
-        x1, y1 = cx + s * reach, cy + (-drop if up else drop)
-        out.append(tube([(x0, y0), (x1, y1)], w / 2, FILLED))
+        x1 = BODY_X + s * reach
+        y1 = BODY_Y + (-8 if up else 6)
+        out.append(tube([(BODY_X + s * 6, BODY_Y - 2), (x1, y1)], 3.4, FILLED))
         out.append(circle(x1, y1, mitt, FILLED))
     return "".join(out)
 
 
-def feet(cx, cy, spread=11.0, rx=8.0, ry=5.5):
-    return "".join(ellipse(cx + s * spread, cy, rx, ry, 0, FILLED)
+def feet(y=BODY_Y + 16, spread=10.0, rx=8.5, ry=5.5):
+    return "".join(ellipse(BODY_X + s * spread, y, rx, ry, 0, FILLED)
                    for s in (-1, 1))
 
 
-def tail_curl(x, y, r=8.0):
-    return arc(x, y, r, 250, 520)
+def round_ears(spread=20.0, r=10.0, y=HEAD_Y - 18):
+    return "".join(circle(HEAD_X + s * spread, y, r, FILLED) for s in (-1, 1))
+
+
+def pointy_ears(spread=17.0, h=17.0, w=15.0, y=HEAD_Y - 15):
+    out = []
+    for s in (-1, 1):
+        bx = HEAD_X + s * spread
+        out.append(path(f"M {bx - w / 2} {y + 4} L {bx + s * 2} {y - h} "
+                        f"L {bx + w / 2} {y + 6} Z", FILLED))
+    return "".join(out)
+
+
+def long_ears(spread=11.0, h=34.0, w=14.0, tilt=10.0, y=HEAD_Y - 14):
+    out = []
+    for s in (-1, 1):
+        ex = HEAD_X + s * spread
+        shape = ellipse(ex, y - h / 2, w / 2, h / 2, 0, FILLED)
+        out.append(f'<g transform="rotate({s * tilt} {ex} {y})">{shape}</g>')
+    return "".join(out)
+
+
+def floppy_ears(spread=24.0, rx=9.0, ry=14.0, y=HEAD_Y):
+    return "".join(ellipse(HEAD_X + s * spread, y, rx, ry, s * 12, FILLED)
+                   for s in (-1, 1))
+
+
+def critter(ears="", behind="", marks="", extras="", prop="",
+            snout=False, arms_up=False, has_feet=True, blush=True,
+            face_parts=None):
+    """Standard build, in the order things overlap.
+
+    The prop goes on before the arms so the mitts land on top of it and the
+    character reads as holding the thing rather than standing behind it.
+    """
+    return "".join([
+        behind,
+        feet() if has_feet else "",
+        body_shape(),
+        marks,
+        prop,
+        arms(up=arms_up),
+        ears,
+        head_shape(),
+        face_parts if face_parts is not None
+        else eyes(blush=blush) + (muzzle() if snout else smile()),
+        extras,
+    ])
 
 
 # ---------------------------------------------------------------- heroes ----
 
+def held(body: str) -> str:
+    """Wrap a prop so it sits in the character's hands, in front of the body."""
+    return body
+
+
 @hero("easter")
 def bunny_on_carrot():
-    """A bunny sitting on a giant carrot."""
     carrot = "".join([
-        path("M 16 80 C 32 70 72 70 88 82 C 88 90 76 97 58 97 "
-             "C 36 97 18 90 16 80 Z", FILLED),
-        path("M 32 76 C 34 84 34 92 32 96"),
-        path("M 48 72 C 50 80 50 90 48 97"),
-        path("M 64 73 C 66 80 66 90 64 96"),
-        path("M 16 80 C 6 74 4 64 8 60 C 15 63 20 70 22 77"),
-        path("M 18 77 C 14 66 17 57 23 53 C 28 60 28 70 26 77"),
+        path("M 10 84 C 30 74 72 74 92 86 C 92 94 76 99 54 99 "
+             "C 30 99 12 93 10 84 Z", FILLED),
+        path("M 32 80 C 34 88 34 95 32 98"),
+        path("M 54 76 C 56 84 56 93 54 99"),
+        path("M 74 79 C 76 86 76 94 74 98"),
+        path("M 10 84 C 0 78 -2 68 2 64 C 9 67 14 74 16 81"),
     ])
-    bunny = "".join([
-        feet(50, 72, 13, 8.5, 5),
-        arms(50, 56, 18, 8, 5, 5.4),
-        ellipse(50, 56, 18, 16, 0, FILLED),
-        belly(50, 60, 10, 9),
-        long_ears(50, 24, 8, 30, 13),
-        circle(50, 30, 17, FILLED),
-        face(50, 28, 14, 3.0, 6.5),
-        snout(50, 36, 6, 4.5, 2.2),
-    ])
-    return carrot + bunny
+    return critter(behind=carrot, ears=long_ears(), snout=True, has_feet=False)
 
 
 @hero("fall")
 def squirrel_with_acorn():
-    """A squirrel holding an acorn, tail up behind it."""
-    tail = path("M 74 84 C 92 80 96 56 86 42 C 76 28 56 30 54 44 "
-                "C 66 36 80 42 82 56 C 84 70 78 80 68 82 Z", FILLED)
-    body = "".join([
-        feet(48, 88, 12, 8, 5),
-        ellipse(48, 68, 19, 18, 0, FILLED),
-        belly(48, 72, 11, 10),
-        arms(48, 62, 16, 8, 5, 5.2),
-        pointy_ears(48, 30, 11, 12, 9),
-        circle(48, 38, 17, FILLED),
-        face(48, 36, 14, 3.0, 6.5),
-        snout(48, 44, 5.5, 4.2, 2.2),
-    ])
+    tail = path("M 74 88 C 94 84 98 56 86 42 C 74 28 54 32 54 46 "
+                "C 68 38 82 46 84 60 C 86 74 80 84 68 86 Z", FILLED)
     acorn = "".join([
-        path("M 40 74 C 40 84 44 90 50 90 C 56 90 60 84 60 74 Z", FILLED),
-        path("M 38 74 C 38 68 43 65 50 65 C 57 65 62 68 62 74 Z", FILLED),
-        line(50, 65, 50, 60),
+        path("M 40 84 C 40 94 45 98 50 98 C 55 98 60 94 60 84 Z", FILLED),
+        path("M 38 84 C 38 77 43 74 50 74 C 57 74 62 77 62 84 Z", FILLED),
     ])
-    return tail + body + acorn
-
-
-@hero("halloween")
-def cat_with_lantern():
-    """A cat holding a little jack-o'-lantern."""
-    return "".join([
-        path("M 72 76 C 88 74 92 58 82 52"),
-        feet(50, 90, 13, 8.5, 5.2),
-        arms(50, 66, 18, 8, 5, 5.4),
-        ellipse(50, 68, 19, 18, 0, FILLED),
-        belly(50, 72, 10, 9),
-        pointy_ears(50, 22, 12, 14, 11),
-        circle(50, 32, 18, FILLED),
-        face(50, 29, 14, 3.1, 6.5),
-        path("M 50 36 L 45.5 40 L 54.5 40 Z", 'fill="#000" stroke="none"'),
-        line(32, 34, 18, 31), line(32, 38, 18, 40),
-        line(68, 34, 82, 31), line(68, 38, 82, 40),
-        ellipse(50, 80, 16, 13, 0, FILLED),
-        path("M 50 67 L 50 62"),
-        path("M 42 76 L 48 76 L 45 71 Z", 'fill="#000" stroke="none"'),
-        path("M 58 76 L 52 76 L 55 71 Z", 'fill="#000" stroke="none"'),
-        path("M 42 84 L 46 84 L 48 87 L 52 87 L 54 84 L 58 84 "
-             "L 56 89 L 44 89 Z", 'fill="#000" stroke="none"'),
-    ])
-
-
-@hero("valentine")
-def bear_with_heart():
-    """A teddy bear hugging a heart."""
-    return "".join([
-        feet(50, 88, 13, 9, 6),
-        arms(50, 62, 19, 4, 5.4, 6.0, up=True),
-        ellipse(50, 66, 20, 19, 0, FILLED),
-        belly(50, 70, 12, 11),
-        round_ears(50, 24, 16, 15, 8),
-        circle(50, 34, 19, FILLED),
-        face(50, 31, 15, 3.1, 7),
-        snout(50, 41, 8, 5.5, 2.6),
-        heart(50, 70, 13, FILLED),
-    ])
-
-
-@hero("ocean")
-def octopus_with_starfish():
-    """An octopus holding a starfish, tentacles curling below."""
-    legs = []
-    for i, x in enumerate((22, 34, 46, 58, 70)):
-        d = 1 if i % 2 else -1
-        legs.append(path(f"M {x} 62 C {x + 7 * d} 74 {x - 7 * d} 84 "
-                         f"{x + 5 * d} 94", FILLED))
-    return "".join([
-        "".join(legs),
-        path("M 20 60 C 20 34 34 20 51 20 C 68 20 82 34 82 60 "
-             "C 66 68 36 68 20 60 Z", FILLED),
-        face(51, 44, 16, 3.2, 7.5),
-        star(80, 80, 15, 5, 0.45, -90, FILLED),
-        dot(80, 80, 2.6),
-    ])
-
-
-@hero("pets")
-def dog_with_bone():
-    """A sitting dog with a bone at its paws."""
-    return "".join([
-        path("M 72 76 C 88 74 92 58 82 52"),
-        feet(50, 86, 15, 9, 5.5),
-        arms(50, 70, 19, 12, 5, 5.4),
-        ellipse(50, 68, 19, 18, 0, FILLED),
-        belly(50, 73, 9, 8),
-        ellipse(26, 34, 8, 14, -12, FILLED),
-        ellipse(74, 34, 8, 14, 12, FILLED),
-        circle(50, 32, 18, FILLED),
-        face(50, 29, 14, 3.1, 6.5),
-        snout(50, 40, 8, 5.5, 2.8),
-        path("M 28 93 C 22 88 14 90 14 95 C 14 99 20 100 24 97 "
-             "L 72 97 C 76 100 82 99 82 95 C 82 90 74 88 68 93 Z", FILLED),
-    ])
+    return critter(behind=tail, ears=pointy_ears(14, 14, 13), snout=True,
+                   prop=acorn)
 
 
 @hero("spring")
 def bee_with_flower():
-    """A round bee holding a flower."""
-    wings = (ellipse(24, 46, 18, 11, -26, FILLED)
-             + ellipse(76, 46, 18, 11, 26, FILLED))
-    body = "".join([
-        feet(50, 88, 11, 7, 4.6),
-        arms(50, 64, 17, 7, 4.8, 5.2),
-        ellipse(50, 66, 20, 19, 0, FILLED),
-        path("M 33 58 C 42 56 58 56 67 58"),
-        path("M 31 72 C 42 74 58 74 69 72"),
-        circle(50, 34, 17, FILLED),
-        line(42, 20, 38, 10), line(58, 20, 62, 10),
-        dot(37, 8, 3.2), dot(63, 8, 3.2),
-        face(50, 32, 14, 3.0, 6.5),
+    wings = (ellipse(22, 62, 17, 10, -24, FILLED)
+             + ellipse(78, 62, 17, 10, 24, FILLED))
+    stripes = (path("M 35 70 C 43 68 57 68 65 70")
+               + path("M 34 80 C 43 82 57 82 66 80"))
+    antennae = "".join([
+        line(40, 14, 34, 4), line(60, 14, 66, 4),
+        dot(33, 3, 3.6), dot(67, 3, 3.6),
     ])
     flower = "".join([
-        "".join(circle(*pt(72, 78, 7, a), 5.4, FILLED) for a in range(0, 360, 72)),
-        circle(72, 78, 4, FILLED),
-        path("M 72 86 C 71 92 70 96 68 99"),
+        "".join(circle(*pt(50, 84, 7, a), 5.6, FILLED)
+                for a in range(0, 360, 72)),
+        circle(50, 84, 4, FILLED),
     ])
-    return wings + body + flower
+    return critter(behind=wings, marks=stripes, extras=antennae, prop=flower)
 
 
-@hero("summer")
-def crab_with_ice_cream():
-    """A crab in sunglasses holding an ice cream."""
-    legs = "".join(
-        path(f"M {x} 76 C {x + 6 * d} 86 {x + 12 * d} 90 {x + 18 * d} 90")
-        for x, d in ((34, -1), (44, -1), (56, 1), (66, 1))
-    )
-    claw_l = path("M 24 56 C 10 50 6 36 14 30 C 18 36 16 44 24 46 "
-                  "C 16 42 20 32 26 34 C 33 37 32 52 24 56 Z", FILLED)
-    claw_r = path("M 76 56 C 90 50 94 36 86 30 C 82 36 84 44 76 46 "
-                  "C 84 42 80 32 74 34 C 67 37 68 52 76 56 Z", FILLED)
-    body = "".join([
-        ellipse(50, 62, 27, 20, 0, FILLED),
-        line(40, 46, 36, 34), line(60, 46, 64, 34),
-        dot(35, 32, 3.4), dot(65, 32, 3.4),
-        path("M 30 52 C 36 48 44 48 48 52 L 52 52 C 56 48 64 48 70 52 "
-             "C 70 58 62 62 58 56 L 52 56 L 48 56 C 44 62 30 58 30 52 Z",
-             FILLED),
-        arc(50, 68, 9, 20, 160),
-    ])
-    cone = "".join([
-        path("M 74 66 L 90 66 L 82 88 Z", FILLED),
-        circle(78, 60, 8, FILLED), circle(87, 60, 7, FILLED),
-        circle(82, 52, 7.5, FILLED),
-    ])
-    return legs + claw_l + claw_r + body + cone
+@hero("valentine")
+def bear_with_heart():
+    return critter(ears=round_ears(), snout=True, arms_up=True,
+                   prop=heart(50, 84, 13, FILLED))
 
 
-@hero("winter")
-def penguin_in_scarf():
-    """A penguin in a scarf and bobble hat."""
-    return "".join([
-        path("M 22 62 C 12 70 12 82 20 86"),
-        path("M 78 62 C 88 70 88 82 80 86"),
-        path("M 34 92 L 26 98 L 46 98 Z", FILLED),
-        path("M 66 92 L 74 98 L 54 98 Z", FILLED),
-        path("M 50 26 C 70 26 80 46 80 66 C 80 84 66 94 50 94 "
-             "C 34 94 20 84 20 66 C 20 46 30 26 50 26 Z", FILLED),
-        path("M 50 46 C 63 46 70 58 70 70 C 70 84 62 90 50 90 "
-             "C 38 90 30 84 30 70 C 30 58 37 46 50 46 Z", FILLED),
-        dot(43, 36, 3.2), dot(57, 36, 3.2),
-        path("M 50 40 L 58 46 L 42 46 Z", FILLED),
-        path("M 24 52 C 34 58 66 58 76 52 C 76 60 68 64 50 64 "
-             "C 32 64 24 60 24 52 Z", FILLED),
-        path("M 62 62 L 62 80 L 74 80 L 74 60", FILLED),
-        line(64, 80, 64, 86), line(68, 80, 68, 86), line(72, 80, 72, 86),
-        path("M 30 26 C 30 12 70 12 70 26 Z", FILLED),
-        rect(26, 20, 48, 9, 4, FILLED),
-        circle(50, 8, 7, FILLED),
+@hero("camping")
+def bear_with_marshmallow():
+    stick = (line(64, 82, 92, 52) + rect(84, 38, 16, 14, 6, FILLED))
+    return critter(ears=round_ears(), snout=True, extras=stick)
+
+
+@hero("pets")
+def dog_with_bone():
+    bone = "".join([
+        path("M 36 84 C 31 79 24 81 24 86 C 24 90 29 91 33 88 "
+             "L 67 88 C 71 91 76 90 76 86 C 76 81 69 79 64 84 Z", FILLED),
     ])
+    return critter(ears=floppy_ears(), snout=True, prop=bone)
+
+
+@hero("halloween")
+def cat_with_lantern():
+    whiskers = "".join([
+        line(26, 40, 10, 36), line(26, 46, 10, 48),
+        line(74, 40, 90, 36), line(74, 46, 90, 48),
+    ])
+    nose = path("M 50 44 L 45 49 L 55 49 Z", SOLID_BLACK)
+    lantern = "".join([
+        ellipse(50, 86, 15, 12, 0, FILLED),
+        path("M 50 74 L 50 70"),
+        path("M 43 83 L 48 83 L 45.5 78 Z", SOLID_BLACK),
+        path("M 57 83 L 52 83 L 54.5 78 Z", SOLID_BLACK),
+        path("M 42 89 L 46 89 L 48 92 L 52 92 L 54 89 L 58 89 "
+             "L 56 94 L 44 94 Z", SOLID_BLACK),
+    ])
+    return critter(ears=pointy_ears(16, 16, 14), extras=whiskers + nose,
+                   prop=lantern)
 
 
 @hero("christmas")
 def reindeer_with_gift():
-    """A reindeer holding a wrapped present."""
     antlers = "".join([
-        path("M 34 26 C 28 16 26 8 28 2 M 28 12 L 18 8 M 31 18 L 21 18"),
-        path("M 66 26 C 72 16 74 8 72 2 M 72 12 L 82 8 M 69 18 L 79 18"),
+        path("M 32 18 C 26 8 24 2 26 -2 M 26 8 L 16 4 M 29 14 L 19 14"),
+        path("M 68 18 C 74 8 76 2 74 -2 M 74 8 L 84 4 M 71 14 L 81 14"),
     ])
-    return "".join([
-        antlers,
-        feet(50, 90, 13, 9, 5.5),
-        arms(50, 64, 19, 4, 5.2, 5.6, up=True),
-        ellipse(50, 68, 20, 19, 0, FILLED),
-        belly(50, 72, 12, 11),
-        ellipse(24, 36, 9, 6, -20, FILLED),
-        ellipse(76, 36, 9, 6, 20, FILLED),
-        circle(50, 34, 18, FILLED),
-        face(50, 30, 14, 3.1, 6.5),
-        ellipse(50, 42, 8, 6, 0, FILLED),
-        circle(50, 41, 4, 'fill="#000" stroke="none"'),
-        rect(36, 62, 28, 24, 3, FILLED),
-        rect(34, 56, 32, 8, 3, FILLED),
-        line(50, 56, 50, 86),
-        path("M 50 56 C 42 56 36 52 38 47 C 41 43 48 48 50 56 Z", FILLED),
-        path("M 50 56 C 58 56 64 52 62 47 C 59 43 52 48 50 56 Z", FILLED),
+    gift = "".join([
+        rect(38, 76, 24, 20, 3, FILLED),
+        rect(35, 71, 30, 7, 3, FILLED),
+        line(50, 71, 50, 96),
     ])
+    nose = circle(50, 45, 5, SOLID_BLACK)
+    return critter(ears=floppy_ears(26, 10, 6, 30), snout=True,
+                   extras=antlers + nose, prop=gift, arms_up=True)
 
 
-@hero("farm")
-def cow_with_bell():
-    """A cow with horns, a bell and two spots."""
-    return "".join([
-        path("M 80 72 C 92 70 96 56 88 50"),
-        feet(50, 92, 15, 8.5, 5.2),
-        ellipse(50, 72, 22, 18, 0, FILLED),
-        circle(36, 70, 6.5, FILLED),
-        ellipse(63, 78, 7, 5, 20, FILLED),
-        ellipse(20, 36, 10, 7, -22, FILLED),
-        ellipse(80, 36, 10, 7, 22, FILLED),
-        path("M 36 20 C 30 14 32 8 38 9 C 41 12 40 17 38 20 Z", FILLED),
-        path("M 64 20 C 70 14 68 8 62 9 C 59 12 60 17 62 20 Z", FILLED),
-        circle(50, 34, 19, FILLED),
-        dot(42, 30, 3.2), dot(58, 30, 3.2),
-        ellipse(50, 45, 12, 8, 0, FILLED),
-        dot(45, 43, 2.4), dot(55, 43, 2.4),
-        arc(50, 48, 5, 20, 160),
-        path("M 33 56 C 40 61 60 61 67 56"),
-        path("M 50 60 C 45 60 44 67 50 69 C 56 67 55 60 50 60 Z", FILLED),
-        dot(50, 65, 2.2),
+@hero("birthday")
+def fox_with_cupcake():
+    hat = (path("M 50 -4 L 40 14 L 60 14 Z", FILLED) + circle(50, -7, 4.6, FILLED))
+    cupcake = "".join([
+        path("M 40 84 L 60 84 L 57 96 L 43 96 Z", FILLED),
+        path("M 38 84 C 38 74 45 70 50 74 C 55 70 62 74 62 84 Z", FILLED),
+        circle(50, 68, 3.6, FILLED),
     ])
+    tail = path("M 72 86 C 92 84 98 64 88 54 C 82 48 74 54 78 62", FILLED)
+    return critter(behind=tail, ears=pointy_ears(17, 18, 15), snout=True,
+                   extras=hat, prop=cupcake)
 
 
 @hero("jungle")
 def monkey_with_banana():
-    """A monkey holding a banana."""
-    return "".join([
-        path("M 74 74 C 90 72 94 54 84 46 C 78 42 72 46 74 52"),
-        feet(50, 90, 14, 9, 5.5),
-        arms(50, 66, 19, 8, 5.2, 5.6),
-        ellipse(50, 70, 19, 18, 0, FILLED),
-        belly(50, 74, 11, 10),
-        circle(22, 34, 10, FILLED), circle(78, 34, 10, FILLED),
-        circle(22, 34, 5, FILLED), circle(78, 34, 5, FILLED),
-        circle(50, 34, 18, FILLED),
-        path("M 50 30 C 62 30 68 38 68 44 C 68 51 60 55 50 55 "
-             "C 40 55 32 51 32 44 C 32 38 38 30 50 30 Z", FILLED),
-        dot(43, 28, 3.1), dot(57, 28, 3.1),
-        dot(46, 42, 2.3), dot(54, 42, 2.3),
-        arc(50, 45, 6, 20, 160),
-        path("M 62 78 C 60 88 70 96 84 94 C 86 90 84 86 80 84 "
-             "C 74 88 68 86 66 78 Z", FILLED),
-        path("M 62 78 L 60 74 L 66 75 L 66 78"),
+    ears = "".join(circle(HEAD_X + s * 26, HEAD_Y, 10, FILLED) for s in (-1, 1))
+    face_patch = path("M 50 30 C 64 30 70 40 70 47 C 70 55 61 60 50 60 "
+                      "C 39 60 30 55 30 47 C 30 40 36 30 50 30 Z", FILLED)
+    banana = path("M 36 86 C 34 95 46 100 60 97 C 62 93 60 90 56 89 "
+                  "C 50 93 43 91 41 84 Z", FILLED)
+    tail = path("M 70 84 C 90 82 96 62 86 54 C 80 50 74 56 78 62")
+    return critter(behind=tail, ears=ears, prop=banana,
+                   face_parts=face_patch + eyes(w=19, r=4.8)
+                   + dot(46, 46, 2.6) + dot(54, 46, 2.6)
+                   + arc(50, 50, 6, 20, 160))
+
+
+@hero("farm")
+def cow_with_bell():
+    horns = "".join([
+        path("M 32 8 C 24 2 26 -4 33 -3 C 37 0 36 5 34 8 Z", FILLED),
+        path("M 68 8 C 76 2 74 -4 67 -3 C 63 0 64 5 66 8 Z", FILLED),
     ])
+    spots = (circle(34, 76, 6, FILLED) + ellipse(64, 82, 7, 5, 20, FILLED))
+    bell = "".join([
+        path("M 46 58 C 46 54 54 54 54 58 C 56 62 56 64 50 64 "
+             "C 44 64 44 62 46 58 Z", FILLED),
+        dot(50, 63, 2.2),
+    ])
+    return critter(ears=floppy_ears(28, 11, 7, 32), snout=True, marks=spots,
+                   extras=horns + bell)
+
+
+@hero("winter")
+def penguin_in_hat():
+    wings = (path("M 30 66 C 20 74 20 88 28 92", FILLED)
+             + path("M 70 66 C 80 74 80 88 72 92", FILLED))
+    feet_tri = (path("M 40 92 L 32 98 L 50 98 Z", FILLED)
+                + path("M 60 92 L 68 98 L 50 98 Z", FILLED))
+    beak = path("M 50 44 L 58 50 L 42 50 Z", FILLED)
+    hat = "".join([
+        path("M 28 12 C 30 -2 70 -2 72 12 Z", FILLED),
+        rect(24, 8, 52, 9, 4, FILLED),
+        circle(50, -6, 6.5, FILLED),
+    ])
+    scarf = "".join([
+        path("M 26 58 C 34 64 66 64 74 58 C 74 66 66 70 50 70 "
+             "C 34 70 26 66 26 58 Z", FILLED),
+        path("M 62 68 L 62 86 L 74 86 L 74 66", FILLED),
+    ])
+    return critter(behind=wings + feet_tri, extras=beak + scarf + hat,
+                   has_feet=False)
 
 
 @hero("thanksgiving")
 def turkey_with_fan():
-    """A turkey with a full feather fan."""
-    fan = "".join(
-        ellipse(*pt(50, 66, 32, a), 14, 9, a, FILLED)
-        for a in range(190, 356, 27)
-    )
-    inner = "".join(
-        ellipse(*pt(50, 66, 18, a), 9, 6, a, FILLED)
-        for a in range(200, 345, 36)
-    )
-    return "".join([
-        fan, inner,
-        path("M 40 92 L 34 98 L 48 98 Z", FILLED),
-        path("M 60 92 L 66 98 L 52 98 Z", FILLED),
-        ellipse(50, 70, 21, 20, 0, FILLED),
-        circle(50, 38, 15, FILLED),
-        dot(44, 34, 3.1), dot(56, 34, 3.1),
-        path("M 50 42 L 62 46 L 50 50 Z", FILLED),
-        path("M 54 49 C 60 54 58 62 51 59"),
-        path("M 42 22 C 40 15 46 13 48 18 C 52 11 58 15 56 22", FILLED),
-        arc(50, 76, 9, 20, 160),
-    ])
-
-
-@hero("stpatrick")
-def pot_of_gold():
-    """A smiling pot of gold with a four-leaf clover."""
-    return "".join([
-        circle(34, 40, 9, FILLED), circle(52, 36, 9, FILLED),
-        circle(68, 42, 9, FILLED),
-        circle(34, 40, 4, FILLED), circle(52, 36, 4, FILLED),
-        path("M 16 48 C 16 78 30 92 50 92 C 70 92 84 78 84 48 Z", FILLED),
-        rect(10, 40, 80, 11, 5, FILLED),
-        face(50, 66, 17, 3.4, 8),
-        "".join(
-            f'<g transform="rotate({a} 84 24)">'
-            + heart(84, 14, 9, FILLED) + "</g>"
-            for a in (0, 90, 180, 270)
-        ),
-        path("M 84 32 C 86 40 86 44 84 48"),
-    ])
+    fan = "".join(ellipse(*pt(50, 74, 34, a), 15, 10, a, FILLED)
+                  for a in range(188, 356, 24))
+    beak = path("M 50 46 L 62 51 L 50 56 Z", FILLED)
+    wattle = path("M 55 55 C 61 60 59 68 52 65")
+    tuft = path("M 42 10 C 40 2 46 0 48 5 C 52 -2 58 2 56 10", FILLED)
+    feet_tri = (path("M 42 92 L 34 98 L 50 98 Z", FILLED)
+                + path("M 58 92 L 66 98 L 50 98 Z", FILLED))
+    return critter(behind=fan + feet_tri, extras=beak + wattle + tuft,
+                   has_feet=False)
 
 
 @hero("space")
 def alien_with_star():
-    """A little alien holding a star."""
+    antennae = "".join([
+        line(38, 14, 32, 2), line(62, 14, 68, 2),
+        circle(31, 0, 5, FILLED), circle(69, 0, 5, FILLED),
+    ])
+    big_eyes = (ellipse(38, 34, 9, 12, 16, FILLED)
+                + ellipse(62, 34, 9, 12, -16, FILLED))
     return "".join([
-        feet(50, 92, 12, 8, 5),
-        arms(50, 66, 18, 4, 4.8, 5.2, up=True),
-        ellipse(50, 70, 17, 16, 0, FILLED),
-        line(40, 24, 34, 12), line(60, 24, 66, 12),
-        circle(33, 10, 4.4, FILLED), circle(67, 10, 4.4, FILLED),
-        path("M 50 16 C 70 16 82 30 82 44 C 82 58 68 64 50 64 "
-             "C 32 64 18 58 18 44 C 18 30 30 16 50 16 Z", FILLED),
-        ellipse(38, 40, 8, 11, 18, 'fill="#000" stroke="none"'),
-        ellipse(62, 40, 8, 11, -18, 'fill="#000" stroke="none"'),
-        arc(50, 52, 7, 20, 160),
-        star(50, 74, 14, 5, 0.45, -90, FILLED),
+        feet(), arms(up=True), body_shape(),
+        path("M 50 8 C 72 8 84 22 84 38 C 84 54 70 60 50 60 "
+             "C 30 60 16 54 16 38 C 16 22 28 8 50 8 Z", FILLED),
+        big_eyes, arc(50, 48, 7, 20, 160), antennae,
+        star(50, 78, 16, 5, 0.45, -90, FILLED),
+    ])
+
+
+@hero("ocean")
+def octopus_with_star():
+    legs = "".join(
+        path(f"M {x} 68 C {x + 8 * d} 80 {x - 8 * d} 90 {x + 6 * d} 98",
+             FILLED)
+        for x, d in ((24, -1), (37, 1), (50, -1), (63, 1), (76, -1))
+    )
+    return "".join([
+        legs,
+        path("M 50 10 C 74 10 88 28 88 50 C 88 66 70 72 50 72 "
+             "C 30 72 12 66 12 50 C 12 28 26 10 50 10 Z", FILLED),
+        eyes(50, 40, 22, 5.2),
+        arc(50, 54, 7, 20, 160),
+        star(80, 84, 14, 5, 0.45, -90, FILLED),
+    ])
+
+
+@hero("bugs")
+def ladybug_with_dots():
+    legs = "".join([
+        line(20, 66, 8, 62), line(20, 76, 6, 78), line(24, 86, 14, 94),
+        line(80, 66, 92, 62), line(80, 76, 94, 78), line(76, 86, 86, 94),
+    ])
+    antennae = "".join([
+        line(38, 12, 30, 2), line(62, 12, 70, 2),
+        dot(29, 1, 4), dot(71, 1, 4),
+    ])
+    shell = "".join([
+        ellipse(50, 66, 32, 30, 0, FILLED),
+        line(50, 36, 50, 96),
+        circle(34, 60, 7, FILLED), circle(66, 60, 7, FILLED),
+        circle(36, 80, 6, FILLED), circle(64, 80, 6, FILLED),
+    ])
+    head = "".join([
+        path("M 50 12 C 68 12 78 22 78 34 C 66 40 34 40 22 34 "
+             "C 22 22 32 12 50 12 Z", FILLED),
+        eyes(50, 26, 18, 4.4),
+        arc(50, 34, 6, 20, 160),
+    ])
+    return legs + shell + head + antennae
+
+
+@hero("school")
+def owl_with_book():
+    book = "".join([
+        path("M 26 76 C 33 70 44 70 50 74 C 56 70 67 70 74 76 "
+             "L 74 92 C 67 86 56 86 50 90 C 44 86 33 86 26 92 Z", FILLED),
+        line(50, 74, 50, 90),
+    ])
+    tufts = (path("M 30 16 L 24 4 L 40 12") + path("M 70 16 L 76 4 L 60 12"))
+    specs = (circle(37, 36, 15) + circle(63, 36, 15) + line(48, 36, 52, 36))
+    return "".join([
+        path("M 40 92 L 32 98 L 48 98 Z", FILLED),
+        path("M 60 92 L 68 98 L 52 98 Z", FILLED),
+        path("M 50 6 C 76 6 90 28 90 56 C 90 82 72 94 50 94 "
+             "C 28 94 10 82 10 56 C 10 28 24 6 50 6 Z", FILLED),
+        circle(37, 36, 11, FILLED), circle(63, 36, 11, FILLED),
+        dot(37, 36, 5), dot(63, 36, 5),
+        specs, tufts,
+        path("M 50 46 L 56 54 L 44 54 Z", FILLED),
+        book,
     ])
 
 
 @hero("dinosaur")
 def dino_with_spikes():
-    """A chubby dinosaur with a long tail and spiky back."""
+    tail = path("M 22 76 C 8 78 2 90 10 95 C 17 99 26 93 28 86", FILLED)
+    spikes = "".join([
+        path("M 30 40 L 24 28 L 38 32 Z", FILLED),
+        path("M 42 26 L 40 12 L 52 22 Z", FILLED),
+        path("M 58 22 L 62 10 L 70 22 Z", FILLED),
+    ])
     return "".join([
-        path("M 24 72 C 10 74 2 84 8 90 C 14 95 24 90 26 82", FILLED),
-        feet(46, 90, 17, 10, 6),
-        path("M 36 48 L 30 36 L 44 40 Z", FILLED),
-        path("M 48 36 L 46 22 L 58 32 Z", FILLED),
-        path("M 62 32 L 66 20 L 72 32 Z", FILLED),
-        tube([(54, 62), (64, 50), (70, 42)], 9, FILLED),
-        ellipse(46, 66, 26, 22, 0, FILLED),
-        ellipse(44, 74, 13, 10, 0, FILLED),
-        circle(72, 36, 15, FILLED),
-        ellipse(84, 42, 10, 7, 10, FILLED),
-        dot(70, 32, 3.2),
-        dot(88, 40, 2.2),
-        arc(80, 46, 5, 20, 160),
+        tail, spikes,
+        feet(88, 14, 10, 6),
+        ellipse(44, 70, 28, 24, 0, FILLED),
+        circle(72, 36, 20, FILLED),
+        ellipse(88, 44, 11, 8, 10, FILLED),
+        dot(70, 30, 4.4),
+        ellipse(63, 42, 4, 2.6, 0),
+        arc(82, 48, 6, 20, 160),
+        dot(92, 42, 2.4),
     ])
 
 
-@hero("school")
-def owl_with_book():
-    """A bespectacled owl holding a book."""
+@hero("stpatrick")
+def pot_of_gold():
+    clover = "".join(
+        f'<g transform="rotate({a} 80 20)">{heart(80, 10, 10, FILLED)}</g>'
+        for a in (0, 90, 180, 270)
+    )
+    coins = "".join([
+        circle(32, 38, 10, FILLED), circle(52, 34, 10, FILLED),
+        circle(70, 40, 10, FILLED),
+    ])
     return "".join([
-        path("M 38 90 L 32 97 L 46 97 Z", FILLED),
-        path("M 62 90 L 68 97 L 54 97 Z", FILLED),
-        path("M 50 12 C 72 12 84 30 84 54 C 84 78 70 90 50 90 "
-             "C 30 90 16 78 16 54 C 16 30 28 12 50 12 Z", FILLED),
-        path("M 30 20 L 24 10 L 38 16"),
-        path("M 70 20 L 76 10 L 62 16"),
-        circle(37, 42, 12, FILLED), circle(63, 42, 12, FILLED),
-        dot(37, 42, 4.6), dot(63, 42, 4.6),
-        circle(37, 42, 15), circle(63, 42, 15),
-        line(48, 42, 52, 42),
-        path("M 22 40 L 16 36"), path("M 78 40 L 84 36"),
-        path("M 50 50 L 56 57 L 44 57 Z", FILLED),
-        path("M 20 60 C 22 70 24 76 28 82"),
-        path("M 80 60 C 78 70 76 76 72 82"),
-        path("M 28 72 C 34 66 44 66 50 70 C 56 66 66 66 72 72 "
-             "L 72 88 C 66 82 56 82 50 86 C 44 82 34 82 28 88 Z", FILLED),
-        line(50, 70, 50, 86),
+        coins,
+        path("M 14 46 C 14 78 30 94 50 94 C 70 94 86 78 86 46 Z", FILLED),
+        rect(8, 38, 84, 12, 6, FILLED),
+        eyes(50, 62, 22, 5.2),
+        arc(50, 76, 8, 20, 160),
+        clover,
+        path("M 80 30 C 82 38 82 42 80 46"),
     ])
 
 
 @hero("transport")
 def happy_car():
-    """A little car with a face in the windscreen."""
     return "".join([
-        path("M 10 62 L 14 46 C 16 38 24 34 36 34 L 64 34 "
-             "C 76 34 84 38 88 46 L 92 62 C 92 70 88 72 80 72 "
-             "L 20 72 C 12 72 8 70 10 62 Z", FILLED),
-        path("M 28 34 L 32 18 L 68 18 L 72 34", FILLED),
-        line(50, 18, 50, 34),
-        circle(28, 78, 13, FILLED), circle(72, 78, 13, FILLED),
-        circle(28, 78, 5, FILLED), circle(72, 78, 5, FILLED),
-        dot(38, 52, 4), dot(62, 52, 4),
-        arc(50, 56, 9, 20, 160),
-        ellipse(22, 60, 5, 3.4, 0, FILLED),
-        ellipse(78, 60, 5, 3.4, 0, FILLED),
+        path("M 6 62 L 12 42 C 15 32 26 28 38 28 L 62 28 "
+             "C 74 28 85 32 88 42 L 94 62 C 94 72 88 74 78 74 "
+             "L 22 74 C 12 74 6 72 6 62 Z", FILLED),
+        path("M 28 28 L 32 10 L 68 10 L 72 28", FILLED),
+        line(50, 10, 50, 28),
+        circle(26, 82, 15, FILLED), circle(74, 82, 15, FILLED),
+        circle(26, 82, 6, FILLED), circle(74, 82, 6, FILLED),
+        dot(36, 50, 5), dot(64, 50, 5),
+        arc(50, 56, 10, 20, 160),
+        ellipse(15, 58, 6, 4, 0, FILLED), ellipse(85, 58, 6, 4, 0, FILLED),
     ])
 
 
-@hero("camping")
-def bear_with_marshmallow():
-    """A bear toasting a marshmallow on a stick."""
-    return "".join([
-        feet(50, 90, 13, 9, 5.6),
-        arms(50, 64, 19, 8, 5.4, 5.8),
-        ellipse(50, 68, 20, 19, 0, FILLED),
-        belly(50, 72, 11, 10),
-        round_ears(50, 26, 16, 15, 8),
-        circle(50, 36, 19, FILLED),
-        face(50, 33, 15, 3.1, 7),
-        snout(50, 43, 8, 5.5, 2.6),
-        line(66, 74, 92, 44),
-        rect(84, 30, 16, 14, 5, FILLED),
-        path("M 86 44 C 90 48 96 48 98 44"),
+@hero("summer")
+def crab_with_ice_cream():
+    legs = "".join(
+        path(f"M {x} 84 C {x + 6 * d} 94 {x + 12 * d} 97 {x + 18 * d} 96")
+        for x, d in ((32, -1), (44, -1), (56, 1), (68, 1))
+    )
+    claws = "".join([
+        path("M 20 62 C 6 56 2 40 12 34 C 16 40 14 48 22 50 "
+             "C 12 46 16 34 24 37 C 32 41 30 58 20 62 Z", FILLED),
+        path("M 80 62 C 94 56 98 40 88 34 C 84 40 86 48 78 50 "
+             "C 88 46 84 34 76 37 C 68 41 70 58 80 62 Z", FILLED),
     ])
-
-
-@hero("birthday")
-def fox_with_cupcake():
-    """A fox in a party hat holding a cupcake."""
-    return "".join([
-        path("M 74 80 C 92 78 96 60 86 52 C 80 48 74 54 78 60"),
-        feet(50, 90, 13, 8.5, 5.2),
-        arms(50, 66, 18, 8, 5, 5.4),
-        ellipse(50, 68, 19, 18, 0, FILLED),
-        belly(50, 72, 10, 9),
-        path("M 30 32 L 22 12 L 44 24 Z", FILLED),
-        path("M 70 32 L 78 12 L 56 24 Z", FILLED),
-        circle(50, 36, 18, FILLED),
-        face(50, 32, 14, 3.1, 0),
-        path("M 50 40 C 44 40 40 46 44 50 C 48 53 52 53 56 50 "
-             "C 60 46 56 40 50 40 Z", FILLED),
-        dot(50, 44, 3),
-        path("M 50 10 L 42 24 L 58 24 Z", FILLED),
-        circle(50, 7, 4, FILLED),
-        path("M 40 76 L 60 76 L 57 90 L 43 90 Z", FILLED),
-        path("M 38 76 C 38 66 46 62 50 66 C 54 62 62 66 62 76 Z", FILLED),
-        circle(50, 60, 3.4, FILLED),
+    shades = path("M 28 42 C 34 38 42 38 46 42 L 54 42 C 58 38 66 38 72 42 "
+                  "C 72 50 62 54 58 46 L 42 46 C 38 54 28 50 28 42 Z", FILLED)
+    cone = "".join([
+        path("M 72 70 L 92 70 L 82 96 Z", FILLED),
+        circle(76, 62, 9, FILLED), circle(88, 62, 8, FILLED),
+        circle(82, 52, 8.5, FILLED),
     ])
-
-
-@hero("bugs")
-def ladybug_with_leaf():
-    """A ladybug with spots, holding a leaf."""
+    stalks = (line(38, 30, 34, 16) + line(62, 30, 66, 16)
+              + dot(33, 14, 4) + dot(67, 14, 4))
     return "".join([
-        line(22, 62, 10, 58), line(22, 70, 10, 72), line(24, 78, 12, 86),
-        line(78, 62, 90, 58), line(78, 70, 90, 72), line(76, 78, 88, 86),
-        ellipse(50, 64, 28, 26, 0, FILLED),
-        line(50, 38, 50, 90),
-        circle(36, 58, 6, FILLED), circle(64, 58, 6, FILLED),
-        circle(38, 76, 5, FILLED), circle(62, 76, 5, FILLED),
-        path("M 50 16 C 66 16 76 26 76 38 C 64 42 36 42 24 38 "
-             "C 24 26 34 16 50 16 Z", FILLED),
-        face(50, 28, 14, 3.1, 6.5, blush=False),
-        line(40, 16, 34, 6), line(60, 16, 66, 6),
-        dot(33, 4, 3.4), dot(67, 4, 3.4),
-        path("M 88 84 C 96 76 96 64 90 58 C 82 62 78 74 82 86 Z", FILLED),
-        line(86, 84, 90, 62),
+        legs, claws,
+        ellipse(50, 62, 32, 24, 0, FILLED),
+        stalks, shades,
+        arc(50, 70, 10, 20, 160),
+        cone,
     ])
 
 
 @hero("food")
 def strawberry_friend():
-    """A strawberry with a leafy crown and a big smile."""
-    seeds = "".join(dot(x, y, 2.4) for x, y in
-                    ((24, 74), (76, 74), (34, 84), (66, 84), (50, 88)))
-    leaves = "".join(
-        ellipse(*pt(50, 36, 15, a), 11, 6, a, FILLED)
-        for a in (196, 232, 270, 308, 344)
-    )
+    leaves = "".join(ellipse(*pt(50, 30, 16, a), 12, 7, a, FILLED)
+                     for a in (196, 232, 270, 308, 344))
+    seeds = "".join(dot(x, y, 2.8) for x, y in
+                    ((26, 72), (74, 72), (34, 86), (66, 86), (50, 92)))
     return "".join([
-        feet(50, 92, 12, 8, 5),
-        arms(50, 62, 21, 8, 5, 5.4),
-        path("M 50 32 C 74 32 86 48 82 66 C 78 84 64 93 50 93 "
-             "C 36 93 22 84 18 66 C 14 48 26 32 50 32 Z", FILLED),
+        feet(94, 12, 8, 5),
+        arms(reach=22),
+        path("M 50 26 C 78 26 92 46 88 68 C 84 88 68 97 50 97 "
+             "C 32 97 16 88 12 68 C 8 46 22 26 50 26 Z", FILLED),
         leaves,
-        line(50, 22, 50, 14),
-        face(50, 56, 16, 3.2, 7.5),
+        eyes(50, 58, 22, 5.2),
+        arc(50, 72, 8, 20, 160),
         seeds,
     ])

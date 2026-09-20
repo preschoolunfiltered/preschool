@@ -62,9 +62,15 @@ Every theme opens with its **hero** — a full-body character drawn for page
 size in [`ispy/heroes.py`](ispy/heroes.py): a bunny riding a carrot, a squirrel
 hugging an acorn, an owl in reading glasses, a crab in sunglasses with an ice
 cream. A blown-up icon can't carry a page (a bunny there is a head, not a
-character), so the heroes are drawn separately from shared parts — head, ears,
-body, arms, mitts, feet, the house smile — which is what makes twenty-two
-characters read as one family. Then one page per picture in the theme, so a
+character), so the heroes are drawn separately, on chibi proportions — head
+bigger than the body, big solid eyes, a small smile, and as few interior lines
+as the character can carry. Every extra line is another fiddly gap a
+four-year-old has to color around.
+
+`critter()` builds the standard body and every character is then just its ears,
+its markings and the thing it holds, which is what makes twenty-two of them
+read as one family. Props are drawn before the arms, so the mitts land on top
+and the character reads as *holding* the thing rather than standing behind it. Then one page per picture in the theme, so a
 set runs 16–19 pages — 456 in total.
 
 Three things make a doodle work at page size:
