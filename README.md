@@ -56,8 +56,16 @@ python3 build.py --no-previews        # PDFs only, faster
 One big picture per sheet, clip-art style: a two-line bubble-letter title
 ("COLOR THE BUNNY"), the subject drawn large with a heavy 5.4pt outline, and
 flowers, butterflies and stars down both margins, inside a thin page border
-whose bottom edge carries the credit line. One page per picture in the theme,
-so a set runs 15–18 pages — 434 in total.
+whose bottom edge carries the credit line.
+
+Every theme opens with its **hero** — a full-body character drawn for page
+size in [`ispy/heroes.py`](ispy/heroes.py): a bunny riding a carrot, a squirrel
+hugging an acorn, an owl in reading glasses, a crab in sunglasses with an ice
+cream. A blown-up icon can't carry a page (a bunny there is a head, not a
+character), so the heroes are drawn separately from shared parts — head, ears,
+body, arms, mitts, feet, the house smile — which is what makes twenty-two
+characters read as one family. Then one page per picture in the theme, so a
+set runs 16–19 pages — 456 in total.
 
 Three things make a doodle work at page size:
 
@@ -130,6 +138,7 @@ puzzle and answer-key previews as supporting images.
 | `ispy/layout.py` | Header, frames, puzzle field, legend, cover, terms page |
 | `ispy/coloring.py` | The coloring line: one subject per page, badge frames |
 | `ispy/cute.py` | Kawaii faces for objects drawn at page size |
+| `ispy/heroes.py` | 22 full-body characters, one per theme, and their greetings |
 | `ispy/render.py` | SVG assembly and PDF/PNG export |
 | `build.py` | Builds every theme, merges PDFs, writes previews |
 

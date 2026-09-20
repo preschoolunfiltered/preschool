@@ -1020,10 +1020,10 @@ PDF, 8 pages, US Letter, print-and-go. No prep and nothing to assemble.
 # Coloring pages
 
 **Bundle title**  
-Coloring Pages MEGA Bundle | 22 Themes, 390 Pages
+Coloring Pages MEGA Bundle | 22 Themes, 412 Pages
 
 A year of coloring in one download: 22 themes and
-390 pages, each one a single big picture with its name spelled out
+412 pages, each one a single big picture with its name spelled out
 underneath in hollow letters. Chunky outlines throughout, nothing filled in
 solid black, so every shape - and every letter - can be colored.
 
@@ -1034,18 +1034,20 @@ solid black, so every shape - and every letter - can be colored.
 ## Spring (coloring)
 
 **Product title**  
-Spring Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
+Spring Coloring Pages | 19 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-18 chunky-line spring coloring pages - one big picture per sheet, print and go.
+19 chunky-line spring coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- 19 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
 - One big picture per page, drawn clip-art style with a heavy outline, so
   even the youngest hands have somewhere easy to start
+- A full-body character to open the set - a bunny riding a carrot, a
+  squirrel hugging an acorn, an owl in reading glasses
 - A bubble-letter title the children color in as well - COLOR THE BUNNY -
   so the page builds vocabulary and print awareness while it is worked on
 - Flowers, butterflies and stars down the margins, so there is plenty to
@@ -1072,7 +1074,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 21 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1083,18 +1085,20 @@ PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Summer (coloring)
 
 **Product title**  
-Summer Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
+Summer Coloring Pages | 19 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-18 chunky-line summer coloring pages - one big picture per sheet, print and go.
+19 chunky-line summer coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- 19 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
 - One big picture per page, drawn clip-art style with a heavy outline, so
   even the youngest hands have somewhere easy to start
+- A full-body character to open the set - a bunny riding a carrot, a
+  squirrel hugging an acorn, an owl in reading glasses
 - A bubble-letter title the children color in as well - COLOR THE BUNNY -
   so the page builds vocabulary and print awareness while it is worked on
 - Flowers, butterflies and stars down the margins, so there is plenty to
@@ -1121,7 +1125,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 21 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1132,18 +1136,20 @@ PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Fall (coloring)
 
 **Product title**  
-Fall Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
+Fall Coloring Pages | 19 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-18 chunky-line fall coloring pages - one big picture per sheet, print and go.
+19 chunky-line fall coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- 19 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
 - One big picture per page, drawn clip-art style with a heavy outline, so
   even the youngest hands have somewhere easy to start
+- A full-body character to open the set - a bunny riding a carrot, a
+  squirrel hugging an acorn, an owl in reading glasses
 - A bubble-letter title the children color in as well - COLOR THE BUNNY -
   so the page builds vocabulary and print awareness while it is worked on
 - Flowers, butterflies and stars down the margins, so there is plenty to
@@ -1170,7 +1176,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 21 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1181,18 +1187,20 @@ PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Winter (coloring)
 
 **Product title**  
-Winter Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
+Winter Coloring Pages | 19 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-18 chunky-line winter coloring pages - one big picture per sheet, print and go.
+19 chunky-line winter coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- 19 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
 - One big picture per page, drawn clip-art style with a heavy outline, so
   even the youngest hands have somewhere easy to start
+- A full-body character to open the set - a bunny riding a carrot, a
+  squirrel hugging an acorn, an owl in reading glasses
 - A bubble-letter title the children color in as well - COLOR THE BUNNY -
   so the page builds vocabulary and print awareness while it is worked on
 - Flowers, butterflies and stars down the margins, so there is plenty to
@@ -1219,7 +1227,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 21 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1230,18 +1238,20 @@ PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Christmas (coloring)
 
 **Product title**  
-Christmas Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
+Christmas Coloring Pages | 19 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-18 chunky-line christmas coloring pages - one big picture per sheet, print and go.
+19 chunky-line christmas coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- 19 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
 - One big picture per page, drawn clip-art style with a heavy outline, so
   even the youngest hands have somewhere easy to start
+- A full-body character to open the set - a bunny riding a carrot, a
+  squirrel hugging an acorn, an owl in reading glasses
 - A bubble-letter title the children color in as well - COLOR THE BUNNY -
   so the page builds vocabulary and print awareness while it is worked on
 - Flowers, butterflies and stars down the margins, so there is plenty to
@@ -1268,7 +1278,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 21 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1279,18 +1289,20 @@ PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Halloween (coloring)
 
 **Product title**  
-Halloween Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
+Halloween Coloring Pages | 19 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-18 chunky-line halloween coloring pages - one big picture per sheet, print and go.
+19 chunky-line halloween coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- 19 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
 - One big picture per page, drawn clip-art style with a heavy outline, so
   even the youngest hands have somewhere easy to start
+- A full-body character to open the set - a bunny riding a carrot, a
+  squirrel hugging an acorn, an owl in reading glasses
 - A bubble-letter title the children color in as well - COLOR THE BUNNY -
   so the page builds vocabulary and print awareness while it is worked on
 - Flowers, butterflies and stars down the margins, so there is plenty to
@@ -1317,7 +1329,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 21 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1328,18 +1340,20 @@ PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Thanksgiving (coloring)
 
 **Product title**  
-Thanksgiving Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
+Thanksgiving Coloring Pages | 19 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-18 chunky-line thanksgiving coloring pages - one big picture per sheet, print and go.
+19 chunky-line thanksgiving coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- 19 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
 - One big picture per page, drawn clip-art style with a heavy outline, so
   even the youngest hands have somewhere easy to start
+- A full-body character to open the set - a bunny riding a carrot, a
+  squirrel hugging an acorn, an owl in reading glasses
 - A bubble-letter title the children color in as well - COLOR THE BUNNY -
   so the page builds vocabulary and print awareness while it is worked on
 - Flowers, butterflies and stars down the margins, so there is plenty to
@@ -1366,7 +1380,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 21 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1377,18 +1391,20 @@ PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Valentine (coloring)
 
 **Product title**  
-Valentine Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
+Valentine Coloring Pages | 19 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-18 chunky-line valentine coloring pages - one big picture per sheet, print and go.
+19 chunky-line valentine coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- 19 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
 - One big picture per page, drawn clip-art style with a heavy outline, so
   even the youngest hands have somewhere easy to start
+- A full-body character to open the set - a bunny riding a carrot, a
+  squirrel hugging an acorn, an owl in reading glasses
 - A bubble-letter title the children color in as well - COLOR THE BUNNY -
   so the page builds vocabulary and print awareness while it is worked on
 - Flowers, butterflies and stars down the margins, so there is plenty to
@@ -1415,7 +1431,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 21 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1426,18 +1442,20 @@ PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Easter (coloring)
 
 **Product title**  
-Easter Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
+Easter Coloring Pages | 19 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-18 chunky-line easter coloring pages - one big picture per sheet, print and go.
+19 chunky-line easter coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- 19 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
 - One big picture per page, drawn clip-art style with a heavy outline, so
   even the youngest hands have somewhere easy to start
+- A full-body character to open the set - a bunny riding a carrot, a
+  squirrel hugging an acorn, an owl in reading glasses
 - A bubble-letter title the children color in as well - COLOR THE BUNNY -
   so the page builds vocabulary and print awareness while it is worked on
 - Flowers, butterflies and stars down the margins, so there is plenty to
@@ -1464,7 +1482,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 21 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1475,18 +1493,20 @@ PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## St. Patrick's (coloring)
 
 **Product title**  
-St. Patrick's Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
+St. Patrick's Coloring Pages | 19 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-18 chunky-line st. patrick's coloring pages - one big picture per sheet, print and go.
+19 chunky-line st. patrick's coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- 19 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
 - One big picture per page, drawn clip-art style with a heavy outline, so
   even the youngest hands have somewhere easy to start
+- A full-body character to open the set - a bunny riding a carrot, a
+  squirrel hugging an acorn, an owl in reading glasses
 - A bubble-letter title the children color in as well - COLOR THE BUNNY -
   so the page builds vocabulary and print awareness while it is worked on
 - Flowers, butterflies and stars down the margins, so there is plenty to
@@ -1513,7 +1533,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 21 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1524,18 +1544,20 @@ PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Ocean (coloring)
 
 **Product title**  
-Ocean Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
+Ocean Coloring Pages | 19 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-18 chunky-line ocean coloring pages - one big picture per sheet, print and go.
+19 chunky-line ocean coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- 19 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
 - One big picture per page, drawn clip-art style with a heavy outline, so
   even the youngest hands have somewhere easy to start
+- A full-body character to open the set - a bunny riding a carrot, a
+  squirrel hugging an acorn, an owl in reading glasses
 - A bubble-letter title the children color in as well - COLOR THE BUNNY -
   so the page builds vocabulary and print awareness while it is worked on
 - Flowers, butterflies and stars down the margins, so there is plenty to
@@ -1562,7 +1584,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 21 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1573,18 +1595,20 @@ PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Space (coloring)
 
 **Product title**  
-Space Coloring Pages | 15 No-Prep Sheets for Preschool and Pre-K
+Space Coloring Pages | 16 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-15 chunky-line space coloring pages - one big picture per sheet, print and go.
+16 chunky-line space coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 15 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- 16 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
 - One big picture per page, drawn clip-art style with a heavy outline, so
   even the youngest hands have somewhere easy to start
+- A full-body character to open the set - a bunny riding a carrot, a
+  squirrel hugging an acorn, an owl in reading glasses
 - A bubble-letter title the children color in as well - COLOR THE BUNNY -
   so the page builds vocabulary and print awareness while it is worked on
 - Flowers, butterflies and stars down the margins, so there is plenty to
@@ -1611,7 +1635,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 17 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 18 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1622,18 +1646,20 @@ PDF, 17 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Farm (coloring)
 
 **Product title**  
-Farm Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
+Farm Coloring Pages | 19 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-18 chunky-line farm coloring pages - one big picture per sheet, print and go.
+19 chunky-line farm coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- 19 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
 - One big picture per page, drawn clip-art style with a heavy outline, so
   even the youngest hands have somewhere easy to start
+- A full-body character to open the set - a bunny riding a carrot, a
+  squirrel hugging an acorn, an owl in reading glasses
 - A bubble-letter title the children color in as well - COLOR THE BUNNY -
   so the page builds vocabulary and print awareness while it is worked on
 - Flowers, butterflies and stars down the margins, so there is plenty to
@@ -1660,7 +1686,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 21 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1671,18 +1697,20 @@ PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Dinosaurs (coloring)
 
 **Product title**  
-Dinosaurs Coloring Pages | 15 No-Prep Sheets for Preschool and Pre-K
+Dinosaurs Coloring Pages | 16 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-15 chunky-line dinosaurs coloring pages - one big picture per sheet, print and go.
+16 chunky-line dinosaurs coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 15 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- 16 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
 - One big picture per page, drawn clip-art style with a heavy outline, so
   even the youngest hands have somewhere easy to start
+- A full-body character to open the set - a bunny riding a carrot, a
+  squirrel hugging an acorn, an owl in reading glasses
 - A bubble-letter title the children color in as well - COLOR THE BUNNY -
   so the page builds vocabulary and print awareness while it is worked on
 - Flowers, butterflies and stars down the margins, so there is plenty to
@@ -1709,7 +1737,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 17 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 18 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1720,18 +1748,20 @@ PDF, 17 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Jungle (coloring)
 
 **Product title**  
-Jungle Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
+Jungle Coloring Pages | 19 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-18 chunky-line jungle coloring pages - one big picture per sheet, print and go.
+19 chunky-line jungle coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- 19 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
 - One big picture per page, drawn clip-art style with a heavy outline, so
   even the youngest hands have somewhere easy to start
+- A full-body character to open the set - a bunny riding a carrot, a
+  squirrel hugging an acorn, an owl in reading glasses
 - A bubble-letter title the children color in as well - COLOR THE BUNNY -
   so the page builds vocabulary and print awareness while it is worked on
 - Flowers, butterflies and stars down the margins, so there is plenty to
@@ -1758,7 +1788,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 21 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1769,18 +1799,20 @@ PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## School (coloring)
 
 **Product title**  
-School Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
+School Coloring Pages | 19 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-18 chunky-line school coloring pages - one big picture per sheet, print and go.
+19 chunky-line school coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- 19 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
 - One big picture per page, drawn clip-art style with a heavy outline, so
   even the youngest hands have somewhere easy to start
+- A full-body character to open the set - a bunny riding a carrot, a
+  squirrel hugging an acorn, an owl in reading glasses
 - A bubble-letter title the children color in as well - COLOR THE BUNNY -
   so the page builds vocabulary and print awareness while it is worked on
 - Flowers, butterflies and stars down the margins, so there is plenty to
@@ -1807,7 +1839,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 21 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1818,18 +1850,20 @@ PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Things That Go (coloring)
 
 **Product title**  
-Things That Go Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
+Things That Go Coloring Pages | 19 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-18 chunky-line things that go coloring pages - one big picture per sheet, print and go.
+19 chunky-line things that go coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- 19 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
 - One big picture per page, drawn clip-art style with a heavy outline, so
   even the youngest hands have somewhere easy to start
+- A full-body character to open the set - a bunny riding a carrot, a
+  squirrel hugging an acorn, an owl in reading glasses
 - A bubble-letter title the children color in as well - COLOR THE BUNNY -
   so the page builds vocabulary and print awareness while it is worked on
 - Flowers, butterflies and stars down the margins, so there is plenty to
@@ -1856,7 +1890,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 21 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1867,18 +1901,20 @@ PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Camping (coloring)
 
 **Product title**  
-Camping Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
+Camping Coloring Pages | 19 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-18 chunky-line camping coloring pages - one big picture per sheet, print and go.
+19 chunky-line camping coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- 19 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
 - One big picture per page, drawn clip-art style with a heavy outline, so
   even the youngest hands have somewhere easy to start
+- A full-body character to open the set - a bunny riding a carrot, a
+  squirrel hugging an acorn, an owl in reading glasses
 - A bubble-letter title the children color in as well - COLOR THE BUNNY -
   so the page builds vocabulary and print awareness while it is worked on
 - Flowers, butterflies and stars down the margins, so there is plenty to
@@ -1905,7 +1941,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 21 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1916,18 +1952,20 @@ PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Birthday (coloring)
 
 **Product title**  
-Birthday Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
+Birthday Coloring Pages | 19 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-18 chunky-line birthday coloring pages - one big picture per sheet, print and go.
+19 chunky-line birthday coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- 19 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
 - One big picture per page, drawn clip-art style with a heavy outline, so
   even the youngest hands have somewhere easy to start
+- A full-body character to open the set - a bunny riding a carrot, a
+  squirrel hugging an acorn, an owl in reading glasses
 - A bubble-letter title the children color in as well - COLOR THE BUNNY -
   so the page builds vocabulary and print awareness while it is worked on
 - Flowers, butterflies and stars down the margins, so there is plenty to
@@ -1954,7 +1992,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 21 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -1965,18 +2003,20 @@ PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Bugs (coloring)
 
 **Product title**  
-Bugs Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
+Bugs Coloring Pages | 19 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-18 chunky-line bugs coloring pages - one big picture per sheet, print and go.
+19 chunky-line bugs coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- 19 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
 - One big picture per page, drawn clip-art style with a heavy outline, so
   even the youngest hands have somewhere easy to start
+- A full-body character to open the set - a bunny riding a carrot, a
+  squirrel hugging an acorn, an owl in reading glasses
 - A bubble-letter title the children color in as well - COLOR THE BUNNY -
   so the page builds vocabulary and print awareness while it is worked on
 - Flowers, butterflies and stars down the margins, so there is plenty to
@@ -2003,7 +2043,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 21 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -2014,18 +2054,20 @@ PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Pets (coloring)
 
 **Product title**  
-Pets Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
+Pets Coloring Pages | 19 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-18 chunky-line pets coloring pages - one big picture per sheet, print and go.
+19 chunky-line pets coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- 19 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
 - One big picture per page, drawn clip-art style with a heavy outline, so
   even the youngest hands have somewhere easy to start
+- A full-body character to open the set - a bunny riding a carrot, a
+  squirrel hugging an acorn, an owl in reading glasses
 - A bubble-letter title the children color in as well - COLOR THE BUNNY -
   so the page builds vocabulary and print awareness while it is worked on
 - Flowers, butterflies and stars down the margins, so there is plenty to
@@ -2052,7 +2094,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 21 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  
@@ -2063,18 +2105,20 @@ PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
 ## Yummy Food (coloring)
 
 **Product title**  
-Yummy Food Coloring Pages | 18 No-Prep Sheets for Preschool and Pre-K
+Yummy Food Coloring Pages | 19 No-Prep Sheets for Preschool and Pre-K
 
 **Short blurb**  
-18 chunky-line yummy food coloring pages - one big picture per sheet, print and go.
+19 chunky-line yummy food coloring pages - one big picture per sheet, print and go.
 
 **Description**
 
 **What you get**
 
-- 18 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
+- 19 coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
 - One big picture per page, drawn clip-art style with a heavy outline, so
   even the youngest hands have somewhere easy to start
+- A full-body character to open the set - a bunny riding a carrot, a
+  squirrel hugging an acorn, an owl in reading glasses
 - A bubble-letter title the children color in as well - COLOR THE BUNNY -
   so the page builds vocabulary and print awareness while it is worked on
 - Flowers, butterflies and stars down the margins, so there is plenty to
@@ -2101,7 +2145,7 @@ focus and stamina, vocabulary building.
 
 **Format**
 
-PDF, 20 pages, US Letter, print-and-go. No prep and nothing to assemble.
+PDF, 21 pages, US Letter, print-and-go. No prep and nothing to assemble.
 
 **Grades**: PreK, Kindergarten, 1st grade  
 **Suggested price**: $3.00 (single theme)  

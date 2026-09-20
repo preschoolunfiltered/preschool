@@ -91,7 +91,7 @@ def build_coloring(theme, previews=True, dpi=150):
     pdf_paths = []
     for stem, svg in pages:
         pdf_paths.append(write_pdf(svg, os.path.join(work, f"{stem}.pdf")))
-        if previews and stem in ("00-cover", "10-subject-1", "12-subject-3"):
+        if previews and stem in ("00-cover", "10-hero-1", "12-subject-3"):
             write_png(svg, os.path.join(prev, f"{stem}.png"), dpi=dpi)
 
     return merge(pdf_paths, os.path.join(folder, f"{name}.pdf"))

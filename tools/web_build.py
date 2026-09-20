@@ -106,8 +106,9 @@ def main():
              "note": "One big picture per sheet, clip-art style: a bubble"
                      " -letter title, a smiling subject drawn heavy enough for"
                      " a crayon to chase, and flowers, butterflies and stars"
-                     " down the margins. Nothing is filled in black except"
-                     " the eyes, so every shape can take a color."},
+                     " down the margins. Every theme opens with its own"
+                     " full-body character - a bunny on a carrot, a squirrel"
+                     " with an acorn, an owl in glasses."},
         ],
     }
     total = 0

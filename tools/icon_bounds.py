@@ -19,7 +19,8 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import cairosvg
 from PIL import Image
 
-from ispy.coloring import art
+from ispy.coloring import art, outline
+from ispy.heroes import HEROES
 from ispy.render import svg_doc, place
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -27,8 +28,8 @@ OUT = os.path.join(ROOT, "assets", "icon_bounds.json")
 PX = 200  # render size; 2px of slop at this scale is 1 unit in icon space
 
 
-def bounds_of(name: str, tmp: str):
-    svg = svg_doc(place(art(name), 100, 100, 200, 0, 3.0, "#000000"),
+def bounds_of(name: str, tmp: str, body: str | None = None):
+    svg = svg_doc(place(body or art(name), 100, 100, 200, 0, 3.0, "#000000"),
                   200, 200, units="")
     cairosvg.svg2png(bytestring=svg.encode(), write_to=tmp,
                      output_width=PX, output_height=PX,
@@ -48,6 +49,8 @@ def main():
     out = {}
     for name in sorted(ICONS):
         out[name] = bounds_of(name, tmp)
+    for key in sorted(HEROES):           # heroes share the same 100-unit box
+        out["hero:" + key] = bounds_of(key, tmp, outline(HEROES[key]()))
     os.remove(tmp)
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w") as fh:

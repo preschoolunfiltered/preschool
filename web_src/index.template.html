@@ -390,7 +390,8 @@
   };
 
   const SHEET_KINDS = {
-    subject: "One big picture, bubble-letter title, decorated margins"
+    subject: "One big picture, bubble-letter title, decorated margins",
+    hero: "The theme's character, drawn full-body with something to hold"
   };
 
   const el = (id) => document.getElementById(id);
@@ -540,7 +541,9 @@
       rows.push(["Use for", "the listing thumbnail"]);
     } else if (SHEET_KINDS[page.kind]) {
       rows.push(["Picture", page.label]);
-      rows.push(["Title", "COLOR THE " + page.label.toUpperCase()]);
+      rows.push(["Title", page.kind === "hero"
+        ? "the theme's greeting, in bubble letters"
+        : "COLOR THE " + page.label.toUpperCase()]);
       rows.push(["Lines", "chunky, nothing filled black"]);
       rows.push(["Child does", "colors the picture and the word"]);
     } else {

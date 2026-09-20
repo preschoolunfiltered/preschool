@@ -17,6 +17,7 @@ import re
 
 from ispy import config
 from ispy.cute import cutify
+from ispy.heroes import HEROES, PHRASES
 from ispy.draw import SOLID, circle, dot, heart, line, path, pt, rect, star
 from ispy.icons import ICONS, label
 from ispy.render import PAGE_H, PAGE_W, SymbolPool, place, svg_doc
@@ -80,6 +81,25 @@ def drop(name: str, x: float, y: float, size: float, rot: float = 0.0,
          stroke: float = STROKE_FILLER, pool=None, flip: bool = False) -> str:
     return place(art(name), x, y, size, rot, stroke, INK, name=name + "-c",
                  pool=pool, flip=flip)
+
+
+def fit_scale(key: str, target: float):
+    """(size, ink centre) for drawing `key` at `target` points across."""
+    x0, y0, x1, y1 = BOUNDS.get(key, (0.0, 0.0, 100.0, 100.0))
+    w, h = max(x1 - x0, 1.0), max(y1 - y0, 1.0)
+    size = target * 100.0 / max(w, h)
+    return size, (x0 + x1) / 2, (y0 + y1) / 2, w, h
+
+
+def fitted_hero(theme: Theme, cx: float, cy: float, target: float,
+                pool=None) -> str:
+    """The theme's character, scaled by its ink the way subjects are."""
+    key = "hero:" + theme.key
+    size, ink_cx, ink_cy, _, _ = fit_scale(key, target)
+    s = size / 100.0
+    return place(outline(HEROES[theme.key]()),
+                 cx - (ink_cx - 50) * s, cy - (ink_cy - 50) * s, size, 0,
+                 STROKE_SUBJECT, INK, name=key, pool=pool)
 
 
 def fitted(name: str, cx: float, cy: float, target: float, rot: float = 0.0,
@@ -191,15 +211,15 @@ BLOOM_THEMES = {"spring", "summer", "easter", "bugs", "farm", "jungle",
                 "stpatrick", "fall", "valentine", "pets", "birthday"}
 
 
-def _subject_guard(name: str, target: float):
+def _subject_guard(key: str, target: float):
     """The ellipse the main picture occupies, so fillers keep out of it."""
-    x0, y0, x1, y1 = BOUNDS.get(name, (0.0, 0.0, 100.0, 100.0))
-    w, h = max(x1 - x0, 1.0), max(y1 - y0, 1.0)
+    _, _, _, w, h = fit_scale(key, target)
     s = target / max(w, h)
     return w * s / 2 + 16, h * s / 2 + 14
 
 
-def decorations(theme: Theme, rng: random.Random, guard, pool=None) -> str:
+def decorations(theme: Theme, rng: random.Random, guard, pool=None,
+                cy: float = SUBJECT_CY) -> str:
     """Flowers, butterflies and sparkles filling the space around the picture."""
     picks = [n for n in theme.icons if n in FILLERS]
     kinds = [("icon", n) for n in picks] * 2
@@ -221,9 +241,9 @@ def decorations(theme: Theme, rng: random.Random, guard, pool=None) -> str:
         size = rng.uniform(52, 88)
         r = size * 0.5
         x = min(max(sx + rng.uniform(-14, 14), x0 + 20 + r), x1 - 20 - r)
-        y = min(max(sy + rng.uniform(-14, 14), 244 + r), y1 - 26 - r)
+        y = min(max(sy + rng.uniform(-14, 14), 250 + r), y1 - 26 - r)
         dx = (x - SUBJECT_CX) / (gx + r)
-        dy = (y - SUBJECT_CY) / (gy + r)
+        dy = (y - cy) / (gy + r)
         if dx * dx + dy * dy < 1.0:
             continue
         if any((x - px) ** 2 + (y - py) ** 2 < (0.92 * (r + pr)) ** 2
@@ -270,9 +290,34 @@ def subject_page(theme: Theme, name: str, index: int, pool=None) -> str:
     return "".join(body)
 
 
+HERO_CY, HERO_FIT = 512.0, 386.0
+
+
+def hero_page(theme: Theme, pool=None) -> str:
+    """The theme's character, big, under a two-line greeting."""
+    rng = random.Random(theme.key + "-hero")
+    lead, word = PHRASES.get(theme.key, ("COLOR THE", theme.title))
+
+    small, big = 44.0, 88.0
+    while measure(lead, "display", small, 0) > 400 and small > 24:
+        small -= 2
+    while measure(word, "display", big, 0) > 452 and big > 30:
+        big -= 2
+
+    guard = _subject_guard("hero:" + theme.key, HERO_FIT)
+    return "".join([
+        page_border(pool),
+        hollow(lead, PAGE_W / 2, 132, small, 3.6, pool),
+        hollow(word, PAGE_W / 2, 216, big, STROKE_TITLE, pool),
+        decorations(theme, rng, guard, pool, cy=HERO_CY),
+        fitted_hero(theme, PAGE_W / 2, HERO_CY, HERO_FIT, pool),
+        credit(theme, pool),
+    ])
+
+
 def pages_for(theme: Theme):
     """One coloring sheet per picture in the theme."""
-    out = []
+    out = [("hero", "Big character", lambda p: hero_page(theme, p))]
     for i, name in enumerate(theme.icons):
         out.append((
             "subject",

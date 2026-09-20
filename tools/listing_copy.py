@@ -35,6 +35,8 @@ COLORING_LONG = """**What you get**
 - {n} coloring pages, each on its own full-page US Letter sheet (8.5 x 11 in)
 - One big picture per page, drawn clip-art style with a heavy outline, so
   even the youngest hands have somewhere easy to start
+- A full-body character to open the set - a bunny riding a carrot, a
+  squirrel hugging an acorn, an owl in reading glasses
 - A bubble-letter title the children color in as well - COLOR THE BUNNY -
   so the page builds vocabulary and print awareness while it is worked on
 - Flowers, butterflies and stars down the margins, so there is plenty to
@@ -130,7 +132,7 @@ def block(theme):
 
 
 def coloring_block(theme):
-    n = len(theme.icons)
+    n = len(theme.icons) + 1
     pages = 2 + n
     icons = ", ".join(label(i) for i in theme.icons)
     title_word = pretty(theme.title)
@@ -201,7 +203,7 @@ Black-and-white, print-and-go, US Letter. {total_pages} pages.""")
     for t in THEMES:
         print(block(t))
 
-    cn = sum(len(t.icons) for t in THEMES)
+    cn = sum(len(t.icons) + 1 for t in THEMES)
     print("# Coloring pages")
     print()
     print("**Bundle title**  ")
